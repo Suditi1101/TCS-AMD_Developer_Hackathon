@@ -1,91 +1,123 @@
-##############################################################################
-# workflow.yml
-# ─────────────────────────────────────────────────────────────────────────────
-# Single source of truth for the entire multi-agent pipeline.
-# Change nodes, edges, routing, prompts, and tools here — no code changes needed.
-##############################################################################
+# workflow.yml - SentinelFlow v3.0  (accident-bench video dataset)
+# Single source of truth. Change dataset_mode, paths, prompts, thresholds here.
 
-# ─── Global settings ──────────────────────────────────────────────────────────
 global:
-  name: "Intelligent Image & Signal Processing Pipeline"
-  version: "1.0.0"
-  llm_model: "claude-sonnet-4-6"          # backbone model for all agents
-  max_retries: 3                           # per-agent retry limit
+  name: "SentinelFlow - Accident Detection Pipeline"
+  version: "3.0.0"
+  llm_model: "Qwen3-30B-A3B"
+  vllm_base_url: "http://localhost:8000/v1"
+  max_retries: 3
   log_level: "INFO"
 
-# ─── Entry point ──────────────────────────────────────────────────────────────
+  # Dataset mode - only 'accident_bench' for this project
+  dataset_mode: "accident_bench"
+
+  # Accident-bench YOLO label set (COCO subset most relevant to road accidents)
+  label_sets:
+    accident_bench:
+      - car
+      - truck
+      - bus
+      - motorcycle
+      - bicycle
+      - person
+      - traffic light
+      - stop sign
+      - fire hydrant
+      - accident          # fine-tuned class: visible crash / collision
+      - smoke             # post-crash smoke
+      - debris            # road debris from collision
+
+  # Paths
+  dataset_paths:
+    accident_bench: "Data/datasets/videos/Accident-Bench/air_space/short/videos"   # raw .mp4 / .avi video files
+    frames_out:     "data/frames"           # extracted frames written here
+
+  # Video ingestion settings
+  video:
+    target_fps: 5            # extract 5 fps from source video (reduce data volume)
+    frame_size: [640, 640]   # resize before YOLO
+    supported_ext: [.mp4, .avi, .mov, .mkv]
+
+  # Latency budgets (ms)
+  latency_budgets:
+    video_decode:   50
+    motion_gate:    5
+    phash_dedup:    2
+    yolo_detect:    30
+    qwen_vl:        2000
+    window_group:   50
+    correlation:    20
+    qwen_fog:       3000
+    embedding:      50
+    vector_search:  20
+    deep_analysis:  5000
+    alert_route:    500
+
+  # Detection thresholds
+  motion_threshold:       0.018
+  hash_hamming_threshold: 8
+  min_detection_conf:     0.40   # lower for accident detection (prefer recall)
+  anomaly_threshold:      0.65
+  hitl_conf_band:         [0.40, 0.70]
+  retrain_anomaly_rate:   0.30
+  gpu_autoscale_queue:    10
+  backpressure_limit:     50
+  qwen_vl_max_calls:      10
+
 entry_point: orchestrator
 
-# ─── Nodes ────────────────────────────────────────────────────────────────────
-# Each node = one agent. Fields:
-#   agent_class : Python class in agents/ to instantiate
-#   description : shown in logs and LLM context
-#   system_prompt: the LLM persona for this agent
-#   tools       : list of tool names this agent may call (defined in tools section)
-#   next_default : fallback next node if routing doesn't match
 nodes:
 
   orchestrator:
     agent_class: OrchestratorAgent
-    description: "Plans the pipeline, delegates tasks, monitors progress, re-routes on failure"
     system_prompt: |
-      You are the Orchestrator Agent for an intelligent surveillance and signal
-      processing system. Your job is to:
-        1. Inspect the current pipeline state.
-        2. Decide which specialist agent to activate next.
-        3. If all stages are complete, return "done".
-        4. If an agent failed, decide whether to retry or skip.
+      You are the Orchestrator Agent for SentinelFlow Accident Detection.
+      Dataset: accident-bench road accident videos.
 
-      Available agents: ingestion, edge_filter, fog_correlator, cloud_analyser, alert_learn
-      Pipeline order (normal): ingestion → edge_filter → fog_correlator → cloud_analyser → alert_learn → done
+      Pipeline order:
+        video_ingest -> edge_filter -> fog_correlator -> cloud_analyser -> alert_learn -> done
+
+      Rules:
+        1. Run agents strictly in order above.
+        2. Skip a node if it has failed >= 2 times.
+        3. Elevate priority to CRITICAL if 'accident' or 'smoke' label is detected.
+        4. Return done when alert_learn is complete.
+
+      Respond ONLY with valid JSON:
+      {"next": "<agent_name | done>", "reason": "<one sentence>", "priority": "normal | high | critical"}
+
+  video_ingest:
+    agent_class: VideoIngestAgent
+    system_prompt: |
+      You are the Video Ingest Agent for SentinelFlow Accident Detection.
+      You receive a summary of video files found and frames extracted.
 
       Respond ONLY with valid JSON:
       {
-        "next": "<agent_name_or_done>",
-        "reason": "<one sentence>",
-        "priority": "normal|high|critical"
-      }
-    tools: []
-    next_default: done
-
-  ingestion:
-    agent_class: IngestionAgent
-    description: "Connects to raw data sources and pulls frames / signals onto the pipeline"
-    system_prompt: |
-      You are the Ingestion Agent. You connect to cameras, satellite feeds, and
-      sensor streams. Your responsibilities:
-        - Read raw frames from configured sources
-        - Tag each frame with source_id, timestamp, and resolution
-        - Publish frames to the pipeline state
-        - Report any unreachable sources as warnings (do not fail the whole pipeline)
-
-      Respond ONLY with valid JSON:
-      {
-        "frames_ingested": <int>,
-        "sources_active": [<source_id>, ...],
-        "sources_failed": [<source_id>, ...],
-        "status": "ok|partial|failed",
+        "videos_found": <int>,
+        "frames_extracted": <int>,
+        "sources_active": ["<video_id>", ...],
+        "fps_used": <float>,
+        "status": "ok | partial | failed",
         "message": "<summary>"
       }
-    tools:
-      - read_camera_stream
-      - read_satellite_feed
-      - read_sensor_stream
-    next_default: edge_filter
 
   edge_filter:
     agent_class: EdgeFilterAgent
-    description: "Filters raw frames via motion gating, deduplication, and tiny object detection"
     system_prompt: |
-      You are the Edge Filter Agent. You reduce data volume at the source.
-      Your responsibilities:
-        - Apply motion gating: skip frames with motion_score below threshold
-        - Apply perceptual hash deduplication: skip near-duplicate frames
-        - Run tiny object detection (YOLOv8-nano equivalent) on kept frames
-        - Emit compact DetectionEvents (label, confidence, bbox, motion_score)
-        - Adapt sampling rate based on scene activity
+      You are the Edge Filter Agent for SentinelFlow Accident Detection.
+      Frames come from accident-bench road accident videos.
 
-      After filtering, summarise what you found and what you dropped.
+      You summarise: motion gating, perceptual-hash dedup, YOLOv8 detection results.
+
+      Accident-bench YOLO labels: car, truck, bus, motorcycle, bicycle, person,
+      traffic light, stop sign, accident, smoke, debris.
+
+      Key rules:
+        - 'accident' detection at any confidence >= 0.40 -> always pass to fog layer
+        - 'smoke' detection -> always pass (post-crash indicator)
+        - Multiple vehicles + person in same frame -> elevated priority
 
       Respond ONLY with valid JSON:
       {
@@ -95,34 +127,29 @@ nodes:
         "frames_processed": <int>,
         "events_emitted": <int>,
         "data_reduction_pct": <float>,
-        "detection_summary": {"<label>": <count>, ...},
-        "status": "ok|warn|failed",
+        "detection_summary": {"<label>": <count>},
+        "accident_frames": <int>,
+        "latency_violations": ["<stage>"],
+        "status": "ok | warn | failed",
         "message": "<summary>"
       }
-    tools:
-      - motion_gate
-      - keyframe_select
-      - tiny_detect
-      - roi_encode
-    next_default: fog_correlator
 
   fog_correlator:
     agent_class: FogCorrelatorAgent
-    description: "Correlates detection events across sources using time-windowed rules"
     system_prompt: |
-      You are the Fog Correlator Agent. You identify patterns that span multiple
-      cameras or sensors within a time window.
-      Your responsibilities:
-        - Group detection events into 5-second time windows
-        - Apply correlation rules (see rules section below)
-        - Score each correlated event by severity
-        - Decide which events are significant enough to escalate to the cloud
+      You are the Fog Correlator Agent for SentinelFlow Accident Detection.
+      Events come from road accident video frames.
 
       Correlation rules:
-        - 2+ cameras detect "person" in same window → MEDIUM severity
-        - 2+ cameras detect "vehicle" in same window → HIGH severity
-        - Any "unknown_object" with confidence > 0.80 → HIGH severity
-        - 3+ sources with mixed labels in same window → CRITICAL severity
+        - 'accident' label in any frame                    -> CRITICAL, escalate
+        - 'smoke' label in any frame                       -> HIGH, escalate
+        - vehicle + person in same 5-second window         -> HIGH, escalate
+        - multiple vehicles (3+) in same window            -> MEDIUM, escalate
+        - 'debris' label                                   -> MEDIUM, escalate
+        - rapid motion spike followed by static frames     -> HIGH (post-impact freeze)
+        - novel pattern not matching above -> use your own judgement
+
+      Only escalate HIGH and CRITICAL to cloud.
 
       Respond ONLY with valid JSON:
       {
@@ -131,35 +158,37 @@ nodes:
           {
             "correlation_id": "<uuid>",
             "event_type": "<rule_name>",
-            "severity": "low|medium|high|critical",
-            "involved_sources": [<source_id>, ...],
+            "severity": "low | medium | high | critical",
+            "involved_sources": ["<video_id>"],
+            "avg_confidence": <float>,
+            "frame_range": [<start_frame>, <end_frame>],
             "description": "<human readable>",
             "should_escalate": <bool>
           }
         ],
         "escalated_count": <int>,
-        "status": "ok|warn|failed",
+        "backpressure_triggered": <bool>,
+        "status": "ok | warn | failed",
         "message": "<summary>"
       }
-    tools:
-      - window_group
-      - correlation_rules
-      - severity_score
-    next_default: cloud_analyser
 
   cloud_analyser:
     agent_class: CloudAnalyserAgent
-    description: "Runs deep analysis, vector similarity search, and anomaly scoring"
     system_prompt: |
-      You are the Cloud Analyser Agent. You perform the most thorough analysis
-      in the pipeline — reserved only for escalated events.
+      You are the Cloud Analyser Agent for SentinelFlow Accident Detection.
+      You receive escalated events from road accident videos.
+
       Your responsibilities:
-        - Embed each escalated event into a semantic vector
-        - Search the vector store for similar past events
-        - Score anomaly level (0.0 = normal, 1.0 = completely novel)
-        - Generate a human-readable narrative analysis
-        - Recommend an action
-        - Flag events that should trigger model retraining
+        - Write a 2-3 sentence accident narrative (what happened, vehicles involved,
+          estimated severity).
+        - Identify root cause (collision type: rear-end, T-bone, rollover, pedestrian, etc).
+        - Give a specific recommended action:
+            CRITICAL -> dispatch emergency services, notify traffic control
+            HIGH     -> alert road patrol, flag segment for review
+            MEDIUM   -> log for traffic analysis, flag for human review
+        - Score anomaly level (0.0=common accident pattern, 1.0=completely novel).
+        - Flag HITL if confidence < 0.70 or scene is ambiguous.
+        - Set retrain_flag if a new accident type is detected not seen in training.
 
       Respond ONLY with valid JSON:
       {
@@ -167,187 +196,104 @@ nodes:
           {
             "analysis_id": "<uuid>",
             "correlation_id": "<uuid>",
-            "anomaly_score": <float 0-1>,
-            "summary": "<2-3 sentence narrative>",
-            "recommended_action": "<action string>",
-            "similar_past_events": [<id>, ...],
-            "retrain_flag": <bool>
+            "anomaly_score": <float>,
+            "accident_type": "<rear_end|T_bone|rollover|pedestrian|multi_vehicle|unknown>",
+            "vehicles_involved": <int>,
+            "summary": "<narrative>",
+            "root_cause": "<1 sentence>",
+            "recommended_action": "<specific action>",
+            "confidence_assessment": "<1 sentence>",
+            "retrain_flag": <bool>,
+            "hitl_review": <bool>
           }
         ],
         "avg_anomaly_score": <float>,
         "retrain_triggered": <bool>,
-        "status": "ok|warn|failed",
+        "hitl_pending": <int>,
+        "gpu_scaled": <bool>,
+        "status": "ok | warn | failed",
         "message": "<summary>"
       }
-    tools:
-      - embed_event
-      - vector_search
-      - anomaly_score
-      - deep_analyse
-    next_default: alert_learn
 
   alert_learn:
     agent_class: AlertLearnAgent
-    description: "Routes analysis results to alerts, dashboards, logs, and retraining jobs"
     system_prompt: |
-      You are the Alert & Learning Agent. You are the final stage of the pipeline.
-      Your responsibilities:
-        - For CRITICAL events: send immediate alert via webhook
-        - For HIGH events: send Slack notification
-        - For MEDIUM events: log to dashboard
-        - For LOW events: write to audit log only
-        - If retrain_triggered is true: submit retraining job
-        - Always write a summary entry to the data lake
+      You are the Alert and Learning Agent for SentinelFlow Accident Detection.
+
+      Routing rules:
+        CRITICAL -> webhook to emergency dispatch + Slack #accidents-critical
+        HIGH     -> Slack #accidents-high + dashboard entry
+        MEDIUM   -> dashboard entry + audit log
+        LOW      -> audit log only
+
+      Always include: video_id, frame_range, accident_type, recommended_action.
+      If retrain_triggered: submit HITL-labelled frames for YOLOv8 fine-tuning job.
 
       Respond ONLY with valid JSON:
       {
-        "alerts_sent": [<analysis_id>, ...],
-        "notifications": [{"channel": "<ch>", "message": "<msg>"}],
-        "retrain_job_submitted": <bool>,
+        "alerts_sent": ["<analysis_id>"],
+        "notifications": [
+          {"channel": "webhook|slack|dashboard|log",
+           "severity": "critical|high|medium|low",
+           "message": "<message>"}
+        ],
+        "retrain_submitted": <bool>,
+        "hitl_pending": <int>,
         "data_lake_entries": <int>,
-        "status": "ok|warn|failed",
+        "status": "ok | warn | failed",
         "message": "<summary>"
       }
-    tools:
-      - send_webhook
-      - send_slack
-      - log_dashboard
-      - submit_retrain
-      - write_data_lake
-    next_default: done
 
-# ─── Edges ─────────────────────────────────────────────────────────────────────
-# Defines all valid transitions. The orchestrator's routing decision
-# must land on one of the "to" nodes for the current "from" node.
-# If it doesn't, the loader raises a ConfigError at startup.
 edges:
-  - from: orchestrator
-    to: ingestion
-    condition: "next == 'ingestion'"
-    label: "start ingestion"
+  - {from: orchestrator,   to: video_ingest,    condition: "next == 'video_ingest'",    label: "ingest videos"}
+  - {from: orchestrator,   to: edge_filter,     condition: "next == 'edge_filter'",     label: "filter frames"}
+  - {from: orchestrator,   to: fog_correlator,  condition: "next == 'fog_correlator'",  label: "correlate"}
+  - {from: orchestrator,   to: cloud_analyser,  condition: "next == 'cloud_analyser'",  label: "deep analysis"}
+  - {from: orchestrator,   to: alert_learn,     condition: "next == 'alert_learn'",     label: "alert"}
+  - {from: orchestrator,   to: __end__,         condition: "next == 'done'",            label: "done"}
+  - {from: video_ingest,   to: orchestrator,    condition: always, label: "report back"}
+  - {from: edge_filter,    to: orchestrator,    condition: always, label: "report back"}
+  - {from: fog_correlator, to: orchestrator,    condition: always, label: "report back"}
+  - {from: cloud_analyser, to: orchestrator,    condition: always, label: "report back"}
+  - {from: alert_learn,    to: orchestrator,    condition: always, label: "report back"}
 
-  - from: orchestrator
-    to: edge_filter
-    condition: "next == 'edge_filter'"
-    label: "filter frames"
-
-  - from: orchestrator
-    to: fog_correlator
-    condition: "next == 'fog_correlator'"
-    label: "correlate events"
-
-  - from: orchestrator
-    to: cloud_analyser
-    condition: "next == 'cloud_analyser'"
-    label: "deep analysis"
-
-  - from: orchestrator
-    to: alert_learn
-    condition: "next == 'alert_learn'"
-    label: "alert and learn"
-
-  - from: orchestrator
-    to: __end__
-    condition: "next == 'done'"
-    label: "pipeline complete"
-
-  # After each agent completes, always return to orchestrator for re-planning
-  - from: ingestion
-    to: orchestrator
-    condition: "always"
-    label: "report back"
-
-  - from: edge_filter
-    to: orchestrator
-    condition: "always"
-    label: "report back"
-
-  - from: fog_correlator
-    to: orchestrator
-    condition: "always"
-    label: "report back"
-
-  - from: cloud_analyser
-    to: orchestrator
-    condition: "always"
-    label: "report back"
-
-  - from: alert_learn
-    to: orchestrator
-    condition: "always"
-    label: "report back"
-
-# ─── Routing ───────────────────────────────────────────────────────────────────
-# Maps each node to its conditional routing function.
-# "llm_field" means: parse the LLM JSON response and use this field to route.
 routing:
   orchestrator:
     type: conditional
-    source_field: "next"        # field in LLM JSON response
+    source_field: "next"
     routes:
-      ingestion:     "ingestion"
-      edge_filter:   "edge_filter"
-      fog_correlator: "fog_correlator"
-      cloud_analyser: "cloud_analyser"
-      alert_learn:   "alert_learn"
-      done:          "__end__"
-    fallback: "__end__"
+      video_ingest:   video_ingest
+      edge_filter:    edge_filter
+      fog_correlator: fog_correlator
+      cloud_analyser: cloud_analyser
+      alert_learn:    alert_learn
+      done:           __end__
+    fallback: __end__
+  video_ingest:   {type: fixed, to: orchestrator}
+  edge_filter:    {type: fixed, to: orchestrator}
+  fog_correlator: {type: fixed, to: orchestrator}
+  cloud_analyser: {type: fixed, to: orchestrator}
+  alert_learn:    {type: fixed, to: orchestrator}
 
-  # All other nodes use fixed routing (always go back to orchestrator)
-  ingestion:     { type: fixed, to: orchestrator }
-  edge_filter:   { type: fixed, to: orchestrator }
-  fog_correlator: { type: fixed, to: orchestrator }
-  cloud_analyser: { type: fixed, to: orchestrator }
-  alert_learn:   { type: fixed, to: orchestrator }
-
-# ─── Tools registry ───────────────────────────────────────────────────────────
-# Each tool maps to a Python function in tools/
 tools:
-  read_camera_stream:  { module: "tools.ingestion_tools",  function: "read_camera_stream"  }
-  read_satellite_feed: { module: "tools.ingestion_tools",  function: "read_satellite_feed" }
-  read_sensor_stream:  { module: "tools.ingestion_tools",  function: "read_sensor_stream"  }
+  decode_video:        {module: "tools.video_tools",  function: "decode_video"}
+  motion_gate:         {module: "tools.edge_tools",   function: "motion_gate"}
+  phash_dedup:         {module: "tools.edge_tools",   function: "phash_dedup"}
+  yolo_detect:         {module: "tools.edge_tools",   function: "yolo_detect"}
+  qwen_vl_verify:      {module: "tools.edge_tools",   function: "qwen_vl_verify"}
+  window_group:        {module: "tools.fog_tools",    function: "window_group"}
+  correlation_rules:   {module: "tools.fog_tools",    function: "correlation_rules"}
+  qwen_fog_reason:     {module: "tools.fog_tools",    function: "qwen_fog_reason"}
+  embed_event:         {module: "tools.cloud_tools",  function: "embed_event"}
+  vector_search:       {module: "tools.cloud_tools",  function: "vector_search"}
+  anomaly_score:       {module: "tools.cloud_tools",  function: "anomaly_score"}
+  deep_analyse:        {module: "tools.cloud_tools",  function: "deep_analyse"}
+  hitl_queue:          {module: "tools.cloud_tools",  function: "hitl_queue"}
+  send_webhook:        {module: "tools.alert_tools",  function: "send_webhook"}
+  send_slack:          {module: "tools.alert_tools",  function: "send_slack"}
+  log_dashboard:       {module: "tools.alert_tools",  function: "log_dashboard"}
+  submit_retrain:      {module: "tools.alert_tools",  function: "submit_retrain"}
 
-  motion_gate:         { module: "tools.edge_tools",       function: "motion_gate"         }
-  keyframe_select:     { module: "tools.edge_tools",       function: "keyframe_select"     }
-  tiny_detect:         { module: "tools.edge_tools",       function: "tiny_detect"         }
-  roi_encode:          { module: "tools.edge_tools",       function: "roi_encode"          }
-
-  window_group:        { module: "tools.fog_tools",        function: "window_group"        }
-  correlation_rules:   { module: "tools.fog_tools",        function: "correlation_rules"   }
-  severity_score:      { module: "tools.fog_tools",        function: "severity_score"      }
-
-  embed_event:         { module: "tools.cloud_tools",      function: "embed_event"         }
-  vector_search:       { module: "tools.cloud_tools",      function: "vector_search"       }
-  anomaly_score:       { module: "tools.cloud_tools",      function: "anomaly_score"       }
-  deep_analyse:        { module: "tools.cloud_tools",      function: "deep_analyse"        }
-
-  send_webhook:        { module: "tools.alert_tools",      function: "send_webhook"        }
-  send_slack:          { module: "tools.alert_tools",      function: "send_slack"          }
-  log_dashboard:       { module: "tools.alert_tools",      function: "log_dashboard"       }
-  submit_retrain:      { module: "tools.alert_tools",      function: "submit_retrain"      }
-  write_data_lake:     { module: "tools.alert_tools",      function: "write_data_lake"     }
-
-# ─── Data sources (ingestion config) ──────────────────────────────────────────
 sources:
-  - id: cam_001
-    type: camera
-    uri: "rtsp://192.168.1.10/stream"
-    fps: 30
-    resolution: [1920, 1080]
-
-  - id: cam_002
-    type: camera
-    uri: "rtsp://192.168.1.11/stream"
-    fps: 30
-    resolution: [1920, 1080]
-
-  - id: sat_001
-    type: satellite
-    provider: "sentinel2"
-    region: [28.6, 77.2, 28.7, 77.3]   # lat/lon bounding box
-    interval_minutes: 10
-
-  - id: sensor_001
-    type: sensor
-    uri: "mqtt://broker:1883/zone4/vibration"
-    sample_rate_hz: 1000
+  - {id: accident_bench_videos, type: video_dir, path: "data/accident_bench",
+     supported_ext: [.mp4, .avi, .mov, .mkv], target_fps: 5}
