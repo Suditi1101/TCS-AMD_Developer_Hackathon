@@ -1,0 +1,7587 @@
+[
+  {
+    "event_id": "ca5e4381-3dd1-4fe5-a576-6bb11029b3a8",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 6,
+    "timestamp": "2026-06-17T13:47:46.031773",
+    "label": "car",
+    "confidence": 0.527,
+    "bbox": {
+      "x": 0.0247,
+      "y": 0.3606,
+      "w": 0.1452,
+      "h": 0.1621
+    },
+    "motion_score": 0.3198,
+    "frame_hash": "0xb2e0e03812c78f18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "Only a single car detected, no evidence of accident or risk."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000006.jpg",
+    "has_accident": false,
+    "frame_range": [
+      6,
+      6
+    ]
+  },
+  {
+    "event_id": "2af1206e-79ec-471e-959d-0a0cdeaf8c73",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 18,
+    "timestamp": "2026-06-17T13:47:46.882490",
+    "label": "car",
+    "confidence": 0.5828,
+    "bbox": {
+      "x": 0.0001,
+      "y": 0.231,
+      "w": 0.0745,
+      "h": 0.0754
+    },
+    "motion_score": 0.38,
+    "frame_hash": "0xb2e0e0b40cc38d18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000018.jpg",
+    "has_accident": false,
+    "frame_range": [
+      18,
+      18
+    ]
+  },
+  {
+    "event_id": "1bf14844-5bc6-41e2-aaab-ca24b8f37b5f",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 18,
+    "timestamp": "2026-06-17T13:47:46.882752",
+    "label": "car",
+    "confidence": 0.4988,
+    "bbox": {
+      "x": 0.0638,
+      "y": 0.3909,
+      "w": 0.1591,
+      "h": 0.1647
+    },
+    "motion_score": 0.38,
+    "frame_hash": "0xb2e0e0b40cc38d18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000018.jpg",
+    "has_accident": false,
+    "frame_range": [
+      18,
+      18
+    ]
+  },
+  {
+    "event_id": "8c340808-c691-4bd5-808f-2a550c725472",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 18,
+    "timestamp": "2026-06-17T13:47:46.882981",
+    "label": "car",
+    "confidence": 0.4459,
+    "bbox": {
+      "x": 0.0175,
+      "y": 0.2919,
+      "w": 0.128,
+      "h": 0.1108
+    },
+    "motion_score": 0.38,
+    "frame_hash": "0xb2e0e0b40cc38d18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000018.jpg",
+    "has_accident": false,
+    "frame_range": [
+      18,
+      18
+    ]
+  },
+  {
+    "event_id": "c9536122-cc7b-4235-9f43-801a2d7fb285",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 18,
+    "timestamp": "2026-06-17T13:47:46.883204",
+    "label": "motorcycle",
+    "confidence": 0.4118,
+    "bbox": {
+      "x": 0.818,
+      "y": 0.3606,
+      "w": 0.0783,
+      "h": 0.0877
+    },
+    "motion_score": 0.38,
+    "frame_hash": "0xb2e0e0b40cc38d18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000018.jpg",
+    "has_accident": false,
+    "frame_range": [
+      18,
+      18
+    ]
+  },
+  {
+    "event_id": "1026d6e1-4ab0-48ec-a3e5-39fc29f3cfd4",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 24,
+    "timestamp": "2026-06-17T13:47:47.209183",
+    "label": "car",
+    "confidence": 0.695,
+    "bbox": {
+      "x": 0.1077,
+      "y": 0.4179,
+      "w": 0.1707,
+      "h": 0.1748
+    },
+    "motion_score": 0.314,
+    "frame_hash": "0xb2e0e09006c48c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000024.jpg",
+    "has_accident": false,
+    "frame_range": [
+      24,
+      24
+    ]
+  },
+  {
+    "event_id": "927a19c2-a018-43ad-aed6-033d49a1fef0",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 24,
+    "timestamp": "2026-06-17T13:47:47.209430",
+    "label": "car",
+    "confidence": 0.5418,
+    "bbox": {
+      "x": 0.0568,
+      "y": 0.3194,
+      "w": 0.1329,
+      "h": 0.1146
+    },
+    "motion_score": 0.314,
+    "frame_hash": "0xb2e0e09006c48c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000024.jpg",
+    "has_accident": false,
+    "frame_range": [
+      24,
+      24
+    ]
+  },
+  {
+    "event_id": "04eb6845-652f-405d-877a-6a9a5918eba2",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 24,
+    "timestamp": "2026-06-17T13:47:47.209655",
+    "label": "car",
+    "confidence": 0.5342,
+    "bbox": {
+      "x": 0.0016,
+      "y": 0.2463,
+      "w": 0.0987,
+      "h": 0.0814
+    },
+    "motion_score": 0.314,
+    "frame_hash": "0xb2e0e09006c48c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000024.jpg",
+    "has_accident": false,
+    "frame_range": [
+      24,
+      24
+    ]
+  },
+  {
+    "event_id": "3185e101-3a66-477e-b669-7979059ac88e",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 24,
+    "timestamp": "2026-06-17T13:47:47.209876",
+    "label": "person",
+    "confidence": 0.528,
+    "bbox": {
+      "x": 0.7476,
+      "y": 0.4163,
+      "w": 0.0401,
+      "h": 0.1088
+    },
+    "motion_score": 0.314,
+    "frame_hash": "0xb2e0e09006c48c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000024.jpg",
+    "has_accident": false,
+    "frame_range": [
+      24,
+      24
+    ]
+  },
+  {
+    "event_id": "4a81882f-9657-4983-b5e4-1da629c3fb61",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 24,
+    "timestamp": "2026-06-17T13:47:47.210092",
+    "label": "person",
+    "confidence": 0.4571,
+    "bbox": {
+      "x": 0.3448,
+      "y": 0.4623,
+      "w": 0.0564,
+      "h": 0.0997
+    },
+    "motion_score": 0.314,
+    "frame_hash": "0xb2e0e09006c48c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000024.jpg",
+    "has_accident": false,
+    "frame_range": [
+      24,
+      24
+    ]
+  },
+  {
+    "event_id": "fc9b23b5-13f5-4833-bb9b-7784336daf69",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 24,
+    "timestamp": "2026-06-17T13:47:47.210314",
+    "label": "motorcycle",
+    "confidence": 0.4085,
+    "bbox": {
+      "x": 0.8186,
+      "y": 0.3685,
+      "w": 0.0752,
+      "h": 0.0798
+    },
+    "motion_score": 0.314,
+    "frame_hash": "0xb2e0e09006c48c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000024.jpg",
+    "has_accident": false,
+    "frame_range": [
+      24,
+      24
+    ]
+  },
+  {
+    "event_id": "00814f79-bde8-4c4c-aa66-98c2040ab134",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 36,
+    "timestamp": "2026-06-17T13:47:47.541090",
+    "label": "car",
+    "confidence": 0.6986,
+    "bbox": {
+      "x": 0.1603,
+      "y": 0.4453,
+      "w": 0.1855,
+      "h": 0.1898
+    },
+    "motion_score": 0.3086,
+    "frame_hash": "0xb2e0d0d893878c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "road",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "car"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, smoke, fire, or persons at risk. Multiple cars detected but no indication of collision or hazard."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000036.jpg",
+    "has_accident": false,
+    "frame_range": [
+      36,
+      36
+    ]
+  },
+  {
+    "event_id": "ba1d2b95-a037-47f4-9891-813d3691d404",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 36,
+    "timestamp": "2026-06-17T13:47:47.541333",
+    "label": "car",
+    "confidence": 0.63,
+    "bbox": {
+      "x": 0.098,
+      "y": 0.3352,
+      "w": 0.1413,
+      "h": 0.1397
+    },
+    "motion_score": 0.3086,
+    "frame_hash": "0xb2e0d0d893878c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "road",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "car"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, smoke, fire, or persons at risk. Multiple cars detected but no indication of collision or hazard."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000036.jpg",
+    "has_accident": false,
+    "frame_range": [
+      36,
+      36
+    ]
+  },
+  {
+    "event_id": "fbad5856-3d3a-46da-88fe-cb364a827f17",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 36,
+    "timestamp": "2026-06-17T13:47:47.541550",
+    "label": "car",
+    "confidence": 0.5277,
+    "bbox": {
+      "x": 0.0315,
+      "y": 0.2568,
+      "w": 0.1044,
+      "h": 0.0991
+    },
+    "motion_score": 0.3086,
+    "frame_hash": "0xb2e0d0d893878c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "road",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "car"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, smoke, fire, or persons at risk. Multiple cars detected but no indication of collision or hazard."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000036.jpg",
+    "has_accident": false,
+    "frame_range": [
+      36,
+      36
+    ]
+  },
+  {
+    "event_id": "a784c1c4-f0c9-4718-93e1-283976e89822",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 36,
+    "timestamp": "2026-06-17T13:47:47.541760",
+    "label": "car",
+    "confidence": 0.525,
+    "bbox": {
+      "x": 0.8967,
+      "y": 0.5861,
+      "w": 0.0998,
+      "h": 0.1719
+    },
+    "motion_score": 0.3086,
+    "frame_hash": "0xb2e0d0d893878c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "road",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "car"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, smoke, fire, or persons at risk. Multiple cars detected but no indication of collision or hazard."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000036.jpg",
+    "has_accident": false,
+    "frame_range": [
+      36,
+      36
+    ]
+  },
+  {
+    "event_id": "94941436-2ed3-465b-875b-d6dda095b2e2",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 48,
+    "timestamp": "2026-06-17T13:47:48.255374",
+    "label": "car",
+    "confidence": 0.8081,
+    "bbox": {
+      "x": 0.2557,
+      "y": 0.497,
+      "w": 0.2107,
+      "h": 0.2173
+    },
+    "motion_score": 0.3929,
+    "frame_hash": "0xb2e0e0c88cc18c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "truck",
+        "person"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident or hazards detected. Multiple vehicles and a person are present but no collision or danger is observed."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000048.jpg",
+    "has_accident": false,
+    "frame_range": [
+      48,
+      48
+    ]
+  },
+  {
+    "event_id": "052d8952-8d82-403b-90b0-f1a1e5e64199",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 48,
+    "timestamp": "2026-06-17T13:47:48.255647",
+    "label": "car",
+    "confidence": 0.6781,
+    "bbox": {
+      "x": 0.1631,
+      "y": 0.3707,
+      "w": 0.157,
+      "h": 0.1542
+    },
+    "motion_score": 0.3929,
+    "frame_hash": "0xb2e0e0c88cc18c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "truck",
+        "person"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident or hazards detected. Multiple vehicles and a person are present but no collision or danger is observed."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000048.jpg",
+    "has_accident": false,
+    "frame_range": [
+      48,
+      48
+    ]
+  },
+  {
+    "event_id": "ef82f035-391c-47cd-9354-8c0a3d432db5",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 48,
+    "timestamp": "2026-06-17T13:47:48.255960",
+    "label": "car",
+    "confidence": 0.5378,
+    "bbox": {
+      "x": 0.0815,
+      "y": 0.2827,
+      "w": 0.1221,
+      "h": 0.1103
+    },
+    "motion_score": 0.3929,
+    "frame_hash": "0xb2e0e0c88cc18c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "truck",
+        "person"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident or hazards detected. Multiple vehicles and a person are present but no collision or danger is observed."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000048.jpg",
+    "has_accident": false,
+    "frame_range": [
+      48,
+      48
+    ]
+  },
+  {
+    "event_id": "025c1cc3-2b90-4cb4-8ef0-744ccab8b08a",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 48,
+    "timestamp": "2026-06-17T13:47:48.256203",
+    "label": "truck",
+    "confidence": 0.4709,
+    "bbox": {
+      "x": 0.4556,
+      "y": 0.4426,
+      "w": 0.1312,
+      "h": 0.1339
+    },
+    "motion_score": 0.3929,
+    "frame_hash": "0xb2e0e0c88cc18c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "truck",
+        "person"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident or hazards detected. Multiple vehicles and a person are present but no collision or danger is observed."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000048.jpg",
+    "has_accident": false,
+    "frame_range": [
+      48,
+      48
+    ]
+  },
+  {
+    "event_id": "f1219144-ebde-4df8-8d46-893c33486d92",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 48,
+    "timestamp": "2026-06-17T13:47:48.256443",
+    "label": "person",
+    "confidence": 0.4168,
+    "bbox": {
+      "x": 0.6271,
+      "y": 0.3646,
+      "w": 0.0373,
+      "h": 0.1024
+    },
+    "motion_score": 0.3929,
+    "frame_hash": "0xb2e0e0c88cc18c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "truck",
+        "person"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident or hazards detected. Multiple vehicles and a person are present but no collision or danger is observed."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000048.jpg",
+    "has_accident": false,
+    "frame_range": [
+      48,
+      48
+    ]
+  },
+  {
+    "event_id": "3f7d03a2-0920-4a59-be0c-c49d3e7f0b61",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 60,
+    "timestamp": "2026-06-17T13:47:48.982753",
+    "label": "car",
+    "confidence": 0.8922,
+    "bbox": {
+      "x": 0.3351,
+      "y": 0.544,
+      "w": 0.2331,
+      "h": 0.238
+    },
+    "motion_score": 0.5202,
+    "frame_hash": "0xb2e0e0e8c2c68018",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000060.jpg",
+    "has_accident": false,
+    "frame_range": [
+      60,
+      60
+    ]
+  },
+  {
+    "event_id": "a808f16d-650c-4b38-af46-5606210bd448",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 60,
+    "timestamp": "2026-06-17T13:47:48.983049",
+    "label": "car",
+    "confidence": 0.7524,
+    "bbox": {
+      "x": 0.2102,
+      "y": 0.3965,
+      "w": 0.1723,
+      "h": 0.1633
+    },
+    "motion_score": 0.5202,
+    "frame_hash": "0xb2e0e0e8c2c68018",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000060.jpg",
+    "has_accident": false,
+    "frame_range": [
+      60,
+      60
+    ]
+  },
+  {
+    "event_id": "aae59aa9-ba6e-4167-bc7d-895b77d46b29",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 60,
+    "timestamp": "2026-06-17T13:47:48.983312",
+    "label": "car",
+    "confidence": 0.5156,
+    "bbox": {
+      "x": 0.1184,
+      "y": 0.2975,
+      "w": 0.1319,
+      "h": 0.1193
+    },
+    "motion_score": 0.5202,
+    "frame_hash": "0xb2e0e0e8c2c68018",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000060.jpg",
+    "has_accident": false,
+    "frame_range": [
+      60,
+      60
+    ]
+  },
+  {
+    "event_id": "1df5d8ca-fad6-447d-aa45-1ab5f6672d25",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 60,
+    "timestamp": "2026-06-17T13:47:48.983565",
+    "label": "motorcycle",
+    "confidence": 0.4466,
+    "bbox": {
+      "x": 0.6939,
+      "y": 0.6755,
+      "w": 0.1216,
+      "h": 0.1681
+    },
+    "motion_score": 0.5202,
+    "frame_hash": "0xb2e0e0e8c2c68018",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000060.jpg",
+    "has_accident": false,
+    "frame_range": [
+      60,
+      60
+    ]
+  },
+  {
+    "event_id": "cabc29f0-efe4-4f74-925b-7bc878030724",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 60,
+    "timestamp": "2026-06-17T13:47:48.983813",
+    "label": "truck",
+    "confidence": 0.4066,
+    "bbox": {
+      "x": 0.7957,
+      "y": 0.5738,
+      "w": 0.1814,
+      "h": 0.1913
+    },
+    "motion_score": 0.5202,
+    "frame_hash": "0xb2e0e0e8c2c68018",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000060.jpg",
+    "has_accident": false,
+    "frame_range": [
+      60,
+      60
+    ]
+  },
+  {
+    "event_id": "d126af65-26fe-4190-b15e-cd0855a68197",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 72,
+    "timestamp": "2026-06-17T13:47:49.324342",
+    "label": "car",
+    "confidence": 0.839,
+    "bbox": {
+      "x": 0.4324,
+      "y": 0.5968,
+      "w": 0.256,
+      "h": 0.2744
+    },
+    "motion_score": 0.4146,
+    "frame_hash": "0xb2e0e0e0c1d39a18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "car",
+        "person"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, but a person is detected in the scene."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000072.jpg",
+    "has_accident": false,
+    "frame_range": [
+      72,
+      72
+    ]
+  },
+  {
+    "event_id": "683c4df9-f1ed-45be-831a-a6b8a856be0e",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 72,
+    "timestamp": "2026-06-17T13:47:49.324670",
+    "label": "car",
+    "confidence": 0.7418,
+    "bbox": {
+      "x": 0.2646,
+      "y": 0.4193,
+      "w": 0.1854,
+      "h": 0.1851
+    },
+    "motion_score": 0.4146,
+    "frame_hash": "0xb2e0e0e0c1d39a18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "car",
+        "person"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, but a person is detected in the scene."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000072.jpg",
+    "has_accident": false,
+    "frame_range": [
+      72,
+      72
+    ]
+  },
+  {
+    "event_id": "fb336c62-67f5-41f9-99d1-f0f3c6fa3e2f",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 72,
+    "timestamp": "2026-06-17T13:47:49.324959",
+    "label": "car",
+    "confidence": 0.6549,
+    "bbox": {
+      "x": 0.0,
+      "y": 0.3441,
+      "w": 0.0333,
+      "h": 0.0655
+    },
+    "motion_score": 0.4146,
+    "frame_hash": "0xb2e0e0e0c1d39a18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "car",
+        "person"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, but a person is detected in the scene."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000072.jpg",
+    "has_accident": false,
+    "frame_range": [
+      72,
+      72
+    ]
+  },
+  {
+    "event_id": "c4fe5f4f-3caa-411b-ad25-08b44584c8aa",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 72,
+    "timestamp": "2026-06-17T13:47:49.325235",
+    "label": "car",
+    "confidence": 0.4841,
+    "bbox": {
+      "x": 0.1591,
+      "y": 0.318,
+      "w": 0.1413,
+      "h": 0.123
+    },
+    "motion_score": 0.4146,
+    "frame_hash": "0xb2e0e0e0c1d39a18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "car",
+        "person"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, but a person is detected in the scene."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000072.jpg",
+    "has_accident": false,
+    "frame_range": [
+      72,
+      72
+    ]
+  },
+  {
+    "event_id": "e8b0c7ff-e96a-4948-b3d2-932eb74914cf",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 72,
+    "timestamp": "2026-06-17T13:47:49.325503",
+    "label": "person",
+    "confidence": 0.4169,
+    "bbox": {
+      "x": 0.6602,
+      "y": 0.3766,
+      "w": 0.0368,
+      "h": 0.1086
+    },
+    "motion_score": 0.4146,
+    "frame_hash": "0xb2e0e0e0c1d39a18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "car",
+        "car",
+        "person"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, but a person is detected in the scene."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000072.jpg",
+    "has_accident": false,
+    "frame_range": [
+      72,
+      72
+    ]
+  },
+  {
+    "event_id": "77f569b9-9a74-427b-b10c-6720ecaf0fd7",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 78,
+    "timestamp": "2026-06-17T13:47:49.988794",
+    "label": "car",
+    "confidence": 0.6008,
+    "bbox": {
+      "x": 0.3221,
+      "y": 0.458,
+      "w": 0.2033,
+      "h": 0.1901
+    },
+    "motion_score": 0.4646,
+    "frame_hash": "0xb2e0e0e0a2c8889c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000078.jpg",
+    "has_accident": false,
+    "frame_range": [
+      78,
+      78
+    ]
+  },
+  {
+    "event_id": "df6d8a48-3d3e-45b3-83a0-487a32be44f6",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 78,
+    "timestamp": "2026-06-17T13:47:49.989140",
+    "label": "car",
+    "confidence": 0.585,
+    "bbox": {
+      "x": 0.5497,
+      "y": 0.6702,
+      "w": 0.288,
+      "h": 0.3084
+    },
+    "motion_score": 0.4646,
+    "frame_hash": "0xb2e0e0e0a2c8889c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000078.jpg",
+    "has_accident": false,
+    "frame_range": [
+      78,
+      78
+    ]
+  },
+  {
+    "event_id": "d5ef83c0-8e92-45dd-85f1-9a9127d7f694",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 78,
+    "timestamp": "2026-06-17T13:47:49.989440",
+    "label": "car",
+    "confidence": 0.4787,
+    "bbox": {
+      "x": 0.0002,
+      "y": 0.3635,
+      "w": 0.065,
+      "h": 0.0696
+    },
+    "motion_score": 0.4646,
+    "frame_hash": "0xb2e0e0e0a2c8889c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000078.jpg",
+    "has_accident": false,
+    "frame_range": [
+      78,
+      78
+    ]
+  },
+  {
+    "event_id": "82dc8c58-f61f-4547-bbc9-a32bc2cbab74",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 78,
+    "timestamp": "2026-06-17T13:47:49.989723",
+    "label": "truck",
+    "confidence": 0.4732,
+    "bbox": {
+      "x": 0.3222,
+      "y": 0.4569,
+      "w": 0.2033,
+      "h": 0.1906
+    },
+    "motion_score": 0.4646,
+    "frame_hash": "0xb2e0e0e0a2c8889c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000078.jpg",
+    "has_accident": false,
+    "frame_range": [
+      78,
+      78
+    ]
+  },
+  {
+    "event_id": "5a1ca370-7e12-493f-b82e-a9880752591a",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 78,
+    "timestamp": "2026-06-17T13:47:49.990013",
+    "label": "truck",
+    "confidence": 0.4202,
+    "bbox": {
+      "x": 0.2021,
+      "y": 0.3363,
+      "w": 0.1538,
+      "h": 0.1327
+    },
+    "motion_score": 0.4646,
+    "frame_hash": "0xb2e0e0e0a2c8889c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "",
+      "vehicles_detected": [],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": ""
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000078.jpg",
+    "has_accident": false,
+    "frame_range": [
+      78,
+      78
+    ]
+  },
+  {
+    "event_id": "08670398-6123-4329-87b7-3047667be71f",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 90,
+    "timestamp": "2026-06-17T13:47:50.334628",
+    "label": "car",
+    "confidence": 0.6233,
+    "bbox": {
+      "x": 0.0001,
+      "y": 0.3349,
+      "w": 0.1017,
+      "h": 0.1204
+    },
+    "motion_score": 0.3263,
+    "frame_hash": "0xb2e0e07031c38c9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "highway",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "truck"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, smoke, fire, or persons at risk. Vehicles detected are normal."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000090.jpg",
+    "has_accident": false,
+    "frame_range": [
+      90,
+      90
+    ]
+  },
+  {
+    "event_id": "dbcd4af8-54b3-49a2-9068-73b2dcec0ab9",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 90,
+    "timestamp": "2026-06-17T13:47:50.334996",
+    "label": "car",
+    "confidence": 0.5424,
+    "bbox": {
+      "x": 0.3891,
+      "y": 0.4931,
+      "w": 0.219,
+      "h": 0.2082
+    },
+    "motion_score": 0.3263,
+    "frame_hash": "0xb2e0e07031c38c9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "highway",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "truck"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, smoke, fire, or persons at risk. Vehicles detected are normal."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000090.jpg",
+    "has_accident": false,
+    "frame_range": [
+      90,
+      90
+    ]
+  },
+  {
+    "event_id": "5acb2f46-f552-4f51-8b2a-d080173e5d9f",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 90,
+    "timestamp": "2026-06-17T13:47:50.335316",
+    "label": "truck",
+    "confidence": 0.4739,
+    "bbox": {
+      "x": 0.2493,
+      "y": 0.3618,
+      "w": 0.1597,
+      "h": 0.1361
+    },
+    "motion_score": 0.3263,
+    "frame_hash": "0xb2e0e07031c38c9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "highway",
+      "vehicles_detected": [
+        "car",
+        "car",
+        "truck"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, smoke, fire, or persons at risk. Vehicles detected are normal."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000090.jpg",
+    "has_accident": false,
+    "frame_range": [
+      90,
+      90
+    ]
+  },
+  {
+    "event_id": "5fdaedc8-a8de-4993-8017-5e64f1ba1718",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 96,
+    "timestamp": "2026-06-17T13:47:51.000070",
+    "label": "car",
+    "confidence": 0.6312,
+    "bbox": {
+      "x": 0.0016,
+      "y": 0.3472,
+      "w": 0.1361,
+      "h": 0.1336
+    },
+    "motion_score": 0.3994,
+    "frame_hash": "0xb2e0e06830d88819",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, but two cars and a person detected in an urban scene."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000096.jpg",
+    "has_accident": false,
+    "frame_range": [
+      96,
+      96
+    ]
+  },
+  {
+    "event_id": "512f481b-2f50-4f43-830e-e79ac6965d41",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 96,
+    "timestamp": "2026-06-17T13:47:51.000468",
+    "label": "car",
+    "confidence": 0.5851,
+    "bbox": {
+      "x": 0.4667,
+      "y": 0.5332,
+      "w": 0.2361,
+      "h": 0.2365
+    },
+    "motion_score": 0.3994,
+    "frame_hash": "0xb2e0e06830d88819",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, but two cars and a person detected in an urban scene."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000096.jpg",
+    "has_accident": false,
+    "frame_range": [
+      96,
+      96
+    ]
+  },
+  {
+    "event_id": "071d9456-a67e-4dce-a36e-c3a78808ca20",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 96,
+    "timestamp": "2026-06-17T13:47:51.000810",
+    "label": "person",
+    "confidence": 0.4395,
+    "bbox": {
+      "x": 0.6981,
+      "y": 0.3981,
+      "w": 0.0514,
+      "h": 0.1151
+    },
+    "motion_score": 0.3994,
+    "frame_hash": "0xb2e0e06830d88819",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": {
+      "scene": "urban",
+      "vehicles_detected": [
+        "car",
+        "car"
+      ],
+      "accident_visible": false,
+      "accident_type": "none",
+      "smoke_or_fire": false,
+      "persons_at_risk": false,
+      "severity": "low",
+      "escalate": false,
+      "reason": "No visible accident, but two cars and a person detected in an urban scene."
+    },
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000096.jpg",
+    "has_accident": false,
+    "frame_range": [
+      96,
+      96
+    ]
+  },
+  {
+    "event_id": "240345b4-b413-4513-991c-d5df4cfab1fe",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 114,
+    "timestamp": "2026-06-17T13:47:51.649934",
+    "label": "person",
+    "confidence": 0.6249,
+    "bbox": {
+      "x": 0.7282,
+      "y": 0.4079,
+      "w": 0.0443,
+      "h": 0.1116
+    },
+    "motion_score": 0.371,
+    "frame_hash": "0xb2e0e070148c8c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000114.jpg",
+    "has_accident": false,
+    "frame_range": [
+      114,
+      114
+    ]
+  },
+  {
+    "event_id": "d7ca206d-1969-4a88-a27c-1a2590d58418",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 114,
+    "timestamp": "2026-06-17T13:47:51.650311",
+    "label": "truck",
+    "confidence": 0.5749,
+    "bbox": {
+      "x": 0.398,
+      "y": 0.417,
+      "w": 0.1938,
+      "h": 0.1698
+    },
+    "motion_score": 0.371,
+    "frame_hash": "0xb2e0e070148c8c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000114.jpg",
+    "has_accident": false,
+    "frame_range": [
+      114,
+      114
+    ]
+  },
+  {
+    "event_id": "103812ea-fe95-4dc6-9efc-7617a8ce33b4",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 114,
+    "timestamp": "2026-06-17T13:47:51.650638",
+    "label": "car",
+    "confidence": 0.4546,
+    "bbox": {
+      "x": 0.3992,
+      "y": 0.4163,
+      "w": 0.1923,
+      "h": 0.1721
+    },
+    "motion_score": 0.371,
+    "frame_hash": "0xb2e0e070148c8c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000114.jpg",
+    "has_accident": false,
+    "frame_range": [
+      114,
+      114
+    ]
+  },
+  {
+    "event_id": "f78d164c-b504-4a40-b090-8280f084a72e",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 120,
+    "timestamp": "2026-06-17T13:47:51.667468",
+    "label": "truck",
+    "confidence": 0.7065,
+    "bbox": {
+      "x": 0.435,
+      "y": 0.4328,
+      "w": 0.2008,
+      "h": 0.173
+    },
+    "motion_score": 0.4689,
+    "frame_hash": "0xb2e0e03012c48e1e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000120.jpg",
+    "has_accident": false,
+    "frame_range": [
+      120,
+      120
+    ]
+  },
+  {
+    "event_id": "b2c3039a-a9de-419e-aad2-f286732524dc",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 120,
+    "timestamp": "2026-06-17T13:47:51.667757",
+    "label": "person",
+    "confidence": 0.6727,
+    "bbox": {
+      "x": 0.733,
+      "y": 0.4152,
+      "w": 0.0497,
+      "h": 0.1155
+    },
+    "motion_score": 0.4689,
+    "frame_hash": "0xb2e0e03012c48e1e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000120.jpg",
+    "has_accident": false,
+    "frame_range": [
+      120,
+      120
+    ]
+  },
+  {
+    "event_id": "4ee2e718-e890-47c0-9e8e-6653866838f1",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 120,
+    "timestamp": "2026-06-17T13:47:51.668021",
+    "label": "car",
+    "confidence": 0.5186,
+    "bbox": {
+      "x": 0.0752,
+      "y": 0.3875,
+      "w": 0.1533,
+      "h": 0.1515
+    },
+    "motion_score": 0.4689,
+    "frame_hash": "0xb2e0e03012c48e1e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000120.jpg",
+    "has_accident": false,
+    "frame_range": [
+      120,
+      120
+    ]
+  },
+  {
+    "event_id": "01be02f6-a9e6-4dcc-bae7-9703f4eaaa2d",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 126,
+    "timestamp": "2026-06-17T13:47:51.681388",
+    "label": "car",
+    "confidence": 0.5485,
+    "bbox": {
+      "x": 0.1191,
+      "y": 0.4118,
+      "w": 0.1601,
+      "h": 0.1601
+    },
+    "motion_score": 0.4456,
+    "frame_hash": "0xb2e0e0b818cb8f1b",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000126.jpg",
+    "has_accident": false,
+    "frame_range": [
+      126,
+      126
+    ]
+  },
+  {
+    "event_id": "11a197b7-85ca-4c66-b324-d31452a69228",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 126,
+    "timestamp": "2026-06-17T13:47:51.681641",
+    "label": "person",
+    "confidence": 0.4538,
+    "bbox": {
+      "x": 0.7631,
+      "y": 0.4202,
+      "w": 0.0323,
+      "h": 0.1127
+    },
+    "motion_score": 0.4456,
+    "frame_hash": "0xb2e0e0b818cb8f1b",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000126.jpg",
+    "has_accident": false,
+    "frame_range": [
+      126,
+      126
+    ]
+  },
+  {
+    "event_id": "5d00ed2a-c6bd-4749-b8d6-6457da7529a4",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 126,
+    "timestamp": "2026-06-17T13:47:51.681881",
+    "label": "car",
+    "confidence": 0.4512,
+    "bbox": {
+      "x": 0.5184,
+      "y": 0.4672,
+      "w": 0.2135,
+      "h": 0.1937
+    },
+    "motion_score": 0.4456,
+    "frame_hash": "0xb2e0e0b818cb8f1b",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000126.jpg",
+    "has_accident": false,
+    "frame_range": [
+      126,
+      126
+    ]
+  },
+  {
+    "event_id": "f5b78f6f-0754-495f-9049-e5c821214fda",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 126,
+    "timestamp": "2026-06-17T13:47:51.682110",
+    "label": "car",
+    "confidence": 0.4194,
+    "bbox": {
+      "x": 0.8006,
+      "y": 0.6713,
+      "w": 0.1953,
+      "h": 0.3196
+    },
+    "motion_score": 0.4456,
+    "frame_hash": "0xb2e0e0b818cb8f1b",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000126.jpg",
+    "has_accident": false,
+    "frame_range": [
+      126,
+      126
+    ]
+  },
+  {
+    "event_id": "9e36a061-7431-4c1b-9912-d52480219cc4",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 144,
+    "timestamp": "2026-06-17T13:47:51.705561",
+    "label": "car",
+    "confidence": 0.7235,
+    "bbox": {
+      "x": 0.6564,
+      "y": 0.5328,
+      "w": 0.2453,
+      "h": 0.2195
+    },
+    "motion_score": 0.2623,
+    "frame_hash": "0xb2e0e0d09c868618",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000144.jpg",
+    "has_accident": false,
+    "frame_range": [
+      144,
+      144
+    ]
+  },
+  {
+    "event_id": "7180dd8b-ab4e-4381-96c9-858007a21342",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 144,
+    "timestamp": "2026-06-17T13:47:51.705801",
+    "label": "car",
+    "confidence": 0.5689,
+    "bbox": {
+      "x": 0.1861,
+      "y": 0.4485,
+      "w": 0.1792,
+      "h": 0.1813
+    },
+    "motion_score": 0.2623,
+    "frame_hash": "0xb2e0e0d09c868618",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000144.jpg",
+    "has_accident": false,
+    "frame_range": [
+      144,
+      144
+    ]
+  },
+  {
+    "event_id": "74a30e00-c154-4d0c-98ec-7d82b8389270",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 150,
+    "timestamp": "2026-06-17T13:47:51.718078",
+    "label": "car",
+    "confidence": 0.5792,
+    "bbox": {
+      "x": 0.2375,
+      "y": 0.4797,
+      "w": 0.1928,
+      "h": 0.1943
+    },
+    "motion_score": 0.3312,
+    "frame_hash": "0xb2e0e0e8dac68b18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000150.jpg",
+    "has_accident": false,
+    "frame_range": [
+      150,
+      150
+    ]
+  },
+  {
+    "event_id": "9a9258b7-97eb-466e-95ac-980aecae972f",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 150,
+    "timestamp": "2026-06-17T13:47:51.718320",
+    "label": "motorcycle",
+    "confidence": 0.5781,
+    "bbox": {
+      "x": 0.5994,
+      "y": 0.4907,
+      "w": 0.0859,
+      "h": 0.0852
+    },
+    "motion_score": 0.3312,
+    "frame_hash": "0xb2e0e0e8dac68b18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000150.jpg",
+    "has_accident": false,
+    "frame_range": [
+      150,
+      150
+    ]
+  },
+  {
+    "event_id": "e695c475-e4ef-47b2-ba70-85be90536043",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 150,
+    "timestamp": "2026-06-17T13:47:51.718540",
+    "label": "person",
+    "confidence": 0.4962,
+    "bbox": {
+      "x": 0.6213,
+      "y": 0.4572,
+      "w": 0.0459,
+      "h": 0.096
+    },
+    "motion_score": 0.3312,
+    "frame_hash": "0xb2e0e0e8dac68b18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000150.jpg",
+    "has_accident": false,
+    "frame_range": [
+      150,
+      150
+    ]
+  },
+  {
+    "event_id": "068ba8c1-324a-4991-a8e4-eace12c5e7a6",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 168,
+    "timestamp": "2026-06-17T13:47:51.741783",
+    "label": "person",
+    "confidence": 0.4914,
+    "bbox": {
+      "x": 0.1554,
+      "y": 0.3732,
+      "w": 0.0538,
+      "h": 0.0928
+    },
+    "motion_score": 0.4943,
+    "frame_hash": "0xb2e0e0f0b2c68518",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000168.jpg",
+    "has_accident": false,
+    "frame_range": [
+      168,
+      168
+    ]
+  },
+  {
+    "event_id": "a1530e2e-b22f-4c62-8b85-be60bffdd70b",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 168,
+    "timestamp": "2026-06-17T13:47:51.742031",
+    "label": "car",
+    "confidence": 0.4214,
+    "bbox": {
+      "x": 0.3635,
+      "y": 0.5524,
+      "w": 0.2274,
+      "h": 0.2361
+    },
+    "motion_score": 0.4943,
+    "frame_hash": "0xb2e0e0f0b2c68518",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000168.jpg",
+    "has_accident": false,
+    "frame_range": [
+      168,
+      168
+    ]
+  },
+  {
+    "event_id": "48c860b9-6ab4-4e24-9631-c03d29f0fac1",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 192,
+    "timestamp": "2026-06-17T13:47:51.770846",
+    "label": "person",
+    "confidence": 0.4981,
+    "bbox": {
+      "x": 0.3593,
+      "y": 0.3994,
+      "w": 0.0634,
+      "h": 0.1061
+    },
+    "motion_score": 0.3195,
+    "frame_hash": "0xb2e0c0c88acccc1c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000192.jpg",
+    "has_accident": false,
+    "frame_range": [
+      192,
+      192
+    ]
+  },
+  {
+    "event_id": "e1073f6b-eaff-42f2-87c9-bd1a677d08c9",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 192,
+    "timestamp": "2026-06-17T13:47:51.771094",
+    "label": "car",
+    "confidence": 0.4763,
+    "bbox": {
+      "x": 0.5962,
+      "y": 0.6973,
+      "w": 0.2849,
+      "h": 0.2884
+    },
+    "motion_score": 0.3195,
+    "frame_hash": "0xb2e0c0c88acccc1c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000192.jpg",
+    "has_accident": false,
+    "frame_range": [
+      192,
+      192
+    ]
+  },
+  {
+    "event_id": "880dd0eb-c3fc-4bb3-a250-38171d40c76a",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 192,
+    "timestamp": "2026-06-17T13:47:51.771317",
+    "label": "person",
+    "confidence": 0.405,
+    "bbox": {
+      "x": 0.5679,
+      "y": 0.5522,
+      "w": 0.0501,
+      "h": 0.1202
+    },
+    "motion_score": 0.3195,
+    "frame_hash": "0xb2e0c0c88acccc1c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000192.jpg",
+    "has_accident": false,
+    "frame_range": [
+      192,
+      192
+    ]
+  },
+  {
+    "event_id": "8032d8e9-b17c-43ca-9704-01d45418dbc0",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 192,
+    "timestamp": "2026-06-17T13:47:51.771527",
+    "label": "car",
+    "confidence": 0.4047,
+    "bbox": {
+      "x": 0.0,
+      "y": 0.5335,
+      "w": 0.0911,
+      "h": 0.2884
+    },
+    "motion_score": 0.3195,
+    "frame_hash": "0xb2e0c0c88acccc1c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000192.jpg",
+    "has_accident": false,
+    "frame_range": [
+      192,
+      192
+    ]
+  },
+  {
+    "event_id": "98718f60-7e52-4258-9c74-8ed696f87444",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 204,
+    "timestamp": "2026-06-17T13:47:51.789350",
+    "label": "person",
+    "confidence": 0.6597,
+    "bbox": {
+      "x": 0.4181,
+      "y": 0.4338,
+      "w": 0.0756,
+      "h": 0.1132
+    },
+    "motion_score": 0.2828,
+    "frame_hash": "0xb2e0e0c096c4ce9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000204.jpg",
+    "has_accident": false,
+    "frame_range": [
+      204,
+      204
+    ]
+  },
+  {
+    "event_id": "6058fc27-be79-41af-8204-303df798d24b",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 204,
+    "timestamp": "2026-06-17T13:47:51.789593",
+    "label": "motorcycle",
+    "confidence": 0.5698,
+    "bbox": {
+      "x": 0.6441,
+      "y": 0.6545,
+      "w": 0.1242,
+      "h": 0.1266
+    },
+    "motion_score": 0.2828,
+    "frame_hash": "0xb2e0e0c096c4ce9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000204.jpg",
+    "has_accident": false,
+    "frame_range": [
+      204,
+      204
+    ]
+  },
+  {
+    "event_id": "ceaf4c5e-6638-4794-b1c3-d8812439c0b3",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 204,
+    "timestamp": "2026-06-17T13:47:51.789816",
+    "label": "person",
+    "confidence": 0.5597,
+    "bbox": {
+      "x": 0.6802,
+      "y": 0.6164,
+      "w": 0.0586,
+      "h": 0.13
+    },
+    "motion_score": 0.2828,
+    "frame_hash": "0xb2e0e0c096c4ce9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000204.jpg",
+    "has_accident": false,
+    "frame_range": [
+      204,
+      204
+    ]
+  },
+  {
+    "event_id": "29a73896-cd9a-4c43-b7a8-bb47ee55a937",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 204,
+    "timestamp": "2026-06-17T13:47:51.790042",
+    "label": "car",
+    "confidence": 0.5164,
+    "bbox": {
+      "x": 0.7252,
+      "y": 0.774,
+      "w": 0.273,
+      "h": 0.2202
+    },
+    "motion_score": 0.2828,
+    "frame_hash": "0xb2e0e0c096c4ce9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000204.jpg",
+    "has_accident": false,
+    "frame_range": [
+      204,
+      204
+    ]
+  },
+  {
+    "event_id": "293eae89-1e8f-4afb-a4bf-345cdbf6fdd5",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 216,
+    "timestamp": "2026-06-17T13:47:51.807804",
+    "label": "person",
+    "confidence": 0.4736,
+    "bbox": {
+      "x": 0.494,
+      "y": 0.4729,
+      "w": 0.0805,
+      "h": 0.1231
+    },
+    "motion_score": 0.2649,
+    "frame_hash": "0xb2e0e0c08bc2ced9",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000216.jpg",
+    "has_accident": false,
+    "frame_range": [
+      216,
+      216
+    ]
+  },
+  {
+    "event_id": "f9a21dc8-6696-44cd-9888-d7651447dd2f",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 216,
+    "timestamp": "2026-06-17T13:47:51.808060",
+    "label": "person",
+    "confidence": 0.4307,
+    "bbox": {
+      "x": 0.4329,
+      "y": 0.5126,
+      "w": 0.0414,
+      "h": 0.0646
+    },
+    "motion_score": 0.2649,
+    "frame_hash": "0xb2e0e0c08bc2ced9",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000216.jpg",
+    "has_accident": false,
+    "frame_range": [
+      216,
+      216
+    ]
+  },
+  {
+    "event_id": "26dfa0d0-f5aa-43ac-952e-d1b08703a57c",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 324,
+    "timestamp": "2026-06-17T13:47:51.919276",
+    "label": "truck",
+    "confidence": 0.5199,
+    "bbox": {
+      "x": 0.0,
+      "y": 0.2246,
+      "w": 0.1737,
+      "h": 0.2166
+    },
+    "motion_score": 0.1508,
+    "frame_hash": "0xb2e0506012c68c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000324.jpg",
+    "has_accident": false,
+    "frame_range": [
+      324,
+      324
+    ]
+  },
+  {
+    "event_id": "0d85ea93-34c3-4a0c-9366-5952c03518c8",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 540,
+    "timestamp": "2026-06-17T13:47:52.147943",
+    "label": "motorcycle",
+    "confidence": 0.5443,
+    "bbox": {
+      "x": 0.266,
+      "y": 0.4199,
+      "w": 0.092,
+      "h": 0.0658
+    },
+    "motion_score": 0.219,
+    "frame_hash": "0xb2e0c0b010c48e18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000540.jpg",
+    "has_accident": false,
+    "frame_range": [
+      540,
+      540
+    ]
+  },
+  {
+    "event_id": "1693e23a-a623-47fc-ab44-935919b0ac3c",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 540,
+    "timestamp": "2026-06-17T13:47:52.148191",
+    "label": "person",
+    "confidence": 0.4845,
+    "bbox": {
+      "x": 0.6371,
+      "y": 0.3364,
+      "w": 0.033,
+      "h": 0.0911
+    },
+    "motion_score": 0.219,
+    "frame_hash": "0xb2e0c0b010c48e18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000540.jpg",
+    "has_accident": false,
+    "frame_range": [
+      540,
+      540
+    ]
+  },
+  {
+    "event_id": "7c700373-b2c7-4ac1-909f-95d2926a469f",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 666,
+    "timestamp": "2026-06-17T13:47:52.270340",
+    "label": "person",
+    "confidence": 0.4245,
+    "bbox": {
+      "x": 0.6844,
+      "y": 0.7773,
+      "w": 0.0668,
+      "h": 0.1929
+    },
+    "motion_score": 0.2056,
+    "frame_hash": "0xb2e0c0c010c28918",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000666.jpg",
+    "has_accident": false,
+    "frame_range": [
+      666,
+      666
+    ]
+  },
+  {
+    "event_id": "e1b98569-0aa3-494c-8752-bf33da936bf0",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 666,
+    "timestamp": "2026-06-17T13:47:52.270592",
+    "label": "person",
+    "confidence": 0.4232,
+    "bbox": {
+      "x": 0.7025,
+      "y": 0.334,
+      "w": 0.0244,
+      "h": 0.086
+    },
+    "motion_score": 0.2056,
+    "frame_hash": "0xb2e0c0c010c28918",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000666.jpg",
+    "has_accident": false,
+    "frame_range": [
+      666,
+      666
+    ]
+  },
+  {
+    "event_id": "5428f123-427e-48d4-ac3f-4ad3e170bcb8",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 672,
+    "timestamp": "2026-06-17T13:47:52.282794",
+    "label": "person",
+    "confidence": 0.5672,
+    "bbox": {
+      "x": 0.5197,
+      "y": 0.7618,
+      "w": 0.0683,
+      "h": 0.1517
+    },
+    "motion_score": 0.7257,
+    "frame_hash": "0xc68707874f0a1633",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000672.jpg",
+    "has_accident": false,
+    "frame_range": [
+      672,
+      672
+    ]
+  },
+  {
+    "event_id": "aeae92af-cba9-4001-bea2-9483a544e9cc",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 678,
+    "timestamp": "2026-06-17T13:47:52.295033",
+    "label": "person",
+    "confidence": 0.5925,
+    "bbox": {
+      "x": 0.2946,
+      "y": 0.7303,
+      "w": 0.0784,
+      "h": 0.1699
+    },
+    "motion_score": 0.7196,
+    "frame_hash": "0xbc9c181c383842c2",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000678.jpg",
+    "has_accident": false,
+    "frame_range": [
+      678,
+      678
+    ]
+  },
+  {
+    "event_id": "94fe1f3c-fea9-47a7-9f8a-bd97356ed967",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 684,
+    "timestamp": "2026-06-17T13:47:52.307228",
+    "label": "person",
+    "confidence": 0.4159,
+    "bbox": {
+      "x": 0.5869,
+      "y": 0.8603,
+      "w": 0.0664,
+      "h": 0.1374
+    },
+    "motion_score": 0.7416,
+    "frame_hash": "0x7818303870589684",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000684.jpg",
+    "has_accident": false,
+    "frame_range": [
+      684,
+      684
+    ]
+  },
+  {
+    "event_id": "5122b0fb-ba75-4346-86f4-b95a0b20fcb5",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 732,
+    "timestamp": "2026-06-17T13:47:52.376124",
+    "label": "car",
+    "confidence": 0.5121,
+    "bbox": {
+      "x": 0.016,
+      "y": 0.0002,
+      "w": 0.1735,
+      "h": 0.1538
+    },
+    "motion_score": 0.6294,
+    "frame_hash": "0x5c38e8a816a6c444",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000732.jpg",
+    "has_accident": false,
+    "frame_range": [
+      732,
+      732
+    ]
+  },
+  {
+    "event_id": "e6151e7f-9e3b-4df8-b2a4-1b06f2784160",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 732,
+    "timestamp": "2026-06-17T13:47:52.376374",
+    "label": "person",
+    "confidence": 0.4628,
+    "bbox": {
+      "x": 0.0,
+      "y": 0.5663,
+      "w": 0.0807,
+      "h": 0.2124
+    },
+    "motion_score": 0.6294,
+    "frame_hash": "0x5c38e8a816a6c444",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000732.jpg",
+    "has_accident": false,
+    "frame_range": [
+      732,
+      732
+    ]
+  },
+  {
+    "event_id": "3852acf7-5911-42bf-99ea-f438bacd372a",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 750,
+    "timestamp": "2026-06-17T13:47:52.411836",
+    "label": "person",
+    "confidence": 0.6519,
+    "bbox": {
+      "x": 0.0,
+      "y": 0.5925,
+      "w": 0.2091,
+      "h": 0.3877
+    },
+    "motion_score": 0.5305,
+    "frame_hash": "0xaca4c89a35616662",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000750.jpg",
+    "has_accident": false,
+    "frame_range": [
+      750,
+      750
+    ]
+  },
+  {
+    "event_id": "60cd6592-b68e-4f86-9706-3aa7808b7fc8",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 750,
+    "timestamp": "2026-06-17T13:47:52.412083",
+    "label": "person",
+    "confidence": 0.5126,
+    "bbox": {
+      "x": 0.0941,
+      "y": 0.4261,
+      "w": 0.2085,
+      "h": 0.5603
+    },
+    "motion_score": 0.5305,
+    "frame_hash": "0xaca4c89a35616662",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000750.jpg",
+    "has_accident": false,
+    "frame_range": [
+      750,
+      750
+    ]
+  },
+  {
+    "event_id": "7f797dbd-9165-44da-b77a-bd138d43415c",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 750,
+    "timestamp": "2026-06-17T13:47:52.412314",
+    "label": "person",
+    "confidence": 0.4229,
+    "bbox": {
+      "x": 0.6838,
+      "y": 0.6907,
+      "w": 0.1247,
+      "h": 0.2931
+    },
+    "motion_score": 0.5305,
+    "frame_hash": "0xaca4c89a35616662",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000750.jpg",
+    "has_accident": false,
+    "frame_range": [
+      750,
+      750
+    ]
+  },
+  {
+    "event_id": "99b3aa06-3517-4d7d-a8d5-68931f5e312e",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 756,
+    "timestamp": "2026-06-17T13:47:52.424469",
+    "label": "person",
+    "confidence": 0.4064,
+    "bbox": {
+      "x": 0.7337,
+      "y": 0.7261,
+      "w": 0.1498,
+      "h": 0.2669
+    },
+    "motion_score": 0.4885,
+    "frame_hash": "0x26088e1a7671e2c2",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000756.jpg",
+    "has_accident": false,
+    "frame_range": [
+      756,
+      756
+    ]
+  },
+  {
+    "event_id": "400ba58b-e3b3-41d1-82cf-3b777447d49c",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 762,
+    "timestamp": "2026-06-17T13:47:52.436677",
+    "label": "person",
+    "confidence": 0.5838,
+    "bbox": {
+      "x": 0.8575,
+      "y": 0.7742,
+      "w": 0.1119,
+      "h": 0.2221
+    },
+    "motion_score": 0.4356,
+    "frame_hash": "0x648c0c3af270e0c3",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000762.jpg",
+    "has_accident": false,
+    "frame_range": [
+      762,
+      762
+    ]
+  },
+  {
+    "event_id": "8d3937bf-74c7-4dbd-bc85-6ab106288d4f",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 816,
+    "timestamp": "2026-06-17T13:47:52.523274",
+    "label": "person",
+    "confidence": 0.5336,
+    "bbox": {
+      "x": 0.2293,
+      "y": 0.1216,
+      "w": 0.2253,
+      "h": 0.4452
+    },
+    "motion_score": 0.5756,
+    "frame_hash": "0x564eced893a2860f",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000816.jpg",
+    "has_accident": false,
+    "frame_range": [
+      816,
+      816
+    ]
+  },
+  {
+    "event_id": "dfaeae53-a513-403b-aacf-2c862473930d",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 816,
+    "timestamp": "2026-06-17T13:47:52.523518",
+    "label": "person",
+    "confidence": 0.4412,
+    "bbox": {
+      "x": 0.0678,
+      "y": 0.9242,
+      "w": 0.0846,
+      "h": 0.0725
+    },
+    "motion_score": 0.5756,
+    "frame_hash": "0x564eced893a2860f",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000816.jpg",
+    "has_accident": false,
+    "frame_range": [
+      816,
+      816
+    ]
+  },
+  {
+    "event_id": "c91d990d-9b10-4d8c-b33e-41283838d2bf",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 822,
+    "timestamp": "2026-06-17T13:47:52.537242",
+    "label": "person",
+    "confidence": 0.8246,
+    "bbox": {
+      "x": 0.1011,
+      "y": 0.8471,
+      "w": 0.1723,
+      "h": 0.1463
+    },
+    "motion_score": 0.57,
+    "frame_hash": "0xce1e4ec8d2c68c3e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000822.jpg",
+    "has_accident": false,
+    "frame_range": [
+      822,
+      822
+    ]
+  },
+  {
+    "event_id": "d2b589ca-2df9-4bd5-bbc9-76fa4015bc4e",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 822,
+    "timestamp": "2026-06-17T13:47:52.537495",
+    "label": "person",
+    "confidence": 0.676,
+    "bbox": {
+      "x": 0.2658,
+      "y": 0.2051,
+      "w": 0.1842,
+      "h": 0.357
+    },
+    "motion_score": 0.57,
+    "frame_hash": "0xce1e4ec8d2c68c3e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000822.jpg",
+    "has_accident": false,
+    "frame_range": [
+      822,
+      822
+    ]
+  },
+  {
+    "event_id": "2335b2ac-5174-40dd-9324-6ba6b2800d8a",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 822,
+    "timestamp": "2026-06-17T13:47:52.537718",
+    "label": "person",
+    "confidence": 0.4841,
+    "bbox": {
+      "x": 0.2475,
+      "y": 0.8185,
+      "w": 0.2029,
+      "h": 0.1772
+    },
+    "motion_score": 0.57,
+    "frame_hash": "0xce1e4ec8d2c68c3e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000822.jpg",
+    "has_accident": false,
+    "frame_range": [
+      822,
+      822
+    ]
+  },
+  {
+    "event_id": "ec886744-13ad-4d1d-b8eb-458b345ae3a9",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 822,
+    "timestamp": "2026-06-17T13:47:52.537945",
+    "label": "person",
+    "confidence": 0.4664,
+    "bbox": {
+      "x": 0.0765,
+      "y": 0.0804,
+      "w": 0.1375,
+      "h": 0.347
+    },
+    "motion_score": 0.57,
+    "frame_hash": "0xce1e4ec8d2c68c3e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000822.jpg",
+    "has_accident": false,
+    "frame_range": [
+      822,
+      822
+    ]
+  },
+  {
+    "event_id": "e7ea6df0-e9b4-4faa-a882-af5db7bbf9ff",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 828,
+    "timestamp": "2026-06-17T13:47:52.550248",
+    "label": "person",
+    "confidence": 0.8307,
+    "bbox": {
+      "x": 0.1492,
+      "y": 0.803,
+      "w": 0.1471,
+      "h": 0.1911
+    },
+    "motion_score": 0.5647,
+    "frame_hash": "0xcece4e48c6c7883e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000828.jpg",
+    "has_accident": false,
+    "frame_range": [
+      828,
+      828
+    ]
+  },
+  {
+    "event_id": "000ed65a-fb1d-44d6-ba8f-e3d8ca359130",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 828,
+    "timestamp": "2026-06-17T13:47:52.550490",
+    "label": "person",
+    "confidence": 0.6014,
+    "bbox": {
+      "x": 0.1058,
+      "y": 0.168,
+      "w": 0.1236,
+      "h": 0.2629
+    },
+    "motion_score": 0.5647,
+    "frame_hash": "0xcece4e48c6c7883e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000828.jpg",
+    "has_accident": false,
+    "frame_range": [
+      828,
+      828
+    ]
+  },
+  {
+    "event_id": "63e555e1-c03a-40c0-ba36-34618616564b",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 828,
+    "timestamp": "2026-06-17T13:47:52.550715",
+    "label": "person",
+    "confidence": 0.5324,
+    "bbox": {
+      "x": 0.3138,
+      "y": 0.6484,
+      "w": 0.1536,
+      "h": 0.3045
+    },
+    "motion_score": 0.5647,
+    "frame_hash": "0xcece4e48c6c7883e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000828.jpg",
+    "has_accident": false,
+    "frame_range": [
+      828,
+      828
+    ]
+  },
+  {
+    "event_id": "bb44614f-7b93-438b-bd60-bf285f500654",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 828,
+    "timestamp": "2026-06-17T13:47:52.550939",
+    "label": "person",
+    "confidence": 0.4985,
+    "bbox": {
+      "x": 0.289,
+      "y": 0.2112,
+      "w": 0.1566,
+      "h": 0.3678
+    },
+    "motion_score": 0.5647,
+    "frame_hash": "0xcece4e48c6c7883e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000828.jpg",
+    "has_accident": false,
+    "frame_range": [
+      828,
+      828
+    ]
+  },
+  {
+    "event_id": "0d90e20e-746f-429f-b7be-b97117a55e15",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 834,
+    "timestamp": "2026-06-17T13:47:52.563140",
+    "label": "person",
+    "confidence": 0.8027,
+    "bbox": {
+      "x": 0.1221,
+      "y": 0.7889,
+      "w": 0.1478,
+      "h": 0.2108
+    },
+    "motion_score": 0.5519,
+    "frame_hash": "0xce9e5e58c68f1a34",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000834.jpg",
+    "has_accident": false,
+    "frame_range": [
+      834,
+      834
+    ]
+  },
+  {
+    "event_id": "0d6ec81c-1fe3-44b9-9980-2979a885f63a",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 834,
+    "timestamp": "2026-06-17T13:47:52.563381",
+    "label": "person",
+    "confidence": 0.4393,
+    "bbox": {
+      "x": 0.2904,
+      "y": 0.0174,
+      "w": 0.0911,
+      "h": 0.2635
+    },
+    "motion_score": 0.5519,
+    "frame_hash": "0xce9e5e58c68f1a34",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000834.jpg",
+    "has_accident": false,
+    "frame_range": [
+      834,
+      834
+    ]
+  },
+  {
+    "event_id": "bdbc74d1-7b60-4939-afd2-8f42caad5c5b",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 852,
+    "timestamp": "2026-06-17T13:47:52.598675",
+    "label": "motorcycle",
+    "confidence": 0.7449,
+    "bbox": {
+      "x": 0.3029,
+      "y": 0.1957,
+      "w": 0.3358,
+      "h": 0.6135
+    },
+    "motion_score": 0.6196,
+    "frame_hash": "0xc6a7ad0c251f4262",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000852.jpg",
+    "has_accident": false,
+    "frame_range": [
+      852,
+      852
+    ]
+  },
+  {
+    "event_id": "02983e0a-feec-4d82-a6a7-d8d3557685ab",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 864,
+    "timestamp": "2026-06-17T13:47:52.616450",
+    "label": "motorcycle",
+    "confidence": 0.7886,
+    "bbox": {
+      "x": 0.3022,
+      "y": 0.179,
+      "w": 0.3385,
+      "h": 0.6283
+    },
+    "motion_score": 0.3345,
+    "frame_hash": "0xc6a7ad0e060e2222",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000864.jpg",
+    "has_accident": false,
+    "frame_range": [
+      864,
+      864
+    ]
+  },
+  {
+    "event_id": "4344ae0b-eb3c-4951-975d-16262c7fa8c1",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 882,
+    "timestamp": "2026-06-17T13:47:52.639836",
+    "label": "motorcycle",
+    "confidence": 0.6246,
+    "bbox": {
+      "x": 0.3026,
+      "y": 0.1828,
+      "w": 0.376,
+      "h": 0.6236
+    },
+    "motion_score": 0.3117,
+    "frame_hash": "0xc6a7ea1a241c2222",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000882.jpg",
+    "has_accident": false,
+    "frame_range": [
+      882,
+      882
+    ]
+  },
+  {
+    "event_id": "30d9dac6-007e-4ef8-be62-627bfb45f583",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 888,
+    "timestamp": "2026-06-17T13:47:52.652111",
+    "label": "person",
+    "confidence": 0.8038,
+    "bbox": {
+      "x": 0.8575,
+      "y": 0.8245,
+      "w": 0.1367,
+      "h": 0.1662
+    },
+    "motion_score": 0.5759,
+    "frame_hash": "0xa6e65b5c25352d61",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000888.jpg",
+    "has_accident": false,
+    "frame_range": [
+      888,
+      888
+    ]
+  },
+  {
+    "event_id": "299a4018-a8bc-42d8-a067-642d1bea853d",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 888,
+    "timestamp": "2026-06-17T13:47:52.652356",
+    "label": "motorcycle",
+    "confidence": 0.486,
+    "bbox": {
+      "x": 0.2614,
+      "y": 0.111,
+      "w": 0.35,
+      "h": 0.6302
+    },
+    "motion_score": 0.5759,
+    "frame_hash": "0xa6e65b5c25352d61",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000888.jpg",
+    "has_accident": false,
+    "frame_range": [
+      888,
+      888
+    ]
+  },
+  {
+    "event_id": "58a65d80-8e3e-4e22-aabf-d49b1de99390",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 894,
+    "timestamp": "2026-06-17T13:47:52.664526",
+    "label": "motorcycle",
+    "confidence": 0.4812,
+    "bbox": {
+      "x": 0.2053,
+      "y": 0.1087,
+      "w": 0.5243,
+      "h": 0.8592
+    },
+    "motion_score": 0.5358,
+    "frame_hash": "0x66435b5c64343460",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000894.jpg",
+    "has_accident": false,
+    "frame_range": [
+      894,
+      894
+    ]
+  },
+  {
+    "event_id": "285c5cda-c595-477f-bdd6-f51adb25a7b1",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 984,
+    "timestamp": "2026-06-17T13:47:52.828882",
+    "label": "skateboard",
+    "confidence": 0.5689,
+    "bbox": {
+      "x": 0.3732,
+      "y": 0.6125,
+      "w": 0.2149,
+      "h": 0.3028
+    },
+    "motion_score": 0.7193,
+    "frame_hash": "0xcc4e9e96f666426e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f000984.jpg",
+    "has_accident": false,
+    "frame_range": [
+      984,
+      984
+    ]
+  },
+  {
+    "event_id": "03a2c65a-ee0c-4c8d-86eb-d3f33d9926be",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1056,
+    "timestamp": "2026-06-17T13:47:52.948667",
+    "label": "person",
+    "confidence": 0.7845,
+    "bbox": {
+      "x": 0.0,
+      "y": 0.1834,
+      "w": 0.3399,
+      "h": 0.791
+    },
+    "motion_score": 0.6508,
+    "frame_hash": "0x8b4d589a9a8e848c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001056.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1056,
+      1056
+    ]
+  },
+  {
+    "event_id": "3f8e21be-4816-4393-b2ef-7a8bbac1bd8a",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1068,
+    "timestamp": "2026-06-17T13:47:52.966398",
+    "label": "person",
+    "confidence": 0.9215,
+    "bbox": {
+      "x": 0.149,
+      "y": 0.4378,
+      "w": 0.403,
+      "h": 0.5443
+    },
+    "motion_score": 0.5553,
+    "frame_hash": "0xbca3e39313e6c6c2",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001068.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1068,
+      1068
+    ]
+  },
+  {
+    "event_id": "e6c5bdaf-4c9e-4a2e-833f-15cc16ad1e55",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1074,
+    "timestamp": "2026-06-17T13:47:52.978630",
+    "label": "person",
+    "confidence": 0.8891,
+    "bbox": {
+      "x": 0.1616,
+      "y": 0.3919,
+      "w": 0.4174,
+      "h": 0.5913
+    },
+    "motion_score": 0.4375,
+    "frame_hash": "0xb9a1839193e3c2c2",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001074.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1074,
+      1074
+    ]
+  },
+  {
+    "event_id": "84e06d87-01b9-4eea-8f21-10beb79b3f61",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1080,
+    "timestamp": "2026-06-17T13:47:52.990857",
+    "label": "car",
+    "confidence": 0.6626,
+    "bbox": {
+      "x": 0.0052,
+      "y": 0.3508,
+      "w": 0.1404,
+      "h": 0.1518
+    },
+    "motion_score": 0.6841,
+    "frame_hash": "0xb2e0e03812c68f18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001080.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1080,
+      1080
+    ]
+  },
+  {
+    "event_id": "0f8fd0b3-ff44-4cfb-b16b-18e397dcd4c6",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1080,
+    "timestamp": "2026-06-17T13:47:52.991103",
+    "label": "truck",
+    "confidence": 0.5781,
+    "bbox": {
+      "x": 0.2946,
+      "y": 0.3772,
+      "w": 0.1187,
+      "h": 0.1279
+    },
+    "motion_score": 0.6841,
+    "frame_hash": "0xb2e0e03812c68f18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001080.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1080,
+      1080
+    ]
+  },
+  {
+    "event_id": "3892e8d4-d1a7-4c7f-be2d-c24646393a51",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1080,
+    "timestamp": "2026-06-17T13:47:52.991326",
+    "label": "car",
+    "confidence": 0.5625,
+    "bbox": {
+      "x": 0.7436,
+      "y": 0.6153,
+      "w": 0.2526,
+      "h": 0.3734
+    },
+    "motion_score": 0.6841,
+    "frame_hash": "0xb2e0e03812c68f18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001080.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1080,
+      1080
+    ]
+  },
+  {
+    "event_id": "472f0e54-442e-4ce3-863f-ab69fc48a7bc",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1080,
+    "timestamp": "2026-06-17T13:47:52.991540",
+    "label": "person",
+    "confidence": 0.4122,
+    "bbox": {
+      "x": 0.5468,
+      "y": 0.3394,
+      "w": 0.0446,
+      "h": 0.1025
+    },
+    "motion_score": 0.6841,
+    "frame_hash": "0xb2e0e03812c68f18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001080.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1080,
+      1080
+    ]
+  },
+  {
+    "event_id": "eb0be4b4-b969-4bfb-9559-00056b2c959c",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1098,
+    "timestamp": "2026-06-17T13:47:53.014939",
+    "label": "truck",
+    "confidence": 0.5867,
+    "bbox": {
+      "x": 0.4243,
+      "y": 0.4215,
+      "w": 0.1439,
+      "h": 0.1394
+    },
+    "motion_score": 0.4202,
+    "frame_hash": "0xb2e0e09006c58c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001098.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1098,
+      1098
+    ]
+  },
+  {
+    "event_id": "b84fe715-6bcb-44c8-a0fd-33c0037c9d54",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1098,
+    "timestamp": "2026-06-17T13:47:53.015183",
+    "label": "car",
+    "confidence": 0.5671,
+    "bbox": {
+      "x": 0.0366,
+      "y": 0.3019,
+      "w": 0.1315,
+      "h": 0.1171
+    },
+    "motion_score": 0.4202,
+    "frame_hash": "0xb2e0e09006c58c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001098.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1098,
+      1098
+    ]
+  },
+  {
+    "event_id": "eff71a55-fb47-4cd8-a5dc-9622f4a7324f",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1098,
+    "timestamp": "2026-06-17T13:47:53.015403",
+    "label": "car",
+    "confidence": 0.5542,
+    "bbox": {
+      "x": 0.0,
+      "y": 0.2397,
+      "w": 0.0883,
+      "h": 0.0836
+    },
+    "motion_score": 0.4202,
+    "frame_hash": "0xb2e0e09006c58c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001098.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1098,
+      1098
+    ]
+  },
+  {
+    "event_id": "821185d6-7f4d-436f-bb64-ba0a801f91b8",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1116,
+    "timestamp": "2026-06-17T13:47:53.038702",
+    "label": "car",
+    "confidence": 0.7662,
+    "bbox": {
+      "x": 0.1603,
+      "y": 0.4435,
+      "w": 0.1862,
+      "h": 0.1913
+    },
+    "motion_score": 0.281,
+    "frame_hash": "0xb2e0c0d893878c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001116.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1116,
+      1116
+    ]
+  },
+  {
+    "event_id": "c2b3c144-3d3a-45a5-89f7-ad8b64cf27ca",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1116,
+    "timestamp": "2026-06-17T13:47:53.038952",
+    "label": "car",
+    "confidence": 0.7288,
+    "bbox": {
+      "x": 0.0318,
+      "y": 0.2565,
+      "w": 0.1037,
+      "h": 0.0997
+    },
+    "motion_score": 0.281,
+    "frame_hash": "0xb2e0c0d893878c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001116.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1116,
+      1116
+    ]
+  },
+  {
+    "event_id": "02a41166-903a-4cdd-8704-dbfafaf0fcc7",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1116,
+    "timestamp": "2026-06-17T13:47:53.039175",
+    "label": "car",
+    "confidence": 0.6962,
+    "bbox": {
+      "x": 0.0981,
+      "y": 0.3358,
+      "w": 0.1403,
+      "h": 0.1383
+    },
+    "motion_score": 0.281,
+    "frame_hash": "0xb2e0c0d893878c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001116.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1116,
+      1116
+    ]
+  },
+  {
+    "event_id": "6cc46466-78b8-4130-91d0-94546837b627",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1128,
+    "timestamp": "2026-06-17T13:47:53.058122",
+    "label": "car",
+    "confidence": 0.8888,
+    "bbox": {
+      "x": 0.2556,
+      "y": 0.4982,
+      "w": 0.2112,
+      "h": 0.218
+    },
+    "motion_score": 0.3996,
+    "frame_hash": "0xb2e0e0e88cc18c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001128.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1128,
+      1128
+    ]
+  },
+  {
+    "event_id": "ee3dd253-31e4-49b2-9334-83be5a02cf74",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1128,
+    "timestamp": "2026-06-17T13:47:53.058364",
+    "label": "car",
+    "confidence": 0.7331,
+    "bbox": {
+      "x": 0.163,
+      "y": 0.3726,
+      "w": 0.156,
+      "h": 0.1515
+    },
+    "motion_score": 0.3996,
+    "frame_hash": "0xb2e0e0e88cc18c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001128.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1128,
+      1128
+    ]
+  },
+  {
+    "event_id": "98a661e6-f3cd-4446-a546-de9d2572cb4b",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1128,
+    "timestamp": "2026-06-17T13:47:53.058583",
+    "label": "car",
+    "confidence": 0.6323,
+    "bbox": {
+      "x": 0.0808,
+      "y": 0.2805,
+      "w": 0.1245,
+      "h": 0.1114
+    },
+    "motion_score": 0.3996,
+    "frame_hash": "0xb2e0e0e88cc18c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001128.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1128,
+      1128
+    ]
+  },
+  {
+    "event_id": "ba644527-df7f-4c46-a9b8-a29ba0d12d47",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1128,
+    "timestamp": "2026-06-17T13:47:53.058804",
+    "label": "person",
+    "confidence": 0.4392,
+    "bbox": {
+      "x": 0.6261,
+      "y": 0.365,
+      "w": 0.0392,
+      "h": 0.1037
+    },
+    "motion_score": 0.3996,
+    "frame_hash": "0xb2e0e0e88cc18c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001128.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1128,
+      1128
+    ]
+  },
+  {
+    "event_id": "a7ca8725-bcff-46ac-9694-ade87e316bb2",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1128,
+    "timestamp": "2026-06-17T13:47:53.059026",
+    "label": "car",
+    "confidence": 0.4295,
+    "bbox": {
+      "x": 0.4217,
+      "y": 0.3831,
+      "w": 0.0645,
+      "h": 0.0927
+    },
+    "motion_score": 0.3996,
+    "frame_hash": "0xb2e0e0e88cc18c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001128.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1128,
+      1128
+    ]
+  },
+  {
+    "event_id": "8f9a1e8d-4f56-4c0a-9093-2dad64c292a5",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1128,
+    "timestamp": "2026-06-17T13:47:53.059239",
+    "label": "truck",
+    "confidence": 0.4146,
+    "bbox": {
+      "x": 0.4551,
+      "y": 0.4419,
+      "w": 0.1344,
+      "h": 0.1348
+    },
+    "motion_score": 0.3996,
+    "frame_hash": "0xb2e0e0e88cc18c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001128.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1128,
+      1128
+    ]
+  },
+  {
+    "event_id": "1ff77e48-4672-448a-a990-7387c9f82da9",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1140,
+    "timestamp": "2026-06-17T13:47:53.077012",
+    "label": "car",
+    "confidence": 0.9096,
+    "bbox": {
+      "x": 0.3346,
+      "y": 0.5438,
+      "w": 0.2342,
+      "h": 0.2377
+    },
+    "motion_score": 0.5546,
+    "frame_hash": "0xb2e0e0e8c2c68018",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001140.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1140,
+      1140
+    ]
+  },
+  {
+    "event_id": "149f66c4-220b-4839-bfdc-9363cca460b2",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1140,
+    "timestamp": "2026-06-17T13:47:53.077253",
+    "label": "car",
+    "confidence": 0.6993,
+    "bbox": {
+      "x": 0.2102,
+      "y": 0.3858,
+      "w": 0.1712,
+      "h": 0.1753
+    },
+    "motion_score": 0.5546,
+    "frame_hash": "0xb2e0e0e8c2c68018",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001140.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1140,
+      1140
+    ]
+  },
+  {
+    "event_id": "449e3a1d-77ec-4207-8405-1a9864378099",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1140,
+    "timestamp": "2026-06-17T13:47:53.077472",
+    "label": "car",
+    "confidence": 0.5514,
+    "bbox": {
+      "x": 0.1187,
+      "y": 0.2983,
+      "w": 0.1325,
+      "h": 0.118
+    },
+    "motion_score": 0.5546,
+    "frame_hash": "0xb2e0e0e8c2c68018",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001140.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1140,
+      1140
+    ]
+  },
+  {
+    "event_id": "0fb8c1c6-7a14-4546-b0e8-e8480acbb698",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1140,
+    "timestamp": "2026-06-17T13:47:53.077683",
+    "label": "person",
+    "confidence": 0.4659,
+    "bbox": {
+      "x": 0.7269,
+      "y": 0.4424,
+      "w": 0.0552,
+      "h": 0.1263
+    },
+    "motion_score": 0.5546,
+    "frame_hash": "0xb2e0e0e8c2c68018",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001140.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1140,
+      1140
+    ]
+  },
+  {
+    "event_id": "555eb961-fc2a-413c-8749-8438f4afc07d",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1140,
+    "timestamp": "2026-06-17T13:47:53.077898",
+    "label": "person",
+    "confidence": 0.4169,
+    "bbox": {
+      "x": 0.8078,
+      "y": 0.4508,
+      "w": 0.0501,
+      "h": 0.1043
+    },
+    "motion_score": 0.5546,
+    "frame_hash": "0xb2e0e0e8c2c68018",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001140.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1140,
+      1140
+    ]
+  },
+  {
+    "event_id": "fd282582-db15-406e-9be0-b2048782ff39",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1152,
+    "timestamp": "2026-06-17T13:47:53.095619",
+    "label": "car",
+    "confidence": 0.8213,
+    "bbox": {
+      "x": 0.2925,
+      "y": 0.4363,
+      "w": 0.1927,
+      "h": 0.1905
+    },
+    "motion_score": 0.4533,
+    "frame_hash": "0xb2e0e0e0e4cb9918",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001152.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1152,
+      1152
+    ]
+  },
+  {
+    "event_id": "06ab58d8-855d-45b7-9451-9d732c55dbe9",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1152,
+    "timestamp": "2026-06-17T13:47:53.095872",
+    "label": "car",
+    "confidence": 0.6764,
+    "bbox": {
+      "x": 0.0001,
+      "y": 0.3246,
+      "w": 0.0481,
+      "h": 0.0965
+    },
+    "motion_score": 0.4533,
+    "frame_hash": "0xb2e0e0e0e4cb9918",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001152.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1152,
+      1152
+    ]
+  },
+  {
+    "event_id": "d048bcbb-97d1-4375-b29a-f75992d5abf8",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1152,
+    "timestamp": "2026-06-17T13:47:53.096094",
+    "label": "car",
+    "confidence": 0.6336,
+    "bbox": {
+      "x": 0.4886,
+      "y": 0.6286,
+      "w": 0.2689,
+      "h": 0.295
+    },
+    "motion_score": 0.4533,
+    "frame_hash": "0xb2e0e0e0e4cb9918",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001152.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1152,
+      1152
+    ]
+  },
+  {
+    "event_id": "c712152f-bfd8-46df-8cd4-7ea9d34a50e5",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1152,
+    "timestamp": "2026-06-17T13:47:53.096318",
+    "label": "person",
+    "confidence": 0.454,
+    "bbox": {
+      "x": 0.6661,
+      "y": 0.3822,
+      "w": 0.0388,
+      "h": 0.1084
+    },
+    "motion_score": 0.4533,
+    "frame_hash": "0xb2e0e0e0e4cb9918",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001152.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1152,
+      1152
+    ]
+  },
+  {
+    "event_id": "712023b4-b9c2-4082-9f72-52026819a881",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1152,
+    "timestamp": "2026-06-17T13:47:53.096534",
+    "label": "car",
+    "confidence": 0.4376,
+    "bbox": {
+      "x": 0.1798,
+      "y": 0.3272,
+      "w": 0.1451,
+      "h": 0.1282
+    },
+    "motion_score": 0.4533,
+    "frame_hash": "0xb2e0e0e0e4cb9918",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001152.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1152,
+      1152
+    ]
+  },
+  {
+    "event_id": "78988467-f0fd-4686-ba64-5cff4369f78f",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1152,
+    "timestamp": "2026-06-17T13:47:53.096745",
+    "label": "car",
+    "confidence": 0.4351,
+    "bbox": {
+      "x": 0.649,
+      "y": 0.5461,
+      "w": 0.1678,
+      "h": 0.1909
+    },
+    "motion_score": 0.4533,
+    "frame_hash": "0xb2e0e0e0e4cb9918",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001152.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1152,
+      1152
+    ]
+  },
+  {
+    "event_id": "835a61f5-7414-4260-a88d-1f285159ba54",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1158,
+    "timestamp": "2026-06-17T13:47:53.108985",
+    "label": "car",
+    "confidence": 0.7456,
+    "bbox": {
+      "x": 0.3221,
+      "y": 0.4588,
+      "w": 0.2032,
+      "h": 0.1886
+    },
+    "motion_score": 0.3735,
+    "frame_hash": "0xb2e0e0e0a2c8899c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001158.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1158,
+      1158
+    ]
+  },
+  {
+    "event_id": "270357f6-71ca-4395-b4ce-aa68ec109e1d",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1158,
+    "timestamp": "2026-06-17T13:47:53.109232",
+    "label": "car",
+    "confidence": 0.6374,
+    "bbox": {
+      "x": 0.5497,
+      "y": 0.6693,
+      "w": 0.2884,
+      "h": 0.3107
+    },
+    "motion_score": 0.3735,
+    "frame_hash": "0xb2e0e0e0a2c8899c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001158.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1158,
+      1158
+    ]
+  },
+  {
+    "event_id": "b4dbc860-4631-4a54-b9fb-51d447075461",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1158,
+    "timestamp": "2026-06-17T13:47:53.109450",
+    "label": "truck",
+    "confidence": 0.465,
+    "bbox": {
+      "x": 0.2019,
+      "y": 0.3367,
+      "w": 0.1531,
+      "h": 0.1332
+    },
+    "motion_score": 0.3735,
+    "frame_hash": "0xb2e0e0e0a2c8899c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001158.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1158,
+      1158
+    ]
+  },
+  {
+    "event_id": "23f94ba7-d6bf-43e4-bf80-aee0fb4e2d15",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1158,
+    "timestamp": "2026-06-17T13:47:53.109663",
+    "label": "car",
+    "confidence": 0.426,
+    "bbox": {
+      "x": 0.0001,
+      "y": 0.3253,
+      "w": 0.066,
+      "h": 0.1085
+    },
+    "motion_score": 0.3735,
+    "frame_hash": "0xb2e0e0e0a2c8899c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001158.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1158,
+      1158
+    ]
+  },
+  {
+    "event_id": "328b73aa-f92e-4acf-89f3-f76a7b9c363e",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1170,
+    "timestamp": "2026-06-17T13:47:53.127328",
+    "label": "car",
+    "confidence": 0.7482,
+    "bbox": {
+      "x": 0.3883,
+      "y": 0.494,
+      "w": 0.22,
+      "h": 0.207
+    },
+    "motion_score": 0.3389,
+    "frame_hash": "0xb2e0e07031c78c9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001170.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1170,
+      1170
+    ]
+  },
+  {
+    "event_id": "f9ae931a-ac01-4723-89dd-634f830ddfbd",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1170,
+    "timestamp": "2026-06-17T13:47:53.127571",
+    "label": "car",
+    "confidence": 0.613,
+    "bbox": {
+      "x": 0.0001,
+      "y": 0.3375,
+      "w": 0.1016,
+      "h": 0.1185
+    },
+    "motion_score": 0.3389,
+    "frame_hash": "0xb2e0e07031c78c9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001170.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1170,
+      1170
+    ]
+  },
+  {
+    "event_id": "c76fd321-2848-4a48-bdd9-74bf5d4fc047",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1170,
+    "timestamp": "2026-06-17T13:47:53.127798",
+    "label": "person",
+    "confidence": 0.4352,
+    "bbox": {
+      "x": 0.164,
+      "y": 0.4116,
+      "w": 0.0424,
+      "h": 0.0909
+    },
+    "motion_score": 0.3389,
+    "frame_hash": "0xb2e0e07031c78c9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001170.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1170,
+      1170
+    ]
+  },
+  {
+    "event_id": "e7bb0ee3-8ba6-405d-9e66-d7e5df7a0b03",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1170,
+    "timestamp": "2026-06-17T13:47:53.128024",
+    "label": "car",
+    "confidence": 0.4337,
+    "bbox": {
+      "x": 0.697,
+      "y": 0.6313,
+      "w": 0.3017,
+      "h": 0.3567
+    },
+    "motion_score": 0.3389,
+    "frame_hash": "0xb2e0e07031c78c9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001170.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1170,
+      1170
+    ]
+  },
+  {
+    "event_id": "c3f1a060-1ea8-4e29-8452-8d2ce66e8fdd",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1170,
+    "timestamp": "2026-06-17T13:47:53.128238",
+    "label": "person",
+    "confidence": 0.4316,
+    "bbox": {
+      "x": 0.1554,
+      "y": 0.2931,
+      "w": 0.032,
+      "h": 0.0724
+    },
+    "motion_score": 0.3389,
+    "frame_hash": "0xb2e0e07031c78c9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001170.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1170,
+      1170
+    ]
+  },
+  {
+    "event_id": "19d80fcc-2c7d-4985-92d7-f1e9b3464d5c",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1176,
+    "timestamp": "2026-06-17T13:47:53.140419",
+    "label": "car",
+    "confidence": 0.7564,
+    "bbox": {
+      "x": 0.0015,
+      "y": 0.3473,
+      "w": 0.1362,
+      "h": 0.1336
+    },
+    "motion_score": 0.3882,
+    "frame_hash": "0xb2e0e06830d88919",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001176.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1176,
+      1176
+    ]
+  },
+  {
+    "event_id": "583017a7-c4c1-4bc8-bc42-a48cad68c446",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1176,
+    "timestamp": "2026-06-17T13:47:53.140667",
+    "label": "car",
+    "confidence": 0.674,
+    "bbox": {
+      "x": 0.467,
+      "y": 0.5344,
+      "w": 0.2354,
+      "h": 0.2354
+    },
+    "motion_score": 0.3882,
+    "frame_hash": "0xb2e0e06830d88919",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001176.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1176,
+      1176
+    ]
+  },
+  {
+    "event_id": "9822d35b-aaaf-4827-9517-e2751266a5c5",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1176,
+    "timestamp": "2026-06-17T13:47:53.140895",
+    "label": "person",
+    "confidence": 0.4661,
+    "bbox": {
+      "x": 0.6999,
+      "y": 0.3987,
+      "w": 0.0471,
+      "h": 0.113
+    },
+    "motion_score": 0.3882,
+    "frame_hash": "0xb2e0e06830d88919",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001176.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1176,
+      1176
+    ]
+  },
+  {
+    "event_id": "0ebfa084-c0dc-4ac7-b461-aed8ec73f158",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1194,
+    "timestamp": "2026-06-17T13:47:53.164261",
+    "label": "truck",
+    "confidence": 0.6003,
+    "bbox": {
+      "x": 0.4356,
+      "y": 0.4316,
+      "w": 0.1999,
+      "h": 0.1761
+    },
+    "motion_score": 0.4165,
+    "frame_hash": "0xb2e0e03012c48e1e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001194.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1194,
+      1194
+    ]
+  },
+  {
+    "event_id": "1bcd981a-7c7c-47a3-addc-a9ee33db4391",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1194,
+    "timestamp": "2026-06-17T13:47:53.164506",
+    "label": "person",
+    "confidence": 0.589,
+    "bbox": {
+      "x": 0.7332,
+      "y": 0.4147,
+      "w": 0.05,
+      "h": 0.1162
+    },
+    "motion_score": 0.4165,
+    "frame_hash": "0xb2e0e03012c48e1e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001194.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1194,
+      1194
+    ]
+  },
+  {
+    "event_id": "4b5f0616-641b-41c0-803a-9812fd992a21",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1194,
+    "timestamp": "2026-06-17T13:47:53.164728",
+    "label": "car",
+    "confidence": 0.517,
+    "bbox": {
+      "x": 0.0756,
+      "y": 0.3873,
+      "w": 0.1526,
+      "h": 0.1525
+    },
+    "motion_score": 0.4165,
+    "frame_hash": "0xb2e0e03012c48e1e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001194.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1194,
+      1194
+    ]
+  },
+  {
+    "event_id": "d8b3d323-c43f-45b3-90ea-54f2d5ad2e69",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1194,
+    "timestamp": "2026-06-17T13:47:53.164957",
+    "label": "person",
+    "confidence": 0.4201,
+    "bbox": {
+      "x": 0.3564,
+      "y": 0.5225,
+      "w": 0.062,
+      "h": 0.1072
+    },
+    "motion_score": 0.4165,
+    "frame_hash": "0xb2e0e03012c48e1e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001194.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1194,
+      1194
+    ]
+  },
+  {
+    "event_id": "22252160-7eeb-4f49-a228-5de5fd21b356",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1194,
+    "timestamp": "2026-06-17T13:47:53.165181",
+    "label": "person",
+    "confidence": 0.4141,
+    "bbox": {
+      "x": 0.2828,
+      "y": 0.4567,
+      "w": 0.0354,
+      "h": 0.0715
+    },
+    "motion_score": 0.4165,
+    "frame_hash": "0xb2e0e03012c48e1e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001194.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1194,
+      1194
+    ]
+  },
+  {
+    "event_id": "9c3e9641-697e-4112-8c1e-9535b4ad5e8c",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1206,
+    "timestamp": "2026-06-17T13:47:53.185992",
+    "label": "car",
+    "confidence": 0.7419,
+    "bbox": {
+      "x": 0.5188,
+      "y": 0.4678,
+      "w": 0.2138,
+      "h": 0.1934
+    },
+    "motion_score": 0.3014,
+    "frame_hash": "0xb2e0e0b818cb8f1b",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001206.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1206,
+      1206
+    ]
+  },
+  {
+    "event_id": "c6a9e370-3803-40dd-8cf1-7749205f2020",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1206,
+    "timestamp": "2026-06-17T13:47:53.186241",
+    "label": "car",
+    "confidence": 0.509,
+    "bbox": {
+      "x": 0.1188,
+      "y": 0.4118,
+      "w": 0.1604,
+      "h": 0.1604
+    },
+    "motion_score": 0.3014,
+    "frame_hash": "0xb2e0e0b818cb8f1b",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001206.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1206,
+      1206
+    ]
+  },
+  {
+    "event_id": "99e4ed89-b1b2-497e-9a85-880a6c360aa0",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1218,
+    "timestamp": "2026-06-17T13:47:53.203973",
+    "label": "car",
+    "confidence": 0.7285,
+    "bbox": {
+      "x": 0.6561,
+      "y": 0.5326,
+      "w": 0.2448,
+      "h": 0.2194
+    },
+    "motion_score": 0.372,
+    "frame_hash": "0xb2e0e0d09c868618",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001218.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1218,
+      1218
+    ]
+  },
+  {
+    "event_id": "12a9c669-a700-4291-8daf-68f1bb55bdf6",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1218,
+    "timestamp": "2026-06-17T13:47:53.204218",
+    "label": "car",
+    "confidence": 0.6663,
+    "bbox": {
+      "x": 0.1857,
+      "y": 0.4476,
+      "w": 0.1799,
+      "h": 0.1829
+    },
+    "motion_score": 0.372,
+    "frame_hash": "0xb2e0e0d09c868618",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001218.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1218,
+      1218
+    ]
+  },
+  {
+    "event_id": "fe85bf82-6ab7-4888-8f53-e00ea84d22ed",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1230,
+    "timestamp": "2026-06-17T13:47:53.221979",
+    "label": "car",
+    "confidence": 0.5162,
+    "bbox": {
+      "x": 0.2383,
+      "y": 0.4795,
+      "w": 0.1925,
+      "h": 0.1936
+    },
+    "motion_score": 0.2756,
+    "frame_hash": "0xb2e0e0e8dac68b18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001230.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1230,
+      1230
+    ]
+  },
+  {
+    "event_id": "e3309edd-b8d3-4058-921f-5fde05810f49",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1230,
+    "timestamp": "2026-06-17T13:47:53.222226",
+    "label": "motorcycle",
+    "confidence": 0.4564,
+    "bbox": {
+      "x": 0.6,
+      "y": 0.4936,
+      "w": 0.0854,
+      "h": 0.0818
+    },
+    "motion_score": 0.2756,
+    "frame_hash": "0xb2e0e0e8dac68b18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001230.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1230,
+      1230
+    ]
+  },
+  {
+    "event_id": "3df92780-0f4a-4c3a-9f01-bda69fadb6aa",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1230,
+    "timestamp": "2026-06-17T13:47:53.222453",
+    "label": "person",
+    "confidence": 0.445,
+    "bbox": {
+      "x": 0.8016,
+      "y": 0.4519,
+      "w": 0.0417,
+      "h": 0.1113
+    },
+    "motion_score": 0.2756,
+    "frame_hash": "0xb2e0e0e8dac68b18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001230.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1230,
+      1230
+    ]
+  },
+  {
+    "event_id": "bc428adc-31dc-4a49-a093-671439f210d6",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1236,
+    "timestamp": "2026-06-17T13:47:53.234710",
+    "label": "person",
+    "confidence": 0.5134,
+    "bbox": {
+      "x": 0.8362,
+      "y": 0.4366,
+      "w": 0.0482,
+      "h": 0.0915
+    },
+    "motion_score": 0.6161,
+    "frame_hash": "0xb2e0c0c812c68c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001236.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1236,
+      1236
+    ]
+  },
+  {
+    "event_id": "68f4b2e4-cca2-4b42-87ea-6fa4745c194c",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1236,
+    "timestamp": "2026-06-17T13:47:53.234966",
+    "label": "motorcycle",
+    "confidence": 0.4667,
+    "bbox": {
+      "x": 0.7224,
+      "y": 0.3637,
+      "w": 0.0753,
+      "h": 0.0931
+    },
+    "motion_score": 0.6161,
+    "frame_hash": "0xb2e0c0c812c68c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001236.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1236,
+      1236
+    ]
+  },
+  {
+    "event_id": "dc0e0ee7-daca-4410-ae9c-8d766e1b422f",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1332,
+    "timestamp": "2026-06-17T13:47:53.329377",
+    "label": "motorcycle",
+    "confidence": 0.6525,
+    "bbox": {
+      "x": 0.1842,
+      "y": 0.4262,
+      "w": 0.094,
+      "h": 0.0647
+    },
+    "motion_score": 0.2035,
+    "frame_hash": "0xb2e0c0a031c48e18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001332.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1332,
+      1332
+    ]
+  },
+  {
+    "event_id": "1862c10b-a1d2-45ba-8ad2-5ee5fe9cea3d",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1332,
+    "timestamp": "2026-06-17T13:47:53.329624",
+    "label": "person",
+    "confidence": 0.5415,
+    "bbox": {
+      "x": 0.2047,
+      "y": 0.3898,
+      "w": 0.0571,
+      "h": 0.0925
+    },
+    "motion_score": 0.2035,
+    "frame_hash": "0xb2e0c0a031c48e18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001332.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1332,
+      1332
+    ]
+  },
+  {
+    "event_id": "9ffeb8de-968a-4e6b-be5d-ed43271ffe5d",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1440,
+    "timestamp": "2026-06-17T13:47:53.438677",
+    "label": "bus",
+    "confidence": 0.5332,
+    "bbox": {
+      "x": 0.2313,
+      "y": 0.3368,
+      "w": 0.304,
+      "h": 0.3182
+    },
+    "motion_score": 0.1832,
+    "frame_hash": "0xb2e0d0a00e8e8c18",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001440.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1440,
+      1440
+    ]
+  },
+  {
+    "event_id": "24ad72ac-19c9-4c4b-a4ef-91f4857c0357",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1578,
+    "timestamp": "2026-06-17T13:47:53.571300",
+    "label": "person",
+    "confidence": 0.5498,
+    "bbox": {
+      "x": 0.387,
+      "y": 0.4156,
+      "w": 0.0726,
+      "h": 0.108
+    },
+    "motion_score": 0.3403,
+    "frame_hash": "0xb2e0e0c88ac6cc9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001578.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1578,
+      1578
+    ]
+  },
+  {
+    "event_id": "3c95cf9c-0e34-41fb-8137-b0dc94d1c9f8",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1578,
+    "timestamp": "2026-06-17T13:47:53.571547",
+    "label": "person",
+    "confidence": 0.5289,
+    "bbox": {
+      "x": 0.6214,
+      "y": 0.5834,
+      "w": 0.0523,
+      "h": 0.1297
+    },
+    "motion_score": 0.3403,
+    "frame_hash": "0xb2e0e0c88ac6cc9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001578.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1578,
+      1578
+    ]
+  },
+  {
+    "event_id": "65c2f618-1298-4fc0-9e2e-88b21ea0f8b2",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1578,
+    "timestamp": "2026-06-17T13:47:53.571770",
+    "label": "car",
+    "confidence": 0.4662,
+    "bbox": {
+      "x": 0.6565,
+      "y": 0.7398,
+      "w": 0.3081,
+      "h": 0.2542
+    },
+    "motion_score": 0.3403,
+    "frame_hash": "0xb2e0e0c88ac6cc9e",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001578.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1578,
+      1578
+    ]
+  },
+  {
+    "event_id": "fd462f8f-c816-4705-bd0c-e7a41bb5df54",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1752,
+    "timestamp": "2026-06-17T13:47:53.730916",
+    "label": "person",
+    "confidence": 0.5572,
+    "bbox": {
+      "x": 0.5204,
+      "y": 0.7616,
+      "w": 0.0671,
+      "h": 0.1504
+    },
+    "motion_score": 0.7215,
+    "frame_hash": "0xc68707874f0a1633",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001752.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1752,
+      1752
+    ]
+  },
+  {
+    "event_id": "2067dfd1-0734-4a3f-a1ab-89bf6e8fb4b4",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1758,
+    "timestamp": "2026-06-17T13:47:53.743153",
+    "label": "person",
+    "confidence": 0.5342,
+    "bbox": {
+      "x": 0.2952,
+      "y": 0.7306,
+      "w": 0.0777,
+      "h": 0.1605
+    },
+    "motion_score": 0.7177,
+    "frame_hash": "0xbc9c181c383842c2",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001758.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1758,
+      1758
+    ]
+  },
+  {
+    "event_id": "a15ca58a-7dbd-43e0-8c31-f53172e53e34",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1812,
+    "timestamp": "2026-06-17T13:47:53.826947",
+    "label": "person",
+    "confidence": 0.4978,
+    "bbox": {
+      "x": 0.0001,
+      "y": 0.5696,
+      "w": 0.0803,
+      "h": 0.2136
+    },
+    "motion_score": 0.6305,
+    "frame_hash": "0x5c38e8a816a6c444",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001812.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1812,
+      1812
+    ]
+  },
+  {
+    "event_id": "9440117a-ff06-4043-883e-dfa82f4951ac",
+    "video_id": "-GpvLzopst8",
+    "frame_no": 1812,
+    "timestamp": "2026-06-17T13:47:53.827190",
+    "label": "car",
+    "confidence": 0.4313,
+    "bbox": {
+      "x": 0.015,
+      "y": 0.0002,
+      "w": 0.1779,
+      "h": 0.1539
+    },
+    "motion_score": 0.6305,
+    "frame_hash": "0x5c38e8a816a6c444",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/-GpvLzopst8/-GpvLzopst8_f001812.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1812,
+      1812
+    ]
+  },
+  {
+    "event_id": "0793ff68-954d-4b23-b21d-6661595b931b",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 0,
+    "timestamp": "2026-06-17T13:47:53.862517",
+    "label": "car",
+    "confidence": 0.8415,
+    "bbox": {
+      "x": 0.014,
+      "y": 0.6642,
+      "w": 0.1694,
+      "h": 0.2401
+    },
+    "motion_score": 0.7567,
+    "frame_hash": "0xbe3f9f8e5eb66cfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000000.jpg",
+    "has_accident": false,
+    "frame_range": [
+      0,
+      0
+    ]
+  },
+  {
+    "event_id": "bfdc4f7b-1cae-4966-bb4b-689e9ed0a4d3",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 0,
+    "timestamp": "2026-06-17T13:47:53.862762",
+    "label": "car",
+    "confidence": 0.7288,
+    "bbox": {
+      "x": 0.5434,
+      "y": 0.2379,
+      "w": 0.0702,
+      "h": 0.0616
+    },
+    "motion_score": 0.7567,
+    "frame_hash": "0xbe3f9f8e5eb66cfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000000.jpg",
+    "has_accident": false,
+    "frame_range": [
+      0,
+      0
+    ]
+  },
+  {
+    "event_id": "5ddf10c4-2c8f-4c5e-8255-4a60fe09dfea",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 0,
+    "timestamp": "2026-06-17T13:47:53.862993",
+    "label": "truck",
+    "confidence": 0.7026,
+    "bbox": {
+      "x": 0.0149,
+      "y": 0.4018,
+      "w": 0.2563,
+      "h": 0.2149
+    },
+    "motion_score": 0.7567,
+    "frame_hash": "0xbe3f9f8e5eb66cfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000000.jpg",
+    "has_accident": false,
+    "frame_range": [
+      0,
+      0
+    ]
+  },
+  {
+    "event_id": "82b247ec-c92b-47a2-aadc-57e048728c8f",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 0,
+    "timestamp": "2026-06-17T13:47:53.863207",
+    "label": "bus",
+    "confidence": 0.5607,
+    "bbox": {
+      "x": 0.2339,
+      "y": 0.4621,
+      "w": 0.2397,
+      "h": 0.2055
+    },
+    "motion_score": 0.7567,
+    "frame_hash": "0xbe3f9f8e5eb66cfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000000.jpg",
+    "has_accident": false,
+    "frame_range": [
+      0,
+      0
+    ]
+  },
+  {
+    "event_id": "e418f04b-891b-4192-9c63-546f8dc4dc0f",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 0,
+    "timestamp": "2026-06-17T13:47:53.863421",
+    "label": "truck",
+    "confidence": 0.4536,
+    "bbox": {
+      "x": 0.2338,
+      "y": 0.4625,
+      "w": 0.24,
+      "h": 0.2048
+    },
+    "motion_score": 0.7567,
+    "frame_hash": "0xbe3f9f8e5eb66cfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000000.jpg",
+    "has_accident": false,
+    "frame_range": [
+      0,
+      0
+    ]
+  },
+  {
+    "event_id": "e6d12e72-173d-4fee-9c69-e5cbf1d30300",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 0,
+    "timestamp": "2026-06-17T13:47:53.863636",
+    "label": "boat",
+    "confidence": 0.4423,
+    "bbox": {
+      "x": 0.4602,
+      "y": 0.5171,
+      "w": 0.2109,
+      "h": 0.2139
+    },
+    "motion_score": 0.7567,
+    "frame_hash": "0xbe3f9f8e5eb66cfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000000.jpg",
+    "has_accident": false,
+    "frame_range": [
+      0,
+      0
+    ]
+  },
+  {
+    "event_id": "9433e8f2-ff15-4fae-a7fb-c070917c10b1",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 78,
+    "timestamp": "2026-06-17T13:47:53.941598",
+    "label": "car",
+    "confidence": 0.9058,
+    "bbox": {
+      "x": 0.0144,
+      "y": 0.6651,
+      "w": 0.171,
+      "h": 0.2383
+    },
+    "motion_score": 0.3228,
+    "frame_hash": "0xbe9f93d35eb66cfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000078.jpg",
+    "has_accident": false,
+    "frame_range": [
+      78,
+      78
+    ]
+  },
+  {
+    "event_id": "4f72c2a3-4fcb-4b80-b62e-ceea36a822a8",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 78,
+    "timestamp": "2026-06-17T13:47:53.941843",
+    "label": "car",
+    "confidence": 0.6137,
+    "bbox": {
+      "x": 0.22,
+      "y": 0.4673,
+      "w": 0.247,
+      "h": 0.2099
+    },
+    "motion_score": 0.3228,
+    "frame_hash": "0xbe9f93d35eb66cfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000078.jpg",
+    "has_accident": false,
+    "frame_range": [
+      78,
+      78
+    ]
+  },
+  {
+    "event_id": "a0b1238f-9006-4fa8-b3e8-7dcfbce64452",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 78,
+    "timestamp": "2026-06-17T13:47:53.942064",
+    "label": "car",
+    "confidence": 0.5015,
+    "bbox": {
+      "x": 0.0141,
+      "y": 0.2723,
+      "w": 0.0604,
+      "h": 0.0562
+    },
+    "motion_score": 0.3228,
+    "frame_hash": "0xbe9f93d35eb66cfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000078.jpg",
+    "has_accident": false,
+    "frame_range": [
+      78,
+      78
+    ]
+  },
+  {
+    "event_id": "d9f32519-3d2f-477e-9256-fa2c42926cfa",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 96,
+    "timestamp": "2026-06-17T13:47:53.965392",
+    "label": "car",
+    "confidence": 0.797,
+    "bbox": {
+      "x": 0.0153,
+      "y": 0.6654,
+      "w": 0.1728,
+      "h": 0.2412
+    },
+    "motion_score": 0.4807,
+    "frame_hash": "0xbe1f939292366cfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000096.jpg",
+    "has_accident": false,
+    "frame_range": [
+      96,
+      96
+    ]
+  },
+  {
+    "event_id": "db18c652-7178-406e-a399-1a071bcbdff3",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 96,
+    "timestamp": "2026-06-17T13:47:53.965635",
+    "label": "car",
+    "confidence": 0.7223,
+    "bbox": {
+      "x": 0.0148,
+      "y": 0.4178,
+      "w": 0.2127,
+      "h": 0.2377
+    },
+    "motion_score": 0.4807,
+    "frame_hash": "0xbe1f939292366cfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000096.jpg",
+    "has_accident": false,
+    "frame_range": [
+      96,
+      96
+    ]
+  },
+  {
+    "event_id": "5ccdf3fd-f22d-4c05-bb76-77d6440d48eb",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 126,
+    "timestamp": "2026-06-17T13:47:53.999707",
+    "label": "car",
+    "confidence": 0.7258,
+    "bbox": {
+      "x": 0.0142,
+      "y": 0.6646,
+      "w": 0.1712,
+      "h": 0.2381
+    },
+    "motion_score": 0.3806,
+    "frame_hash": "0xbe179bba93374dfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000126.jpg",
+    "has_accident": false,
+    "frame_range": [
+      126,
+      126
+    ]
+  },
+  {
+    "event_id": "cdbf5ce4-ffe1-4d93-a0b8-2f4e716f72ee",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 126,
+    "timestamp": "2026-06-17T13:47:53.999964",
+    "label": "car",
+    "confidence": 0.7007,
+    "bbox": {
+      "x": 0.4763,
+      "y": 0.2466,
+      "w": 0.0609,
+      "h": 0.0419
+    },
+    "motion_score": 0.3806,
+    "frame_hash": "0xbe179bba93374dfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000126.jpg",
+    "has_accident": false,
+    "frame_range": [
+      126,
+      126
+    ]
+  },
+  {
+    "event_id": "36a1bde1-ed1a-438c-b4ac-70b6d7c26da6",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 126,
+    "timestamp": "2026-06-17T13:47:54.000187",
+    "label": "truck",
+    "confidence": 0.4066,
+    "bbox": {
+      "x": 0.1081,
+      "y": 0.3808,
+      "w": 0.3528,
+      "h": 0.343
+    },
+    "motion_score": 0.3806,
+    "frame_hash": "0xbe179bba93374dfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000126.jpg",
+    "has_accident": false,
+    "frame_range": [
+      126,
+      126
+    ]
+  },
+  {
+    "event_id": "d0972cf1-f16b-4921-b3eb-e27b729b418b",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 156,
+    "timestamp": "2026-06-17T13:47:54.034501",
+    "label": "car",
+    "confidence": 0.7873,
+    "bbox": {
+      "x": 0.0136,
+      "y": 0.6673,
+      "w": 0.166,
+      "h": 0.2396
+    },
+    "motion_score": 0.3561,
+    "frame_hash": "0xbe339b9a32366dfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000156.jpg",
+    "has_accident": false,
+    "frame_range": [
+      156,
+      156
+    ]
+  },
+  {
+    "event_id": "6fcda1da-b46a-466b-a2a7-4d61e1c44b5f",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 156,
+    "timestamp": "2026-06-17T13:47:54.034743",
+    "label": "car",
+    "confidence": 0.6676,
+    "bbox": {
+      "x": 0.0131,
+      "y": 0.2631,
+      "w": 0.0605,
+      "h": 0.0647
+    },
+    "motion_score": 0.3561,
+    "frame_hash": "0xbe339b9a32366dfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000156.jpg",
+    "has_accident": false,
+    "frame_range": [
+      156,
+      156
+    ]
+  },
+  {
+    "event_id": "52011170-3bd9-4177-82a9-af2fe470f274",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 252,
+    "timestamp": "2026-06-17T13:47:54.129045",
+    "label": "car",
+    "confidence": 0.6489,
+    "bbox": {
+      "x": 0.0142,
+      "y": 0.6653,
+      "w": 0.1674,
+      "h": 0.2387
+    },
+    "motion_score": 0.1406,
+    "frame_hash": "0xbe3fb69a36362dfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000252.jpg",
+    "has_accident": false,
+    "frame_range": [
+      252,
+      252
+    ]
+  },
+  {
+    "event_id": "f19fbbce-289b-4e25-90c1-e1c09cb26dc8",
+    "video_id": "0IPAgFHyRVI",
+    "frame_no": 252,
+    "timestamp": "2026-06-17T13:47:54.129286",
+    "label": "boat",
+    "confidence": 0.5069,
+    "bbox": {
+      "x": 0.4236,
+      "y": 0.2509,
+      "w": 0.0759,
+      "h": 0.0496
+    },
+    "motion_score": 0.1406,
+    "frame_hash": "0xbe3fb69a36362dfc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/0IPAgFHyRVI/0IPAgFHyRVI_f000252.jpg",
+    "has_accident": false,
+    "frame_range": [
+      252,
+      252
+    ]
+  },
+  {
+    "event_id": "88056745-450d-416e-87b3-ec7a1ed5bf56",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 354,
+    "timestamp": "2026-06-17T13:47:54.543241",
+    "label": "truck",
+    "confidence": 0.4711,
+    "bbox": {
+      "x": 0.0685,
+      "y": 0.5938,
+      "w": 0.3212,
+      "h": 0.3642
+    },
+    "motion_score": 0.6321,
+    "frame_hash": "0x84d49828b8385430",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000354.jpg",
+    "has_accident": false,
+    "frame_range": [
+      354,
+      354
+    ]
+  },
+  {
+    "event_id": "fb438763-caf0-4a76-9628-d6859a4c5641",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 354,
+    "timestamp": "2026-06-17T13:47:54.543485",
+    "label": "car",
+    "confidence": 0.4403,
+    "bbox": {
+      "x": 0.0061,
+      "y": 0.4491,
+      "w": 0.0388,
+      "h": 0.0661
+    },
+    "motion_score": 0.6321,
+    "frame_hash": "0x84d49828b8385430",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000354.jpg",
+    "has_accident": false,
+    "frame_range": [
+      354,
+      354
+    ]
+  },
+  {
+    "event_id": "3abdcfe4-af1b-4498-ab4e-e414d9280270",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 366,
+    "timestamp": "2026-06-17T13:47:54.561190",
+    "label": "motorcycle",
+    "confidence": 0.555,
+    "bbox": {
+      "x": 0.3046,
+      "y": 0.6219,
+      "w": 0.067,
+      "h": 0.106
+    },
+    "motion_score": 0.131,
+    "frame_hash": "0x84d4902878186460",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000366.jpg",
+    "has_accident": false,
+    "frame_range": [
+      366,
+      366
+    ]
+  },
+  {
+    "event_id": "fd9bbe22-a38c-4d5f-a31b-ca19794e426d",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 366,
+    "timestamp": "2026-06-17T13:47:54.561440",
+    "label": "car",
+    "confidence": 0.5329,
+    "bbox": {
+      "x": 0.0367,
+      "y": 0.563,
+      "w": 0.2531,
+      "h": 0.2973
+    },
+    "motion_score": 0.131,
+    "frame_hash": "0x84d4902878186460",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000366.jpg",
+    "has_accident": false,
+    "frame_range": [
+      366,
+      366
+    ]
+  },
+  {
+    "event_id": "8a13ca25-cd1b-418b-8080-b146ba5ea8c6",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 366,
+    "timestamp": "2026-06-17T13:47:54.561663",
+    "label": "person",
+    "confidence": 0.5281,
+    "bbox": {
+      "x": 0.3014,
+      "y": 0.5669,
+      "w": 0.0639,
+      "h": 0.1291
+    },
+    "motion_score": 0.131,
+    "frame_hash": "0x84d4902878186460",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000366.jpg",
+    "has_accident": false,
+    "frame_range": [
+      366,
+      366
+    ]
+  },
+  {
+    "event_id": "60c1d87c-e198-48ea-9895-0808815b1ec8",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 366,
+    "timestamp": "2026-06-17T13:47:54.561891",
+    "label": "bus",
+    "confidence": 0.4564,
+    "bbox": {
+      "x": 0.0281,
+      "y": 0.3453,
+      "w": 0.1109,
+      "h": 0.1636
+    },
+    "motion_score": 0.131,
+    "frame_hash": "0x84d4902878186460",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000366.jpg",
+    "has_accident": false,
+    "frame_range": [
+      366,
+      366
+    ]
+  },
+  {
+    "event_id": "c5fcc9af-255d-4213-b495-be1fc3bcb6c2",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 372,
+    "timestamp": "2026-06-17T13:47:54.574098",
+    "label": "car",
+    "confidence": 0.6665,
+    "bbox": {
+      "x": 0.0311,
+      "y": 0.5535,
+      "w": 0.2262,
+      "h": 0.2696
+    },
+    "motion_score": 0.1717,
+    "frame_hash": "0x84d4b82878b86626",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000372.jpg",
+    "has_accident": false,
+    "frame_range": [
+      372,
+      372
+    ]
+  },
+  {
+    "event_id": "b3dfd477-6f4e-4c36-be5f-d960de0483af",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 372,
+    "timestamp": "2026-06-17T13:47:54.574347",
+    "label": "motorcycle",
+    "confidence": 0.4558,
+    "bbox": {
+      "x": 0.2825,
+      "y": 0.61,
+      "w": 0.0618,
+      "h": 0.1007
+    },
+    "motion_score": 0.1717,
+    "frame_hash": "0x84d4b82878b86626",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000372.jpg",
+    "has_accident": false,
+    "frame_range": [
+      372,
+      372
+    ]
+  },
+  {
+    "event_id": "492016bb-8de1-4e2c-8e6a-7c37a5857a9e",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 372,
+    "timestamp": "2026-06-17T13:47:54.574570",
+    "label": "person",
+    "confidence": 0.4522,
+    "bbox": {
+      "x": 0.2808,
+      "y": 0.5545,
+      "w": 0.0575,
+      "h": 0.1231
+    },
+    "motion_score": 0.1717,
+    "frame_hash": "0x84d4b82878b86626",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000372.jpg",
+    "has_accident": false,
+    "frame_range": [
+      372,
+      372
+    ]
+  },
+  {
+    "event_id": "fad88b6f-50fe-4c19-8550-49c2050994f8",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 378,
+    "timestamp": "2026-06-17T13:47:54.586809",
+    "label": "motorcycle",
+    "confidence": 0.5721,
+    "bbox": {
+      "x": 0.2618,
+      "y": 0.6004,
+      "w": 0.0622,
+      "h": 0.0962
+    },
+    "motion_score": 0.2859,
+    "frame_hash": "0x4d4902870b84a08",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000378.jpg",
+    "has_accident": false,
+    "frame_range": [
+      378,
+      378
+    ]
+  },
+  {
+    "event_id": "d89f45a6-5569-4c7a-8038-74f6d92a084f",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 378,
+    "timestamp": "2026-06-17T13:47:54.587061",
+    "label": "person",
+    "confidence": 0.5677,
+    "bbox": {
+      "x": 0.2626,
+      "y": 0.5542,
+      "w": 0.0588,
+      "h": 0.1101
+    },
+    "motion_score": 0.2859,
+    "frame_hash": "0x4d4902870b84a08",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000378.jpg",
+    "has_accident": false,
+    "frame_range": [
+      378,
+      378
+    ]
+  },
+  {
+    "event_id": "e8156334-85cd-46e2-afbe-be3b7bbf515a",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 378,
+    "timestamp": "2026-06-17T13:47:54.587282",
+    "label": "truck",
+    "confidence": 0.5653,
+    "bbox": {
+      "x": 0.022,
+      "y": 0.5468,
+      "w": 0.2113,
+      "h": 0.2504
+    },
+    "motion_score": 0.2859,
+    "frame_hash": "0x4d4902870b84a08",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000378.jpg",
+    "has_accident": false,
+    "frame_range": [
+      378,
+      378
+    ]
+  },
+  {
+    "event_id": "380d1508-acaa-40b6-91a4-b57c8d8453c1",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 390,
+    "timestamp": "2026-06-17T13:47:54.603393",
+    "label": "car",
+    "confidence": 0.8582,
+    "bbox": {
+      "x": 0.2659,
+      "y": 0.6127,
+      "w": 0.2379,
+      "h": 0.2258
+    },
+    "motion_score": 0.2306,
+    "frame_hash": "0x84d4b838f8e81c20",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000390.jpg",
+    "has_accident": false,
+    "frame_range": [
+      390,
+      390
+    ]
+  },
+  {
+    "event_id": "d583bb4b-5d60-448e-a539-3fdd26fab02e",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 390,
+    "timestamp": "2026-06-17T13:47:54.603636",
+    "label": "car",
+    "confidence": 0.6453,
+    "bbox": {
+      "x": 0.0087,
+      "y": 0.5345,
+      "w": 0.1879,
+      "h": 0.2259
+    },
+    "motion_score": 0.2306,
+    "frame_hash": "0x84d4b838f8e81c20",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000390.jpg",
+    "has_accident": false,
+    "frame_range": [
+      390,
+      390
+    ]
+  },
+  {
+    "event_id": "a1546625-56a8-41e1-8ed3-3c4026a04f64",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 402,
+    "timestamp": "2026-06-17T13:47:54.621321",
+    "label": "car",
+    "confidence": 0.7832,
+    "bbox": {
+      "x": 0.6555,
+      "y": 0.6065,
+      "w": 0.3367,
+      "h": 0.253
+    },
+    "motion_score": 0.1429,
+    "frame_hash": "0x84d4b028d8f96020",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000402.jpg",
+    "has_accident": false,
+    "frame_range": [
+      402,
+      402
+    ]
+  },
+  {
+    "event_id": "d723d82c-5e3a-41c0-b7e6-6c6af9419255",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 402,
+    "timestamp": "2026-06-17T13:47:54.621566",
+    "label": "car",
+    "confidence": 0.7433,
+    "bbox": {
+      "x": 0.1974,
+      "y": 0.5693,
+      "w": 0.1677,
+      "h": 0.1669
+    },
+    "motion_score": 0.1429,
+    "frame_hash": "0x84d4b028d8f96020",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000402.jpg",
+    "has_accident": false,
+    "frame_range": [
+      402,
+      402
+    ]
+  },
+  {
+    "event_id": "01d36c80-c315-4b77-9c2c-c069723a0bd3",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 402,
+    "timestamp": "2026-06-17T13:47:54.621787",
+    "label": "truck",
+    "confidence": 0.535,
+    "bbox": {
+      "x": 0.0031,
+      "y": 0.5266,
+      "w": 0.1692,
+      "h": 0.2055
+    },
+    "motion_score": 0.1429,
+    "frame_hash": "0x84d4b028d8f96020",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000402.jpg",
+    "has_accident": false,
+    "frame_range": [
+      402,
+      402
+    ]
+  },
+  {
+    "event_id": "fd2cc2ba-c510-4ba8-ab7b-7ef8d47da039",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 402,
+    "timestamp": "2026-06-17T13:47:54.622011",
+    "label": "car",
+    "confidence": 0.4014,
+    "bbox": {
+      "x": 0.0039,
+      "y": 0.5263,
+      "w": 0.1681,
+      "h": 0.2069
+    },
+    "motion_score": 0.1429,
+    "frame_hash": "0x84d4b028d8f96020",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000402.jpg",
+    "has_accident": false,
+    "frame_range": [
+      402,
+      402
+    ]
+  },
+  {
+    "event_id": "a4562728-9086-4552-bea5-366ce991180a",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 420,
+    "timestamp": "2026-06-17T13:47:54.645226",
+    "label": "car",
+    "confidence": 0.7579,
+    "bbox": {
+      "x": 0.1481,
+      "y": 0.5357,
+      "w": 0.1168,
+      "h": 0.1253
+    },
+    "motion_score": 0.1506,
+    "frame_hash": "0x84d4b828b6e64220",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000420.jpg",
+    "has_accident": false,
+    "frame_range": [
+      420,
+      420
+    ]
+  },
+  {
+    "event_id": "0df68bed-7566-4593-a88c-de09a9cdc0a2",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 420,
+    "timestamp": "2026-06-17T13:47:54.645468",
+    "label": "car",
+    "confidence": 0.7458,
+    "bbox": {
+      "x": 0.5023,
+      "y": 0.5735,
+      "w": 0.2628,
+      "h": 0.2046
+    },
+    "motion_score": 0.1506,
+    "frame_hash": "0x84d4b828b6e64220",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000420.jpg",
+    "has_accident": false,
+    "frame_range": [
+      420,
+      420
+    ]
+  },
+  {
+    "event_id": "6dd12901-9fef-471a-9841-e4ed80855bd7",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 420,
+    "timestamp": "2026-06-17T13:47:54.645693",
+    "label": "car",
+    "confidence": 0.5945,
+    "bbox": {
+      "x": 0.0043,
+      "y": 0.5194,
+      "w": 0.1475,
+      "h": 0.1918
+    },
+    "motion_score": 0.1506,
+    "frame_hash": "0x84d4b828b6e64220",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000420.jpg",
+    "has_accident": false,
+    "frame_range": [
+      420,
+      420
+    ]
+  },
+  {
+    "event_id": "08141e09-7966-469e-b108-a595bba4f33a",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 438,
+    "timestamp": "2026-06-17T13:47:54.669098",
+    "label": "car",
+    "confidence": 0.7986,
+    "bbox": {
+      "x": 0.4367,
+      "y": 0.5645,
+      "w": 0.2325,
+      "h": 0.1707
+    },
+    "motion_score": 0.1538,
+    "frame_hash": "0x84d4b838c4c44323",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000438.jpg",
+    "has_accident": false,
+    "frame_range": [
+      438,
+      438
+    ]
+  },
+  {
+    "event_id": "58812df3-f4fa-4349-a2b6-5eba9c6ab903",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 438,
+    "timestamp": "2026-06-17T13:47:54.669341",
+    "label": "car",
+    "confidence": 0.6995,
+    "bbox": {
+      "x": 0.1426,
+      "y": 0.5193,
+      "w": 0.0877,
+      "h": 0.1055
+    },
+    "motion_score": 0.1538,
+    "frame_hash": "0x84d4b838c4c44323",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000438.jpg",
+    "has_accident": false,
+    "frame_range": [
+      438,
+      438
+    ]
+  },
+  {
+    "event_id": "63c2f737-e0b4-457f-9fd6-4c92cfb6996a",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 438,
+    "timestamp": "2026-06-17T13:47:54.669568",
+    "label": "car",
+    "confidence": 0.4626,
+    "bbox": {
+      "x": 0.0062,
+      "y": 0.5163,
+      "w": 0.1355,
+      "h": 0.1852
+    },
+    "motion_score": 0.1538,
+    "frame_hash": "0x84d4b838c4c44323",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000438.jpg",
+    "has_accident": false,
+    "frame_range": [
+      438,
+      438
+    ]
+  },
+  {
+    "event_id": "4f5edb65-66d5-4b4b-b04a-a3bc86e0c8e0",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 456,
+    "timestamp": "2026-06-17T13:47:54.692835",
+    "label": "car",
+    "confidence": 0.7871,
+    "bbox": {
+      "x": 0.4278,
+      "y": 0.561,
+      "w": 0.2191,
+      "h": 0.1647
+    },
+    "motion_score": 0.1314,
+    "frame_hash": "0x84d4b0388ccd6138",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000456.jpg",
+    "has_accident": false,
+    "frame_range": [
+      456,
+      456
+    ]
+  },
+  {
+    "event_id": "849a0b1a-1603-48e2-9012-a0f90f09a706",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 456,
+    "timestamp": "2026-06-17T13:47:54.693081",
+    "label": "car",
+    "confidence": 0.7829,
+    "bbox": {
+      "x": 0.3418,
+      "y": 0.8854,
+      "w": 0.4978,
+      "h": 0.1142
+    },
+    "motion_score": 0.1314,
+    "frame_hash": "0x84d4b0388ccd6138",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000456.jpg",
+    "has_accident": false,
+    "frame_range": [
+      456,
+      456
+    ]
+  },
+  {
+    "event_id": "916bc639-68ec-4016-b7f8-50dc8ab3fa2a",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 456,
+    "timestamp": "2026-06-17T13:47:54.693302",
+    "label": "car",
+    "confidence": 0.7582,
+    "bbox": {
+      "x": 0.1316,
+      "y": 0.5096,
+      "w": 0.0888,
+      "h": 0.0854
+    },
+    "motion_score": 0.1314,
+    "frame_hash": "0x84d4b0388ccd6138",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000456.jpg",
+    "has_accident": false,
+    "frame_range": [
+      456,
+      456
+    ]
+  },
+  {
+    "event_id": "049a5ae3-9466-46b2-beb1-3e86801d9ef7",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 456,
+    "timestamp": "2026-06-17T13:47:54.693519",
+    "label": "car",
+    "confidence": 0.5749,
+    "bbox": {
+      "x": 0.523,
+      "y": 0.6521,
+      "w": 0.4238,
+      "h": 0.3308
+    },
+    "motion_score": 0.1314,
+    "frame_hash": "0x84d4b0388ccd6138",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000456.jpg",
+    "has_accident": false,
+    "frame_range": [
+      456,
+      456
+    ]
+  },
+  {
+    "event_id": "c9fd790a-4577-469a-bd63-bef01dcc76d9",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 456,
+    "timestamp": "2026-06-17T13:47:54.693736",
+    "label": "car",
+    "confidence": 0.5578,
+    "bbox": {
+      "x": 0.0068,
+      "y": 0.5125,
+      "w": 0.1294,
+      "h": 0.1869
+    },
+    "motion_score": 0.1314,
+    "frame_hash": "0x84d4b0388ccd6138",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000456.jpg",
+    "has_accident": false,
+    "frame_range": [
+      456,
+      456
+    ]
+  },
+  {
+    "event_id": "3f0c798d-e685-469a-a76f-8afbdcab447d",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 468,
+    "timestamp": "2026-06-17T13:47:54.711499",
+    "label": "car",
+    "confidence": 0.7906,
+    "bbox": {
+      "x": 0.4284,
+      "y": 0.5602,
+      "w": 0.2201,
+      "h": 0.1619
+    },
+    "motion_score": 0.1988,
+    "frame_hash": "0x84d49038cccd2361",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000468.jpg",
+    "has_accident": false,
+    "frame_range": [
+      468,
+      468
+    ]
+  },
+  {
+    "event_id": "c9c7f5e6-605c-4502-9d79-5e25c3a7c2e4",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 468,
+    "timestamp": "2026-06-17T13:47:54.711746",
+    "label": "car",
+    "confidence": 0.7287,
+    "bbox": {
+      "x": 0.5113,
+      "y": 0.6521,
+      "w": 0.4078,
+      "h": 0.3471
+    },
+    "motion_score": 0.1988,
+    "frame_hash": "0x84d49038cccd2361",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000468.jpg",
+    "has_accident": false,
+    "frame_range": [
+      468,
+      468
+    ]
+  },
+  {
+    "event_id": "01f779dd-2933-40e9-9093-3c9343fd24a6",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 468,
+    "timestamp": "2026-06-17T13:47:54.711981",
+    "label": "car",
+    "confidence": 0.6107,
+    "bbox": {
+      "x": 0.2087,
+      "y": 0.8002,
+      "w": 0.5028,
+      "h": 0.1996
+    },
+    "motion_score": 0.1988,
+    "frame_hash": "0x84d49038cccd2361",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000468.jpg",
+    "has_accident": false,
+    "frame_range": [
+      468,
+      468
+    ]
+  },
+  {
+    "event_id": "9c0a9676-613a-41e8-b5af-7beda6a8f462",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 468,
+    "timestamp": "2026-06-17T13:47:54.712198",
+    "label": "car",
+    "confidence": 0.5942,
+    "bbox": {
+      "x": 0.1286,
+      "y": 0.5077,
+      "w": 0.069,
+      "h": 0.0734
+    },
+    "motion_score": 0.1988,
+    "frame_hash": "0x84d49038cccd2361",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000468.jpg",
+    "has_accident": false,
+    "frame_range": [
+      468,
+      468
+    ]
+  },
+  {
+    "event_id": "d5266120-2c9a-40b4-b3a1-32fef78d2a4b",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 468,
+    "timestamp": "2026-06-17T13:47:54.712411",
+    "label": "car",
+    "confidence": 0.4478,
+    "bbox": {
+      "x": 0.0067,
+      "y": 0.5102,
+      "w": 0.13,
+      "h": 0.1903
+    },
+    "motion_score": 0.1988,
+    "frame_hash": "0x84d49038cccd2361",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000468.jpg",
+    "has_accident": false,
+    "frame_range": [
+      468,
+      468
+    ]
+  },
+  {
+    "event_id": "f8a23570-2b7c-4487-b27f-323f5f0a74df",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 876,
+    "timestamp": "2026-06-17T13:47:55.060782",
+    "label": "car",
+    "confidence": 0.6408,
+    "bbox": {
+      "x": 0.4726,
+      "y": 0.4903,
+      "w": 0.0823,
+      "h": 0.0678
+    },
+    "motion_score": 0.6254,
+    "frame_hash": "0xdfc7c787e1cecbdf",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000876.jpg",
+    "has_accident": false,
+    "frame_range": [
+      876,
+      876
+    ]
+  },
+  {
+    "event_id": "28f2fe62-e0b4-4735-a801-69543e5fa84c",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 876,
+    "timestamp": "2026-06-17T13:47:55.061029",
+    "label": "car",
+    "confidence": 0.4064,
+    "bbox": {
+      "x": 0.5294,
+      "y": 0.5205,
+      "w": 0.1288,
+      "h": 0.0961
+    },
+    "motion_score": 0.6254,
+    "frame_hash": "0xdfc7c787e1cecbdf",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f000876.jpg",
+    "has_accident": false,
+    "frame_range": [
+      876,
+      876
+    ]
+  },
+  {
+    "event_id": "85be952c-9114-4bbf-8afb-58743f5c7e2f",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1050,
+    "timestamp": "2026-06-17T13:47:55.205270",
+    "label": "car",
+    "confidence": 0.7759,
+    "bbox": {
+      "x": 0.1274,
+      "y": 0.5285,
+      "w": 0.0949,
+      "h": 0.052
+    },
+    "motion_score": 0.5505,
+    "frame_hash": "0xe0f098fbbbb08485",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001050.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1050,
+      1050
+    ]
+  },
+  {
+    "event_id": "c436c8b9-cafd-48e2-9be3-4c592a7d48f3",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1050,
+    "timestamp": "2026-06-17T13:47:55.205515",
+    "label": "car",
+    "confidence": 0.7193,
+    "bbox": {
+      "x": 0.4196,
+      "y": 0.547,
+      "w": 0.0743,
+      "h": 0.0659
+    },
+    "motion_score": 0.5505,
+    "frame_hash": "0xe0f098fbbbb08485",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001050.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1050,
+      1050
+    ]
+  },
+  {
+    "event_id": "5d53fd43-7718-4224-bca0-f9e7ba1230f0",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1050,
+    "timestamp": "2026-06-17T13:47:55.205743",
+    "label": "car",
+    "confidence": 0.6006,
+    "bbox": {
+      "x": 0.2291,
+      "y": 0.5614,
+      "w": 0.1577,
+      "h": 0.1039
+    },
+    "motion_score": 0.5505,
+    "frame_hash": "0xe0f098fbbbb08485",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001050.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1050,
+      1050
+    ]
+  },
+  {
+    "event_id": "f08aecf3-b0d7-4bb7-bdc8-771a3bdace37",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1050,
+    "timestamp": "2026-06-17T13:47:55.205966",
+    "label": "traffic light",
+    "confidence": 0.4979,
+    "bbox": {
+      "x": 0.8568,
+      "y": 0.3546,
+      "w": 0.0139,
+      "h": 0.044
+    },
+    "motion_score": 0.5505,
+    "frame_hash": "0xe0f098fbbbb08485",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001050.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1050,
+      1050
+    ]
+  },
+  {
+    "event_id": "4b69775e-df80-4a32-be68-51ea0f709ff2",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1068,
+    "timestamp": "2026-06-17T13:47:55.229108",
+    "label": "car",
+    "confidence": 0.6976,
+    "bbox": {
+      "x": 0.4325,
+      "y": 0.5488,
+      "w": 0.0903,
+      "h": 0.0741
+    },
+    "motion_score": 0.1502,
+    "frame_hash": "0xe0f0987bbbb05c3d",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001068.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1068,
+      1068
+    ]
+  },
+  {
+    "event_id": "29d08f74-44de-4ee1-8cc7-c08d36e8228b",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1068,
+    "timestamp": "2026-06-17T13:47:55.229354",
+    "label": "traffic light",
+    "confidence": 0.5405,
+    "bbox": {
+      "x": 0.8572,
+      "y": 0.3553,
+      "w": 0.0136,
+      "h": 0.0432
+    },
+    "motion_score": 0.1502,
+    "frame_hash": "0xe0f0987bbbb05c3d",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001068.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1068,
+      1068
+    ]
+  },
+  {
+    "event_id": "c77ece0a-751c-47e5-ab24-1871f3b00b94",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1068,
+    "timestamp": "2026-06-17T13:47:55.229578",
+    "label": "car",
+    "confidence": 0.4387,
+    "bbox": {
+      "x": 0.2286,
+      "y": 0.5321,
+      "w": 0.1589,
+      "h": 0.1354
+    },
+    "motion_score": 0.1502,
+    "frame_hash": "0xe0f0987bbbb05c3d",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001068.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1068,
+      1068
+    ]
+  },
+  {
+    "event_id": "b9932ac0-7223-4df1-9980-fd1a1d176d20",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1068,
+    "timestamp": "2026-06-17T13:47:55.229798",
+    "label": "car",
+    "confidence": 0.4073,
+    "bbox": {
+      "x": 0.0073,
+      "y": 0.5262,
+      "w": 0.0831,
+      "h": 0.0623
+    },
+    "motion_score": 0.1502,
+    "frame_hash": "0xe0f0987bbbb05c3d",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001068.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1068,
+      1068
+    ]
+  },
+  {
+    "event_id": "bad19e31-1925-456f-9aac-2389fd507745",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1080,
+    "timestamp": "2026-06-17T13:47:55.247486",
+    "label": "car",
+    "confidence": 0.8651,
+    "bbox": {
+      "x": 0.4537,
+      "y": 0.5525,
+      "w": 0.1085,
+      "h": 0.0789
+    },
+    "motion_score": 0.1377,
+    "frame_hash": "0xe0f0987bb5a68687",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001080.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1080,
+      1080
+    ]
+  },
+  {
+    "event_id": "fde5a872-6a50-49d7-b44a-d33d5b813873",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1080,
+    "timestamp": "2026-06-17T13:47:55.247728",
+    "label": "car",
+    "confidence": 0.7088,
+    "bbox": {
+      "x": 0.4476,
+      "y": 0.6397,
+      "w": 0.305,
+      "h": 0.3457
+    },
+    "motion_score": 0.1377,
+    "frame_hash": "0xe0f0987bb5a68687",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001080.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1080,
+      1080
+    ]
+  },
+  {
+    "event_id": "1b5140cc-87c3-414e-b887-c9aa4a42e4a9",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1080,
+    "timestamp": "2026-06-17T13:47:55.247959",
+    "label": "traffic light",
+    "confidence": 0.5882,
+    "bbox": {
+      "x": 0.8563,
+      "y": 0.3544,
+      "w": 0.0146,
+      "h": 0.045
+    },
+    "motion_score": 0.1377,
+    "frame_hash": "0xe0f0987bb5a68687",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001080.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1080,
+      1080
+    ]
+  },
+  {
+    "event_id": "4ffb5582-c956-4159-9af9-1e4204884981",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1080,
+    "timestamp": "2026-06-17T13:47:55.248177",
+    "label": "car",
+    "confidence": 0.5057,
+    "bbox": {
+      "x": 0.2289,
+      "y": 0.5312,
+      "w": 0.1572,
+      "h": 0.137
+    },
+    "motion_score": 0.1377,
+    "frame_hash": "0xe0f0987bb5a68687",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001080.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1080,
+      1080
+    ]
+  },
+  {
+    "event_id": "aeea3838-c7cc-405c-bc98-5697fb035124",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1092,
+    "timestamp": "2026-06-17T13:47:55.265881",
+    "label": "car",
+    "confidence": 0.8442,
+    "bbox": {
+      "x": 0.484,
+      "y": 0.5573,
+      "w": 0.1247,
+      "h": 0.0838
+    },
+    "motion_score": 0.0881,
+    "frame_hash": "0xe0f0987bb7b38381",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001092.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1092,
+      1092
+    ]
+  },
+  {
+    "event_id": "b567a9a1-c255-4c1d-ae65-4558eb941028",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1092,
+    "timestamp": "2026-06-17T13:47:55.266126",
+    "label": "car",
+    "confidence": 0.6405,
+    "bbox": {
+      "x": 0.6289,
+      "y": 0.608,
+      "w": 0.1904,
+      "h": 0.2253
+    },
+    "motion_score": 0.0881,
+    "frame_hash": "0xe0f0987bb7b38381",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001092.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1092,
+      1092
+    ]
+  },
+  {
+    "event_id": "df6a1c07-8c3d-46f9-9c47-ddfa9194af57",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1092,
+    "timestamp": "2026-06-17T13:47:55.266351",
+    "label": "traffic light",
+    "confidence": 0.5996,
+    "bbox": {
+      "x": 0.8563,
+      "y": 0.3545,
+      "w": 0.0144,
+      "h": 0.0449
+    },
+    "motion_score": 0.0881,
+    "frame_hash": "0xe0f0987bb7b38381",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001092.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1092,
+      1092
+    ]
+  },
+  {
+    "event_id": "1c387a1b-e3a0-4353-8192-85773bcd00a7",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1092,
+    "timestamp": "2026-06-17T13:47:55.266565",
+    "label": "car",
+    "confidence": 0.4788,
+    "bbox": {
+      "x": 0.455,
+      "y": 0.5275,
+      "w": 0.1029,
+      "h": 0.0617
+    },
+    "motion_score": 0.0881,
+    "frame_hash": "0xe0f0987bb7b38381",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001092.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1092,
+      1092
+    ]
+  },
+  {
+    "event_id": "948d26b5-b7c3-4168-816c-1b13b9bba98f",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1542,
+    "timestamp": "2026-06-17T13:47:55.670314",
+    "label": "car",
+    "confidence": 0.4156,
+    "bbox": {
+      "x": 0.4951,
+      "y": 0.3536,
+      "w": 0.1412,
+      "h": 0.0636
+    },
+    "motion_score": 0.6637,
+    "frame_hash": "0xb0c08e8e0f078c1c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001542.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1542,
+      1542
+    ]
+  },
+  {
+    "event_id": "5de55272-bbee-4657-aa61-e6fb48751697",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1572,
+    "timestamp": "2026-06-17T13:47:55.702848",
+    "label": "car",
+    "confidence": 0.817,
+    "bbox": {
+      "x": 0.7086,
+      "y": 0.3587,
+      "w": 0.1215,
+      "h": 0.0561
+    },
+    "motion_score": 0.127,
+    "frame_hash": "0xb0c4a6de8b478c1c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001572.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1572,
+      1572
+    ]
+  },
+  {
+    "event_id": "3e31b4b9-8688-4b47-9c8c-d41dcd5a0dd1",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1572,
+    "timestamp": "2026-06-17T13:47:55.703097",
+    "label": "car",
+    "confidence": 0.5708,
+    "bbox": {
+      "x": 0.5692,
+      "y": 0.3634,
+      "w": 0.1023,
+      "h": 0.0418
+    },
+    "motion_score": 0.127,
+    "frame_hash": "0xb0c4a6de8b478c1c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001572.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1572,
+      1572
+    ]
+  },
+  {
+    "event_id": "18b0cfb8-c26e-4fd2-9bee-58a618649739",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1584,
+    "timestamp": "2026-06-17T13:47:55.720861",
+    "label": "car",
+    "confidence": 0.6955,
+    "bbox": {
+      "x": 0.004,
+      "y": 0.4462,
+      "w": 0.3946,
+      "h": 0.3248
+    },
+    "motion_score": 0.2525,
+    "frame_hash": "0xb0c4b6fc7b679c3c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001584.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1584,
+      1584
+    ]
+  },
+  {
+    "event_id": "7ca183f1-8b56-4d46-a05e-4ee7de7c124c",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1584,
+    "timestamp": "2026-06-17T13:47:55.721114",
+    "label": "car",
+    "confidence": 0.6278,
+    "bbox": {
+      "x": 0.637,
+      "y": 0.3525,
+      "w": 0.1099,
+      "h": 0.0526
+    },
+    "motion_score": 0.2525,
+    "frame_hash": "0xb0c4b6fc7b679c3c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001584.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1584,
+      1584
+    ]
+  },
+  {
+    "event_id": "a7847217-09a0-4f24-ab28-9f34fd3eacd1",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1584,
+    "timestamp": "2026-06-17T13:47:55.721339",
+    "label": "car",
+    "confidence": 0.5392,
+    "bbox": {
+      "x": 0.8023,
+      "y": 0.3557,
+      "w": 0.0973,
+      "h": 0.056
+    },
+    "motion_score": 0.2525,
+    "frame_hash": "0xb0c4b6fc7b679c3c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001584.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1584,
+      1584
+    ]
+  },
+  {
+    "event_id": "a00a6043-c7e9-42c8-8027-50b66a170120",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1584,
+    "timestamp": "2026-06-17T13:47:55.721557",
+    "label": "car",
+    "confidence": 0.4485,
+    "bbox": {
+      "x": 0.3364,
+      "y": 0.3357,
+      "w": 0.0477,
+      "h": 0.0374
+    },
+    "motion_score": 0.2525,
+    "frame_hash": "0xb0c4b6fc7b679c3c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001584.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1584,
+      1584
+    ]
+  },
+  {
+    "event_id": "88bec609-edce-40f5-bce6-b91034fa1510",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1590,
+    "timestamp": "2026-06-17T13:47:55.733770",
+    "label": "car",
+    "confidence": 0.5344,
+    "bbox": {
+      "x": 0.8381,
+      "y": 0.3552,
+      "w": 0.093,
+      "h": 0.0548
+    },
+    "motion_score": 0.4354,
+    "frame_hash": "0xb0c4963a1f3f0d3c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001590.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1590,
+      1590
+    ]
+  },
+  {
+    "event_id": "23b821a8-0e1a-4680-bf60-fb946258e720",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1590,
+    "timestamp": "2026-06-17T13:47:55.734023",
+    "label": "car",
+    "confidence": 0.4949,
+    "bbox": {
+      "x": 0.1049,
+      "y": 0.4248,
+      "w": 0.3632,
+      "h": 0.2597
+    },
+    "motion_score": 0.4354,
+    "frame_hash": "0xb0c4963a1f3f0d3c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001590.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1590,
+      1590
+    ]
+  },
+  {
+    "event_id": "c3c19ea0-af09-457a-9f4b-a416be88892c",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1596,
+    "timestamp": "2026-06-17T13:47:55.746258",
+    "label": "car",
+    "confidence": 0.4418,
+    "bbox": {
+      "x": 0.7085,
+      "y": 0.3526,
+      "w": 0.1038,
+      "h": 0.0515
+    },
+    "motion_score": 0.1763,
+    "frame_hash": "0xb0c4e61a8f0f8d8c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001596.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1596,
+      1596
+    ]
+  },
+  {
+    "event_id": "e989f628-b30c-4be8-9f5a-48835142e428",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1626,
+    "timestamp": "2026-06-17T13:47:55.780562",
+    "label": "car",
+    "confidence": 0.7526,
+    "bbox": {
+      "x": 0.5527,
+      "y": 0.3718,
+      "w": 0.1571,
+      "h": 0.1336
+    },
+    "motion_score": 0.1242,
+    "frame_hash": "0xb0c09c97070f8c9c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001626.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1626,
+      1626
+    ]
+  },
+  {
+    "event_id": "0dc7089c-9d81-4647-8e47-f94c0a9bb441",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1638,
+    "timestamp": "2026-06-17T13:47:55.798266",
+    "label": "car",
+    "confidence": 0.8465,
+    "bbox": {
+      "x": 0.5643,
+      "y": 0.3686,
+      "w": 0.1844,
+      "h": 0.1364
+    },
+    "motion_score": 0.32,
+    "frame_hash": "0xb0c4ae86030f8d1c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001638.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1638,
+      1638
+    ]
+  },
+  {
+    "event_id": "185e4c16-f48a-4c14-8b10-57868ec181e1",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1638,
+    "timestamp": "2026-06-17T13:47:55.798508",
+    "label": "car",
+    "confidence": 0.5744,
+    "bbox": {
+      "x": 0.3202,
+      "y": 0.3371,
+      "w": 0.0638,
+      "h": 0.0372
+    },
+    "motion_score": 0.32,
+    "frame_hash": "0xb0c4ae86030f8d1c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001638.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1638,
+      1638
+    ]
+  },
+  {
+    "event_id": "4f1a8053-5757-4481-a3ca-ab0abae5fa77",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1638,
+    "timestamp": "2026-06-17T13:47:55.798732",
+    "label": "truck",
+    "confidence": 0.4289,
+    "bbox": {
+      "x": 0.6675,
+      "y": 0.2762,
+      "w": 0.2717,
+      "h": 0.2003
+    },
+    "motion_score": 0.32,
+    "frame_hash": "0xb0c4ae86030f8d1c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001638.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1638,
+      1638
+    ]
+  },
+  {
+    "event_id": "48183509-288b-4a38-a60f-6a4e6df3b9cc",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1674,
+    "timestamp": "2026-06-17T13:47:55.838507",
+    "label": "car",
+    "confidence": 0.7871,
+    "bbox": {
+      "x": 0.6198,
+      "y": 0.371,
+      "w": 0.1947,
+      "h": 0.1238
+    },
+    "motion_score": 0.1182,
+    "frame_hash": "0xb0c4b2d307078d9c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001674.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1674,
+      1674
+    ]
+  },
+  {
+    "event_id": "af6b2af3-8d46-4069-8f78-e09eae58fdd9",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1674,
+    "timestamp": "2026-06-17T13:47:55.838756",
+    "label": "car",
+    "confidence": 0.568,
+    "bbox": {
+      "x": 0.7405,
+      "y": 0.3592,
+      "w": 0.1028,
+      "h": 0.0585
+    },
+    "motion_score": 0.1182,
+    "frame_hash": "0xb0c4b2d307078d9c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001674.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1674,
+      1674
+    ]
+  },
+  {
+    "event_id": "7d894dbc-ffdc-4889-8e91-ff1f43618751",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1674,
+    "timestamp": "2026-06-17T13:47:55.838987",
+    "label": "truck",
+    "confidence": 0.5284,
+    "bbox": {
+      "x": 0.0258,
+      "y": 0.2959,
+      "w": 0.2362,
+      "h": 0.1506
+    },
+    "motion_score": 0.1182,
+    "frame_hash": "0xb0c4b2d307078d9c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001674.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1674,
+      1674
+    ]
+  },
+  {
+    "event_id": "cb81a4c5-b5f8-47d4-a42c-ffc70ecacca5",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1674,
+    "timestamp": "2026-06-17T13:47:55.839216",
+    "label": "car",
+    "confidence": 0.508,
+    "bbox": {
+      "x": 0.3196,
+      "y": 0.3369,
+      "w": 0.0664,
+      "h": 0.0369
+    },
+    "motion_score": 0.1182,
+    "frame_hash": "0xb0c4b2d307078d9c",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001674.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1674,
+      1674
+    ]
+  },
+  {
+    "event_id": "9b44bc35-5096-4bff-a6f2-4c3ff0881bc3",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1722,
+    "timestamp": "2026-06-17T13:47:55.884651",
+    "label": "car",
+    "confidence": 0.6738,
+    "bbox": {
+      "x": 0.4202,
+      "y": 0.472,
+      "w": 0.1726,
+      "h": 0.1244
+    },
+    "motion_score": 0.6062,
+    "frame_hash": "0x803034ea8e93cce7",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001722.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1722,
+      1722
+    ]
+  },
+  {
+    "event_id": "6eca7049-94bc-4d94-a7f7-9c63985aa453",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1734,
+    "timestamp": "2026-06-17T13:47:55.902463",
+    "label": "car",
+    "confidence": 0.687,
+    "bbox": {
+      "x": 0.4187,
+      "y": 0.4632,
+      "w": 0.1746,
+      "h": 0.1297
+    },
+    "motion_score": 0.1235,
+    "frame_hash": "0x8038b0b18e93cce7",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001734.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1734,
+      1734
+    ]
+  },
+  {
+    "event_id": "f8873940-f689-42ca-830b-a96e70723a9c",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1740,
+    "timestamp": "2026-06-17T13:47:55.914663",
+    "label": "car",
+    "confidence": 0.5935,
+    "bbox": {
+      "x": 0.4168,
+      "y": 0.462,
+      "w": 0.1748,
+      "h": 0.131
+    },
+    "motion_score": 0.1721,
+    "frame_hash": "0x8038b4a58e93c3e1",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001740.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1740,
+      1740
+    ]
+  },
+  {
+    "event_id": "1721c871-d082-4224-a0cc-5e4c4fe03acf",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1830,
+    "timestamp": "2026-06-17T13:47:56.015707",
+    "label": "car",
+    "confidence": 0.7807,
+    "bbox": {
+      "x": 0.7258,
+      "y": 0.5463,
+      "w": 0.2677,
+      "h": 0.2544
+    },
+    "motion_score": 0.154,
+    "frame_hash": "0x8138b4b68f93cde4",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001830.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1830,
+      1830
+    ]
+  },
+  {
+    "event_id": "e91e3a59-00cb-41f2-af2a-7e14112e55e8",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1830,
+    "timestamp": "2026-06-17T13:47:56.015960",
+    "label": "car",
+    "confidence": 0.705,
+    "bbox": {
+      "x": 0.4067,
+      "y": 0.4576,
+      "w": 0.1807,
+      "h": 0.1339
+    },
+    "motion_score": 0.154,
+    "frame_hash": "0x8138b4b68f93cde4",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001830.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1830,
+      1830
+    ]
+  },
+  {
+    "event_id": "869cd445-1f08-4f12-a849-a6b1faa2cc4c",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1842,
+    "timestamp": "2026-06-17T13:47:56.033750",
+    "label": "car",
+    "confidence": 0.7526,
+    "bbox": {
+      "x": 0.404,
+      "y": 0.459,
+      "w": 0.1814,
+      "h": 0.1338
+    },
+    "motion_score": 0.2202,
+    "frame_hash": "0x8138b4848f97d3cf",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001842.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1842,
+      1842
+    ]
+  },
+  {
+    "event_id": "68f149bc-86bb-4166-832f-692412892020",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1842,
+    "timestamp": "2026-06-17T13:47:56.034001",
+    "label": "car",
+    "confidence": 0.5723,
+    "bbox": {
+      "x": 0.0948,
+      "y": 0.3823,
+      "w": 0.1684,
+      "h": 0.0916
+    },
+    "motion_score": 0.2202,
+    "frame_hash": "0x8138b4848f97d3cf",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001842.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1842,
+      1842
+    ]
+  },
+  {
+    "event_id": "a97bdd14-efc1-4be5-9657-bf48bfdb37fa",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1848,
+    "timestamp": "2026-06-17T13:47:56.046242",
+    "label": "car",
+    "confidence": 0.7537,
+    "bbox": {
+      "x": 0.144,
+      "y": 0.3822,
+      "w": 0.1278,
+      "h": 0.0859
+    },
+    "motion_score": 0.3216,
+    "frame_hash": "0x8030b4868e86d4cf",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001848.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1848,
+      1848
+    ]
+  },
+  {
+    "event_id": "82b7d3bb-44fa-464b-821e-036219163529",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1848,
+    "timestamp": "2026-06-17T13:47:56.046490",
+    "label": "car",
+    "confidence": 0.6734,
+    "bbox": {
+      "x": 0.4058,
+      "y": 0.4578,
+      "w": 0.1789,
+      "h": 0.1338
+    },
+    "motion_score": 0.3216,
+    "frame_hash": "0x8030b4868e86d4cf",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001848.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1848,
+      1848
+    ]
+  },
+  {
+    "event_id": "6bf5a7c1-474f-45ad-bbcd-f7a6fbb68a14",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1854,
+    "timestamp": "2026-06-17T13:47:56.058747",
+    "label": "train",
+    "confidence": 0.7179,
+    "bbox": {
+      "x": 0.3542,
+      "y": 0.5642,
+      "w": 0.6131,
+      "h": 0.4353
+    },
+    "motion_score": 0.419,
+    "frame_hash": "0x8130b4968c8ddecc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001854.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1854,
+      1854
+    ]
+  },
+  {
+    "event_id": "e61709a5-fbbb-4021-99b7-5a00dc9c87b0",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1854,
+    "timestamp": "2026-06-17T13:47:56.059002",
+    "label": "car",
+    "confidence": 0.6089,
+    "bbox": {
+      "x": 0.1585,
+      "y": 0.3808,
+      "w": 0.1127,
+      "h": 0.0783
+    },
+    "motion_score": 0.419,
+    "frame_hash": "0x8130b4968c8ddecc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001854.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1854,
+      1854
+    ]
+  },
+  {
+    "event_id": "0f6f0325-c65c-4092-ba19-e56c35e41c47",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1854,
+    "timestamp": "2026-06-17T13:47:56.059225",
+    "label": "car",
+    "confidence": 0.4429,
+    "bbox": {
+      "x": 0.0658,
+      "y": 0.3772,
+      "w": 0.0369,
+      "h": 0.0409
+    },
+    "motion_score": 0.419,
+    "frame_hash": "0x8130b4968c8ddecc",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001854.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1854,
+      1854
+    ]
+  },
+  {
+    "event_id": "7599ae06-6ed1-4041-a9af-8047a2ad623a",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1860,
+    "timestamp": "2026-06-17T13:47:56.071412",
+    "label": "bus",
+    "confidence": 0.6436,
+    "bbox": {
+      "x": 0.3066,
+      "y": 0.5419,
+      "w": 0.5699,
+      "h": 0.4556
+    },
+    "motion_score": 0.4675,
+    "frame_hash": "0x8030b496999bdcc8",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001860.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1860,
+      1860
+    ]
+  },
+  {
+    "event_id": "02145192-b9b1-4bd5-b01b-60a25de8c9f1",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1860,
+    "timestamp": "2026-06-17T13:47:56.071655",
+    "label": "car",
+    "confidence": 0.5066,
+    "bbox": {
+      "x": 0.1998,
+      "y": 0.3844,
+      "w": 0.0664,
+      "h": 0.0726
+    },
+    "motion_score": 0.4675,
+    "frame_hash": "0x8030b496999bdcc8",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001860.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1860,
+      1860
+    ]
+  },
+  {
+    "event_id": "f722069c-35e6-482f-be8f-20777f81db05",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1860,
+    "timestamp": "2026-06-17T13:47:56.071880",
+    "label": "car",
+    "confidence": 0.4711,
+    "bbox": {
+      "x": 0.0794,
+      "y": 0.408,
+      "w": 0.1411,
+      "h": 0.0825
+    },
+    "motion_score": 0.4675,
+    "frame_hash": "0x8030b496999bdcc8",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001860.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1860,
+      1860
+    ]
+  },
+  {
+    "event_id": "a5c7b74b-3ba4-4003-86ea-48279f8277cd",
+    "video_id": "1tBtgW63TVI",
+    "frame_no": 1860,
+    "timestamp": "2026-06-17T13:47:56.072101",
+    "label": "car",
+    "confidence": 0.4581,
+    "bbox": {
+      "x": 0.7904,
+      "y": 0.5421,
+      "w": 0.2027,
+      "h": 0.2697
+    },
+    "motion_score": 0.4675,
+    "frame_hash": "0x8030b496999bdcc8",
+    "is_accident_class": false,
+    "dataset_mode": "accident_bench",
+    "qwen_vl": null,
+    "mode": "active",
+    "frame_path": "data/frames/1tBtgW63TVI/1tBtgW63TVI_f001860.jpg",
+    "has_accident": false,
+    "frame_range": [
+      1860,
+      1860
+    ]
+  }
+]

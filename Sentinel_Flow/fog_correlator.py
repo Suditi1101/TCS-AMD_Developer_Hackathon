@@ -10,7 +10,7 @@ VLLM_BASE_URL = cfg['vllm_base_url']
 QWEN_MODEL    = 'Qwen3-30B-A3B'
 client        = OpenAI(base_url=VLLM_BASE_URL, api_key='abc-123')
 
-edge_events   = json.loads(pathlib.Path('edge_events.json').read_text())
+edge_events   = json.loads(pathlib.Path('state_jsons/edge_events.json').read_text())
 DATASET_MODE  = 'accident_bench'
 
 print(f'Loaded {len(edge_events)} edge events')
@@ -79,13 +79,6 @@ class WindowGrouper:
         return dict(windows)
 
 
-grouper = WindowGrouper()
-windows = grouper.group(edge_events)
-print(f'Formed {len(windows)} windows from {len(edge_events)} events')
-for wid, evs in list(windows.items())[:8]:
-    labels = [e.get('label','?') for e in evs]
-    has_acc = any(e.get('has_accident') for e in evs)
-    print(f'  {wid}: {len(evs)} events  accident={has_acc}  labels={set(labels)}')
 
 
 @dataclass
@@ -300,72 +293,86 @@ fog_reasoner = QwenFogReasoner()
 print('QwenFogReasoner ready')
 
 
-all_correlated: List[CorrelatedEvent] = []
-
-print(f'Processing {len(windows)} windows...\\n')
-SEV_ICONS = {'low': 'LOW ', 'medium': 'MED ', 'high': 'HIGH', 'critical': 'CRIT'}
-
-for wid, w_events in windows.items():
-    print(f'-- Window {wid} ({len(w_events)} events) --')
-    bp.check(len(w_events))
-
-    rule_matches  = engine.apply(wid, w_events)
-    matched_names = [c.rule_matched for c in rule_matches]
-
-    for c in rule_matches:
-        icon = SEV_ICONS.get(c.severity, '????')
-        print(f'  [{icon}] RULE: {c.event_type}  frames={c.frame_range}  '
-              f'conf={c.avg_confidence:.3f}  escalate={c.should_escalate}')
-
-    qwen_result = fog_reasoner.reason(wid, w_events, matched_names)
-    if qwen_result and qwen_result.get('pattern_detected'):
-        sev  = qwen_result.get('severity', 'low')
-        esc  = qwen_result.get('escalate', False)
-        name = qwen_result.get('pattern_name', 'novel_pattern')
-        print(f'  [QWEN] {name}  severity={sev}  escalate={esc}')
-        print(f'         -> {qwen_result.get("reasoning","")}')
-        if rule_matches:
-            rule_matches[0].qwen_reasoning = qwen_result.get('reasoning')
-        else:
-            all_correlated.append(CorrelatedEvent(
-                correlation_id   = str(uuid.uuid4()),
-                event_type       = name or 'novel_accident_pattern',
-                severity         = sev,
-                involved_sources = list({e.get('video_id','?') for e in w_events}),
-                source_events    = w_events,
-                description      = qwen_result.get('reasoning', ''),
-                should_escalate  = esc,
-                window_id        = wid,
-                rule_matched     = 'qwen_novel',
-                avg_confidence   = (sum(e.get('confidence',0.5) for e in w_events)
-                                    / max(len(w_events), 1)),
-                frame_range      = [w_events[0].get('frame_no',0),
-                                    w_events[-1].get('frame_no',0)],
-                qwen_reasoning   = qwen_result.get('reasoning'),
-            ))
-    elif qwen_result:
-        print('  [QWEN] no novel pattern')
-
-    all_correlated.extend(rule_matches)
-    print()
-
-escalate = [c for c in all_correlated if c.should_escalate]
-retain   = [c for c in all_correlated if not c.should_escalate]
-print(f'Total correlated : {len(all_correlated)}')
-print(f'Escalate->cloud  : {len(escalate)}')
-print(f'Retain locally   : {len(retain)}')
-print(f'Backpressure     : {bp.summary()}')
 
 
-payload = []
-for c in escalate:
-    d = c.__dict__.copy()
-    # Limit source_events size for JSON
-    d['source_events'] = d['source_events'][:5]
-    payload.append(d)
+def fog_correlator_node(state):
+    
+    edge_events=state.get("edge_events")    
+    grouper = WindowGrouper()
+    windows = grouper.group(edge_events)
+    print(f'Formed {len(windows)} windows from {len(edge_events)} events')
+    for wid, evs in list(windows.items())[:8]:
+        labels = [e.get('label','?') for e in evs]
+        has_acc = any(e.get('has_accident') for e in evs)
+        print(f'  {wid}: {len(evs)} events  accident={has_acc}  labels={set(labels)}')
 
-pathlib.Path('correlated_events.json').write_text(
-    json.dumps(payload, default=str, indent=2))
-print(f'Saved {len(payload)} escalated events -> correlated_events.json')
+    all_correlated: List[CorrelatedEvent] = []
 
+    print(f'Processing {len(windows)} windows...\\n')
+    SEV_ICONS = {'low': 'LOW ', 'medium': 'MED ', 'high': 'HIGH', 'critical': 'CRIT'}
+    
+    for wid, w_events in windows.items():
+        print(f'-- Window {wid} ({len(w_events)} events) --')
+        bp.check(len(w_events))
+    
+        rule_matches  = engine.apply(wid, w_events)
+        matched_names = [c.rule_matched for c in rule_matches]
+    
+        for c in rule_matches:
+            icon = SEV_ICONS.get(c.severity, '????')
+            print(f'  [{icon}] RULE: {c.event_type}  frames={c.frame_range}  '
+                  f'conf={c.avg_confidence:.3f}  escalate={c.should_escalate}')
+    
+        qwen_result = fog_reasoner.reason(wid, w_events, matched_names)
+        if qwen_result and qwen_result.get('pattern_detected'):
+            sev  = qwen_result.get('severity', 'low')
+            esc  = qwen_result.get('escalate', False)
+            name = qwen_result.get('pattern_name', 'novel_pattern')
+            print(f'  [QWEN] {name}  severity={sev}  escalate={esc}')
+            print(f'         -> {qwen_result.get("reasoning","")}')
+            if rule_matches:
+                rule_matches[0].qwen_reasoning = qwen_result.get('reasoning')
+            else:
+                all_correlated.append(CorrelatedEvent(
+                    correlation_id   = str(uuid.uuid4()),
+                    event_type       = name or 'novel_accident_pattern',
+                    severity         = sev,
+                    involved_sources = list({e.get('video_id','?') for e in w_events}),
+                    source_events    = w_events,
+                    description      = qwen_result.get('reasoning', ''),
+                    should_escalate  = esc,
+                    window_id        = wid,
+                    rule_matched     = 'qwen_novel',
+                    avg_confidence   = (sum(e.get('confidence',0.5) for e in w_events)
+                                        / max(len(w_events), 1)),
+                    frame_range      = [w_events[0].get('frame_no',0),
+                                        w_events[-1].get('frame_no',0)],
+                    qwen_reasoning   = qwen_result.get('reasoning'),
+                ))
+        elif qwen_result:
+            print('  [QWEN] no novel pattern')
+    
+        all_correlated.extend(rule_matches)
+        print()
+    
+    escalate = [c for c in all_correlated if c.should_escalate]
+    retain   = [c for c in all_correlated if not c.should_escalate]
+    print(f'Total correlated : {len(all_correlated)}')
+    print(f'Escalate->cloud  : {len(escalate)}')
+    print(f'Retain locally   : {len(retain)}')
+    print(f'Backpressure     : {bp.summary()}')
+    
+    
+    payload = []
+    for c in escalate:
+        d = c.__dict__.copy()
+        # Limit source_events size for JSON
+        d['source_events'] = d['source_events'][:5]
+        payload.append(d)
+    
+    pathlib.Path('state_jsons/correlated_events.json').write_text(
+        json.dumps(payload, default=str, indent=2))
+    print(f'Saved {len(payload)} escalated events -> correlated_events.json')
 
+    state['fog_events'] = payload
+    return state

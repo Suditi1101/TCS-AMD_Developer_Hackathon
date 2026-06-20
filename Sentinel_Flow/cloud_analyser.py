@@ -10,13 +10,7 @@ VLLM_BASE_URL = cfg['vllm_base_url']
 QWEN_MODEL    = 'Qwen3-30B-A3B'
 client        = OpenAI(base_url=VLLM_BASE_URL, api_key='abc-123')
 
-correlated    = json.loads(pathlib.Path('correlated_events.json').read_text())
-DATASET_MODE  = 'accident_bench'
 
-print(f'Loaded {len(correlated)} correlated events')
-for c in correlated[:5]:
-    print(f'  {c.get("event_type"):<30} severity={c.get("severity")}  '
-          f'frames={c.get("frame_range")}')
 
 BUDGET_EMBED_MS    = 50
 BUDGET_SEARCH_MS   = 20
@@ -280,113 +274,118 @@ analyser = QwenDeepAnalyser()
 print('QwenDeepAnalyser ready')
 
 
-final_results = []
-retrain_flags = []
 
-autoscaler.check_and_scale(len(correlated))
-print(f'Analysing {len(correlated)} escalated events...\\n')
 
-for i, event in enumerate(correlated):
-    sev = event.get('severity','low')
-    print(f'-- Event {i+1}/{len(correlated)} [{sev.upper():<8}] '
-          f'{event.get("event_type")} frames={event.get("frame_range")} --')
-
-    vec      = embedder.embed(event)
-    similar  = vector_store.search(vec, top_k=5)
-    sim_ids  = [s[0] for s in similar]
-    a_score  = anomaly_scorer.score(vec)
-    a_flag   = 'ANOMALY' if a_score >= ANOMALY_THRESHOLD else 'normal '
-    print(f'  Anomaly score  : {a_score:.4f}  [{a_flag}]')
-
-    vector_store.add(event.get('correlation_id', str(uuid.uuid4())), vec,
-                     {'event_type': event.get('event_type'),
-                      'severity':   event.get('severity')})
-
-    analysis = analyser.analyse(event, a_score, sim_ids)
-    analysis['anomaly_score']    = a_score
-    analysis['similar_ids']      = sim_ids
-    analysis['analysis_id']      = str(uuid.uuid4())
-    analysis['correlation_id']   = event.get('correlation_id')
-    analysis['frame_range']      = event.get('frame_range')
-    analysis['involved_sources'] = event.get('involved_sources')
-
-    print(f'  Accident type  : {analysis.get("accident_type")}')
-    print(f'  Vehicles       : {analysis.get("vehicles_involved")}')
-    print(f'  Summary        : {str(analysis.get("summary",""))[:120]}')
-    print(f'  Action         : {str(analysis.get("recommended_action",""))[:100]}')
-
-    if analysis.get('retrain_flag'):
-        print(f'  RETRAIN: {analysis.get("retrain_reason","")}')
-        retrain_flags.append(analysis)
-
-    if hitl.needs_review(event, a_score):
-        rid   = hitl.send_to_analyst(event, analysis)
-        label = hitl.simulate_analyst_label(rid, event.get('event_type','?'), True)
-
-    final_results.append({'event': event, 'analysis': analysis})
+def cloud_analyser_node(state):
+    
+    final_results = []
+    retrain_flags = []
+    
+    correlated = state.get('fog_events')
+    
+    autoscaler.check_and_scale(len(correlated))
+    print(f'Analysing {len(correlated)} escalated events...\\n')
+    
+    for i, event in enumerate(correlated):
+        sev = event.get('severity','low')
+        print(f'-- Event {i+1}/{len(correlated)} [{sev.upper():<8}] '
+              f'{event.get("event_type")} frames={event.get("frame_range")} --')
+    
+        vec      = embedder.embed(event)
+        similar  = vector_store.search(vec, top_k=5)
+        sim_ids  = [s[0] for s in similar]
+        a_score  = anomaly_scorer.score(vec)
+        a_flag   = 'ANOMALY' if a_score >= ANOMALY_THRESHOLD else 'normal '
+        print(f'  Anomaly score  : {a_score:.4f}  [{a_flag}]')
+    
+        vector_store.add(event.get('correlation_id', str(uuid.uuid4())), vec,
+                         {'event_type': event.get('event_type'),
+                          'severity':   event.get('severity')})
+    
+        analysis = analyser.analyse(event, a_score, sim_ids)
+        analysis['anomaly_score']    = a_score
+        analysis['similar_ids']      = sim_ids
+        analysis['analysis_id']      = str(uuid.uuid4())
+        analysis['correlation_id']   = event.get('correlation_id')
+        analysis['frame_range']      = event.get('frame_range')
+        analysis['involved_sources'] = event.get('involved_sources')
+    
+        print(f'  Accident type  : {analysis.get("accident_type")}')
+        print(f'  Vehicles       : {analysis.get("vehicles_involved")}')
+        print(f'  Summary        : {str(analysis.get("summary",""))[:120]}')
+        print(f'  Action         : {str(analysis.get("recommended_action",""))[:100]}')
+    
+        if analysis.get('retrain_flag'):
+            print(f'  RETRAIN: {analysis.get("retrain_reason","")}')
+            retrain_flags.append(analysis)
+    
+        if hitl.needs_review(event, a_score):
+            rid   = hitl.send_to_analyst(event, analysis)
+            label = hitl.simulate_analyst_label(rid, event.get('event_type','?'), True)
+    
+        final_results.append({'event': event, 'analysis': analysis})
+        print()
+    
+    anomaly_rate = (sum(1 for r in final_results
+                        if r['analysis'].get('anomaly_score',0) >= ANOMALY_THRESHOLD)
+                    / max(len(final_results), 1))
+    
+    print('=' * 60)
+    print(f'Events analysed     : {len(final_results)}')
+    print(f'Anomaly rate        : {anomaly_rate*100:.0f}%')
+    print(f'HITL pending        : {hitl.pending_count}')
+    print(f'Retrain flagged     : {len(retrain_flags)}')
+    print(f'Vector store size   : {len(vector_store)}')
+    
+    if anomaly_rate > RETRAIN_ANOMALY_RATE or retrain_flags:
+        print()
+        print('CONTINUAL LEARNING TRIGGER: anomaly rate exceeded threshold')
+        print('  -> Submit YOLOv8 fine-tuning job with HITL-labelled frames')
+        print(f'  -> {len(hitl.labels)} analyst labels available')
+    
+    
+    videos_seen = set()
+    for r in final_results:
+        for src in r['event'].get('involved_sources', []):
+            videos_seen.add(src)
+    
+    edge_count = len(json.loads(pathlib.Path('state_jsons/edge_events.json').read_text()))
+    
     print()
-
-anomaly_rate = (sum(1 for r in final_results
-                    if r['analysis'].get('anomaly_score',0) >= ANOMALY_THRESHOLD)
-                / max(len(final_results), 1))
-
-print('=' * 60)
-print(f'Events analysed     : {len(final_results)}')
-print(f'Anomaly rate        : {anomaly_rate*100:.0f}%')
-print(f'HITL pending        : {hitl.pending_count}')
-print(f'Retrain flagged     : {len(retrain_flags)}')
-print(f'Vector store size   : {len(vector_store)}')
-
-if anomaly_rate > RETRAIN_ANOMALY_RATE or retrain_flags:
+    print('=' * 60)
+    print('  SENTINELFLOW v3 - ACCIDENT DETECTION PIPELINE REPORT')
+    print('=' * 60)
+    print(f'  Dataset          : accident-bench')
+    print(f'  Videos processed : {len(videos_seen)}')
     print()
-    print('CONTINUAL LEARNING TRIGGER: anomaly rate exceeded threshold')
-    print('  -> Submit YOLOv8 fine-tuning job with HITL-labelled frames')
-    print(f'  -> {len(hitl.labels)} analyst labels available')
+    print(f'  [TIER 1 EDGE]')
+    print(f'    Edge events emitted  : {edge_count}')
+    print()
+    print(f'  [TIER 2 FOG]')
+    print(f'    Correlated events    : {len(correlated)}')
+    print()
+    print(f'  [TIER 3 CLOUD]')
+    print(f'    Events analysed      : {len(final_results)}')
+    print(f'    Anomaly rate         : {anomaly_rate*100:.0f}%')
+    print(f'    HITL pending         : {hitl.pending_count}')
+    print(f'    Retrain triggered    : {anomaly_rate > RETRAIN_ANOMALY_RATE}')
+    print()
+    for r in final_results:
+        a = r['analysis']
+        # print(f'  [{a.get("accident_type","?"):<15}] '
+        #       f'sev={r["event"].get("severity"):<8} '
+        #       f'anom={a.get("anomaly_score",0):.3f}  '
+        #       f'frames={r["event"].get("frame_range")}')
+   
+    pathlib.Path('state_jsons/cloud_results.json').write_text(
+        json.dumps(final_results, default=str, indent=2))
+    pathlib.Path('state_jsons/hitl_labels.json').write_text(
+        json.dumps(hitl.labels, default=str, indent=2))
+    print(f'Saved cloud_results.json  ({len(final_results)} entries)')
+    print(f'Saved hitl_labels.json    ({len(hitl.labels)} analyst labels)')
+    print()
+    print('Pipeline complete -> see 04_orchestrator.ipynb')
 
-
-videos_seen = set()
-for r in final_results:
-    for src in r['event'].get('involved_sources', []):
-        videos_seen.add(src)
-
-edge_count = len(json.loads(pathlib.Path('edge_events.json').read_text()))
-
-print()
-print('=' * 60)
-print('  SENTINELFLOW v3 - ACCIDENT DETECTION PIPELINE REPORT')
-print('=' * 60)
-print(f'  Dataset          : accident-bench')
-print(f'  Videos processed : {len(videos_seen)}')
-print()
-print(f'  [TIER 1 EDGE]')
-print(f'    Edge events emitted  : {edge_count}')
-print()
-print(f'  [TIER 2 FOG]')
-print(f'    Correlated events    : {len(correlated)}')
-print()
-print(f'  [TIER 3 CLOUD]')
-print(f'    Events analysed      : {len(final_results)}')
-print(f'    Anomaly rate         : {anomaly_rate*100:.0f}%')
-print(f'    HITL pending         : {hitl.pending_count}')
-print(f'    Retrain triggered    : {anomaly_rate > RETRAIN_ANOMALY_RATE}')
-print()
-for r in final_results:
-    a = r['analysis']
-    print(f'  [{a.get("accident_type","?"):<15}] '
-          f'sev={r["event"].get("severity"):<8} '
-          f'anom={a.get("anomaly_score",0):.3f}  '
-          f'frames={r["event"].get("frame_range")}')
-"""))
-
-c03.append(md("## 8. Save results"))
-c03.append(code("""
-pathlib.Path('cloud_results.json').write_text(
-    json.dumps(final_results, default=str, indent=2))
-pathlib.Path('hitl_labels.json').write_text(
-    json.dumps(hitl.labels, default=str, indent=2))
-print(f'Saved cloud_results.json  ({len(final_results)} entries)')
-print(f'Saved hitl_labels.json    ({len(hitl.labels)} analyst labels)')
-print()
-print('Pipeline complete -> see 04_orchestrator.ipynb')
-
-
+    state['analysed_events'] = final_results
+    return state
+    

@@ -54,166 +54,7 @@ PRIORITY_LABELS  = {'accident', 'smoke', 'debris'}
 print('Imports done')
 print(f'Priority labels: {PRIORITY_LABELS}')
 
-
-@dataclass
-class VideoMeta:
-    video_id  : str
-    path      : str
-    fps_src   : float
-    fps_target: float
-    total_frames_src : int
-    frames_extracted : int
-    width     : int
-    height    : int
-
-
-class VideoDecoder:
-    """
-    Extracts frames from video files at target_fps.
-
-    Production:
-        Uses cv2.VideoCapture for efficient seeking.
-        For large video archives, consider ffmpeg-python for GPU-accelerated
-        decode on AMD ROCm: ffmpeg -hwaccel vaapi -i input.mp4 ...
-
-    Fallback (no OpenCV):
-        Generates synthetic accident-like frames:
-          - Normal frames: static road scene (low variance)
-          - Accident frames: high-variance 'impact' burst + freeze
-        This preserves the full pipeline logic without needing real videos.
-
-    Frame naming convention:
-        {video_id}_f{frame_number:06d}.jpg
-        Stored in FRAMES_OUT/{video_id}/
-    """
-
-    def __init__(self, video_dir=VIDEO_DIR, frames_out=FRAMES_OUT,
-                 target_fps=TARGET_FPS, frame_size=FRAME_SIZE):
-        self.video_dir  = pathlib.Path(video_dir)
-        self.frames_out = pathlib.Path(frames_out)
-        self.target_fps = target_fps
-        self.frame_size = frame_size
-        self._metas: List[VideoMeta] = []
-
-    def _find_videos(self):
-        if not self.video_dir.exists():
-            return []
-        return [p for p in sorted(self.video_dir.rglob('*'))
-                if p.suffix.lower() in SUPPORTED_EXT]
-
-    def _decode_opencv(self, video_path):
-        """Real OpenCV decode. Returns list of (frame_no, np.ndarray)."""
-        import cv2
-        cap      = cv2.VideoCapture(str(video_path))
-        fps_src  = cap.get(cv2.CAP_PROP_FPS) or 30.0
-        total    = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-        w        = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-        h        = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-        step     = max(1, int(round(fps_src / self.target_fps)))
-        frames   = []
-        fno      = 0
-        while True:
-            ret, frame = cap.read()
-            if not ret:
-                break
-            if fno % step == 0:
-                frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                resized   = cv2.resize(frame_rgb, self.frame_size)
-                frames.append((fno, resized.astype(np.uint8)))
-            fno += 1
-        cap.release()
-        return frames, fps_src, total, w, h
-
-    def _decode_synthetic(self, video_id, n_frames=60):
-        """
-        Synthetic accident video generator (no OpenCV needed).
-        Simulates: 20 normal frames -> 10 high-motion impact frames
-                   -> 5 static post-crash frames -> 25 normal frames.
-        """
-        rng    = np.random.default_rng(abs(hash(video_id)) % 99999)
-        W, H   = self.frame_size
-        base   = rng.integers(80, 160, (H, W, 3), dtype=np.uint8)
-        frames = []
-        for i in range(n_frames):
-            if 20 <= i < 30:          # impact burst
-                scale = 90
-            elif 30 <= i < 35:        # post-crash freeze (low motion)
-                scale = 2
-            else:                     # normal road scene
-                scale = 8
-            noise = rng.integers(-scale, scale + 1, base.shape)
-            f     = np.clip(base.astype(np.int16) + noise, 0, 255).astype(np.uint8)
-            frames.append((i, f))
-        return frames, 30.0, n_frames, W, H
-
-    def decode_all(self, max_videos=None):
-        """
-        Decode all videos in video_dir.
-        Returns flat list of frame dicts ready for the edge pipeline.
-        """
-        video_paths = self._find_videos()
-        if not video_paths:
-            print(f'No videos found in {self.video_dir} -- using synthetic generator')
-            video_paths = [pathlib.Path(f'synthetic_video_{i:02d}.mp4')
-                           for i in range(3)]
-
-        if max_videos:
-            video_paths = video_paths[:max_videos]
-
-        all_frame_dicts = []
-        for vpath in video_paths:
-            video_id  = vpath.stem
-            out_dir   = self.frames_out / video_id
-            out_dir.mkdir(parents=True, exist_ok=True)
-
-            t0 = time.perf_counter()
-            try:
-                import cv2
-                raw_frames, fps_src, total, w, h = self._decode_opencv(vpath)
-                src = 'opencv'
-            except (ImportError, Exception):
-                raw_frames, fps_src, total, w, h = self._decode_synthetic(video_id)
-                src = 'synthetic'
-
-            ms = (time.perf_counter() - t0) * 1000
-            if ms > BUDGET_DECODE_MS * len(raw_frames):
-                print(f'  WARN {video_id}: decode {ms:.0f}ms')
-
-            # Save frames to disk + build frame dicts
-            for fno, arr in raw_frames:
-                fname    = f'{video_id}_f{fno:06d}.jpg'
-                fpath    = out_dir / fname
-                Image.fromarray(arr).save(str(fpath), quality=90)
-                all_frame_dicts.append({
-                    'video_id'  : video_id,
-                    'frame_no'  : fno,
-                    'frame_path': str(fpath),
-                    'data'      : arr,          # numpy array in memory
-                    'timestamp' : datetime.utcnow().isoformat(),
-                    'source'    : src,
-                    'dataset_mode': 'accident_bench',
-                })
-
-            meta = VideoMeta(
-                video_id=video_id, path=str(vpath),
-                fps_src=fps_src, fps_target=self.target_fps,
-                total_frames_src=total,
-                frames_extracted=len(raw_frames),
-                width=w, height=h,
-            )
-            self._metas.append(meta)
-            print(f'  [{src}] {video_id}: {len(raw_frames)} frames  '
-                  f'(src_fps={fps_src:.0f} -> {self.target_fps}fps)  {ms:.0f}ms')
-
-        return all_frame_dicts
-
-    @property
-    def metas(self):
-        return self._metas
-
-
-decoder = VideoDecoder()
-print('VideoDecoder ready')
+   
 
 
 class MotionGate:
@@ -306,9 +147,6 @@ class PHashDedup:
 
 dedup = PHashDedup()
 print('PHashDedup ready')
-
-
-!pip install ultralytics
 
 import torchvision
 
@@ -536,17 +374,17 @@ class QwenVLVerifier:
         try:
             resp = client.chat.completions.create(
                 model=self.model,
-                messages=[
-                    {'role': 'system', 'content': self.SYSTEM},
-                    {'role': 'user', 'content': [
-                        {'type': 'image_url',
-                         'image_url': {'url': f'data:image/jpeg;base64,{b64}'}},
-                        {'type': 'text', 'text': prompt},
-                    ]},
-                ],
                 # messages=[
                 #     {'role': 'system', 'content': self.SYSTEM},
-                #     {'role': 'user', 'content': prompt}],
+                #     {'role': 'user', 'content': [
+                #         {'type': 'image_url',
+                #          'image_url': {'url': f'data:image/jpeg;base64,{b64}'}},
+                #         {'type': 'text', 'text': prompt},
+                #     ]},
+                # ],
+                messages=[
+                    {'role': 'system', 'content': self.SYSTEM},
+                    {'role': 'user', 'content': prompt}],
                 max_tokens=256, temperature=0.0,response_format={"type": "json_object"}
             )
             raw = resp.choices[0].message.content.strip()
@@ -634,200 +472,140 @@ sampler     = AdaptiveSampler()
 lat_monitor = LatencyMonitor()
 print('AdaptiveSampler + LatencyMonitor ready')
 
-
-print('Step 0: Decoding videos...')
-t_decode = time.perf_counter()
-
-# max_videos=None processes all videos in VIDEO_DIR
-# Set max_videos=2 for a quick test run
-FRAMES = decoder.decode_all(max_videos=3)
-
-decode_ms = (time.perf_counter() - t_decode) * 1000
-lat_monitor.record('decode', decode_ms)
-
-print(f'\\nVideos processed : {len(decoder.metas)}')
-for m in decoder.metas:
-    print(f'  {m.video_id}: {m.frames_extracted} frames  '
-          f'(src={m.fps_src:.0f}fps -> {m.fps_target}fps)  '
-          f'{m.width}x{m.height}  src={m.path}')
-print(f'Total frames     : {len(FRAMES)}')
-print(f'Decode time      : {decode_ms:.0f} ms')
-
-
-results = []
-stats   = dict(received=0, dropped_motion=0, dropped_dup=0,
-               processed=0, detections=0, accident_frames=0, qwen_calls=0)
-
-QWEN_MAX_CALLS = 10  # cap for demo; remove in production
-
-print(f'Processing {len(FRAMES)} frames...\\n')
-print(f'{"Frame":>6} {"Video":<20} {"Motion":>7} {"Hash":>6} '
-      f'{"Dets":>4} {"AccDet":>6} {"Mode":>6}')
-print('-' * 68)
-
-for idx, fdict in enumerate(FRAMES):
-    frame    = fdict['data']
-    video_id = fdict['video_id']
-    frame_no = fdict['frame_no']
-    stats['received'] += 1
-
-    # Step 1: Motion gate
-    # Override: if later detected as accident frame, always pass
-    # (We run motion gate first as a quick filter, then override below)
-    passed, mscore, t_motion = gate.should_pass(frame)
-    lat_monitor.record('motion', t_motion)
-
-    if not passed:
-        stats['dropped_motion'] += 1
-        sampler.update(mscore, False)
-        continue
-
-    # Step 2: Dedup
-    is_new, fhash, t_hash = dedup.is_new(frame)
-    lat_monitor.record('hash', t_hash)
-    if not is_new:
-        stats['dropped_dup'] += 1
-        sampler.update(mscore, False)
-        continue
-
-    # Step 3: YOLOv8 detection
-    stats['processed'] += 1
-    dets, t_yolo = detector.detect(frame, mscore, fhash, video_id, frame_no)
-    lat_monitor.record('yolo', t_yolo)
-    stats['detections'] += len(dets)
-
-    has_accident = any(d.is_accident_class for d in dets)
-    if has_accident:
-        stats['accident_frames'] += 1
-
-    # Step 4: Qwen-VL on accident/high-motion frames
-    vl_result = None
-    t_vl      = 0.0
-    if dets and stats['qwen_calls'] < QWEN_MAX_CALLS:
-        if has_accident or mscore > 0.06:
-            vl_result, t_vl = verifier.verify(frame, dets)
-            lat_monitor.record('qwen_vl', t_vl)
-            stats['qwen_calls'] += 1
-
-    # Step 5: Adaptive sampling
-    sev  = (vl_result or {}).get('severity', 'low')
-    mode = sampler.update(mscore, has_accident, severity=sev)
-
-    results.append({
-        'frame_idx'    : idx,
-        'video_id'     : video_id,
-        'frame_no'     : frame_no,
-        'frame_path'   : fdict['frame_path'],
-        'motion_score' : round(mscore, 4),
-        'frame_hash'   : fhash,
-        'detections'   : [d.__dict__ for d in dets],
-        'has_accident' : has_accident,
-        'qwen_vl'      : vl_result,
-        'mode'         : mode,
-        'dataset_mode' : 'accident_bench',
-        'latency_ms'   : {'motion': t_motion, 'hash': t_hash,
-                          'yolo': t_yolo, 'qwen_vl': t_vl},
-    })
-
-    det_str = ', '.join(f'{d.label}({d.confidence:.2f})' for d in dets) or 'none'
-    acc_str = 'ACCIDENT' if has_accident else '       '
-    print(f'{idx:>6} {video_id:<20} {mscore:>7.4f} {"new":>6} '
-          f'{len(dets):>4} {acc_str:>6} {mode:>6}  {det_str[:40]}')
-
-print('\\n' + '-'*68)
-
-total = stats['received']
-kept  = stats['processed']
-print(f'Frames received   : {total}')
-print(f'Dropped (motion)  : {stats["dropped_motion"]}  ({stats["dropped_motion"]/max(total,1)*100:.0f}%)')
-print(f'Dropped (dup)     : {stats["dropped_dup"]}  ({stats["dropped_dup"]/max(total,1)*100:.0f}%)')
-print(f'Processed         : {kept}  ({kept/max(total,1)*100:.0f}%)')
-print(f'Accident frames   : {stats["accident_frames"]}')
-print(f'Total detections  : {stats["detections"]}')
-print(f'Qwen-VL calls     : {stats["qwen_calls"]}')
-print(f'Data reduction    : {100*(1-kept/max(total,1)):.0f}%')
-print(f'Sampler modes     : {sampler.summary()}')
-
-
-
-vl_frames = [r for r in results if r['qwen_vl'] is not None]
-print(f'Frames with Qwen-VL analysis: {len(vl_frames)}\\n')
-for r in vl_frames:
-    vl = r['qwen_vl']
-    print(f'Video {r["video_id"]}  frame={r["frame_no"]}  motion={r["motion_score"]:.3f}')
-    print(f'  Scene         : {vl.get("scene","")}')
-    print(f'  Accident      : {vl.get("accident_visible")}  type={vl.get("accident_type")}')
-    print(f'  Vehicles      : {vl.get("vehicles_detected",[])}')
-    print(f'  Smoke/fire    : {vl.get("smoke_or_fire")}  Persons at risk: {vl.get("persons_at_risk")}')
-    print(f'  Severity      : {vl.get("severity")}  Escalate: {vl.get("escalate")}')
-    print(f'  Reason        : {vl.get("reason","")}')
-    print()
-
-
-edge_events = []
-for r in results:
-    for det in r['detections']:
-        ev = dict(det)
-        ev['qwen_vl']     = r.get('qwen_vl')
-        ev['mode']        = r['mode']
-        ev['frame_path']  = r['frame_path']
-        ev['motion_score']= r['motion_score']
-        ev['has_accident']= r['has_accident']
-        ev['dataset_mode']= 'accident_bench'
-        # Add frame_range for fog correlator
-        ev['frame_range'] = [r['frame_no'], r['frame_no']]
-        edge_events.append(ev)
-
-pathlib.Path('edge_events.json').write_text(
-    json.dumps(edge_events, default=str, indent=2))
-print(f'Saved {len(edge_events)} edge events -> edge_events.json')
-if edge_events:
-    e = {k: v for k, v in edge_events[0].items() if k not in ('qwen_vl',)}
-    print('\\nSample event:')
-    print(json.dumps(e, indent=2, default=str))
-
-
-fr = FRAMES[0]['data']
-SYSTEM = """
-        You are a road accident analysis expert.
+def edge_filter_node(state):
+    FRAMES=state.get("frames")
+    results = []
+    stats   = dict(received=0, dropped_motion=0, dropped_dup=0,
+                   processed=0, detections=0, accident_frames=0, qwen_calls=0)
+    
+    QWEN_MAX_CALLS = 10  # cap for demo; remove in production
+    
+    print(f'Processing {len(FRAMES)} frames...\\n')
+    print(f'{"Frame":>6} {"Video":<20} {"Motion":>7} {"Hash":>6} '
+          f'{"Dets":>4} {"AccDet":>6} {"Mode":>6}')
+    print('-' * 68)
+    
+    for idx, fdict in enumerate(FRAMES):
+        frame    = fdict['data']
+        video_id = fdict['video_id']
+        frame_no = fdict['frame_no']
+        stats['received'] += 1
+    
+        # Step 1: Motion gate
+        # Override: if later detected as accident frame, always pass
+        # (We run motion gate first as a quick filter, then override below)
+        passed, mscore, t_motion = gate.should_pass(frame)
+        lat_monitor.record('motion', t_motion)
+    
+        if not passed:
+            stats['dropped_motion'] += 1
+            sampler.update(mscore, False)
+            continue
+    
+        # Step 2: Dedup
+        is_new, fhash, t_hash = dedup.is_new(frame)
+        lat_monitor.record('hash', t_hash)
+        if not is_new:
+            stats['dropped_dup'] += 1
+            sampler.update(mscore, False)
+            continue
+    
+        # Step 3: YOLOv8 detection
+        stats['processed'] += 1
+        dets, t_yolo = detector.detect(frame, mscore, fhash, video_id, frame_no)
+        lat_monitor.record('yolo', t_yolo)
+        stats['detections'] += len(dets)
+    
+        has_accident = any(d.is_accident_class for d in dets)
+        if has_accident:
+            stats['accident_frames'] += 1
+    
+        # Step 4: Qwen-VL on accident/high-motion frames
+        vl_result = None
+        t_vl      = 0.0
+        if dets and stats['qwen_calls'] < QWEN_MAX_CALLS:
+            if has_accident or mscore > 0.06:
+                vl_result, t_vl = verifier.verify(frame, dets)
+                lat_monitor.record('qwen_vl', t_vl)
+                stats['qwen_calls'] += 1
+    
+        # Step 5: Adaptive sampling
+        sev  = (vl_result or {}).get('severity', 'low')
+        mode = sampler.update(mscore, has_accident, severity=sev)
+    
+        results.append({
+            'frame_idx'    : idx,
+            'video_id'     : video_id,
+            'frame_no'     : frame_no,
+            'frame_path'   : fdict['frame_path'],
+            'motion_score' : round(mscore, 4),
+            'frame_hash'   : fhash,
+            'detections'   : [d.__dict__ for d in dets],
+            'has_accident' : has_accident,
+            'qwen_vl'      : vl_result,
+            'mode'         : mode,
+            'dataset_mode' : 'accident_bench',
+            'latency_ms'   : {'motion': t_motion, 'hash': t_hash,
+                              'yolo': t_yolo, 'qwen_vl': t_vl},
+        })
+    
+        det_str = ', '.join(f'{d.label}({d.confidence:.2f})' for d in dets) or 'none'
+        acc_str = 'ACCIDENT' if has_accident else '       '
+        print(f'{idx:>6} {video_id:<20} {mscore:>7.4f} {"new":>6} '
+              f'{len(dets):>4} {acc_str:>6} {mode:>6}  {det_str[:40]}')
+    
+    print('\\n' + '-'*68)
+    
+    total = stats['received']
+    kept  = stats['processed']
+    print(f'Frames received   : {total}')
+    print(f'Dropped (motion)  : {stats["dropped_motion"]}  ({stats["dropped_motion"]/max(total,1)*100:.0f}%)')
+    print(f'Dropped (dup)     : {stats["dropped_dup"]}  ({stats["dropped_dup"]/max(total,1)*100:.0f}%)')
+    print(f'Processed         : {kept}  ({kept/max(total,1)*100:.0f}%)')
+    print(f'Accident frames   : {stats["accident_frames"]}')
+    print(f'Total detections  : {stats["detections"]}')
+    print(f'Qwen-VL calls     : {stats["qwen_calls"]}')
+    print(f'Data reduction    : {100*(1-kept/max(total,1)):.0f}%')
+    print(f'Sampler modes     : {sampler.summary()}')
+    
+    
+    
+    vl_frames = [r for r in results if r['qwen_vl'] is not None]
+    print(f'Frames with Qwen-VL analysis: {len(vl_frames)}\\n')
+    for r in vl_frames:
+        vl = r['qwen_vl']
+        print(f'Video {r["video_id"]}  frame={r["frame_no"]}  motion={r["motion_score"]:.3f}')
+        print(f'  Scene         : {vl.get("scene","")}')
+        print(f'  Accident      : {vl.get("accident_visible")}  type={vl.get("accident_type")}')
+        print(f'  Vehicles      : {vl.get("vehicles_detected",[])}')
+        print(f'  Smoke/fire    : {vl.get("smoke_or_fire")}  Persons at risk: {vl.get("persons_at_risk")}')
+        print(f'  Severity      : {vl.get("severity")}  Escalate: {vl.get("escalate")}')
+        print(f'  Reason        : {vl.get("reason","")}')
+        print()
+    
+    
+    edge_events = []
+    for r in results:
+        for det in r['detections']:
+            ev = dict(det)
+            ev['qwen_vl']     = r.get('qwen_vl')
+            ev['mode']        = r['mode']
+            ev['frame_path']  = r['frame_path']
+            ev['motion_score']= r['motion_score']
+            ev['has_accident']= r['has_accident']
+            ev['dataset_mode']= 'accident_bench'
+            # Add frame_range for fog correlator
+            ev['frame_range'] = [r['frame_no'], r['frame_no']]
+            edge_events.append(ev)
+    
+    pathlib.Path('state_jsons/edge_events.json').write_text(
+        json.dumps(edge_events, default=str, indent=2))
+    print(f'Saved {len(edge_events)} edge events -> edge_events.json')
+    if edge_events:
+        e = {k: v for k, v in edge_events[0].items() if k not in ('qwen_vl',)}
+        print('\\nSample event:')
+        print(json.dumps(e, indent=2, default=str))
         
-        Return ONLY valid JSON.
-        
-        Schema:
-        
-        {
-         "scene":"",
-         "vehicles_detected":[],
-         "accident_visible":false,
-         "accident_type":"rear_end|T_bone|rollover|pedestrian|multi_vehicle|none",
-         "smoke_or_fire":false,
-         "persons_at_risk":false,
-         "severity":"low|medium|high|critical",
-         "escalate":false,
-         "reason":""
-        }
-        
-        Do not return markdown.
-        Do not return explanations.
-        Do not wrap with ```json.
-        """
-b64= frame_to_base64(fr)
-print()
-resp = client.chat.completions.create(
-    model=QWEN_MODEL,
-    # messages=[
-    #     {'role': 'system', 'content': SYSTEM},
-    #     {'role': 'user', 'content': [
-    #         {'type': 'image_url',
-    #          'image_url': {'url': f'data:image/jpeg;base64,{b64}'}},
-    #         {'type': 'text', 'text': "TELL ME ABOUT THIS IMAGE"},
-    #     ]},
-    # ],
-    messages=[
-        {'role': 'system', 'content': SYSTEM},
-        {'role': 'user', 'content': "There are two persons in front of the car"}],
-    max_tokens=256, temperature=0.0,response_format={"type": "json_object"}
-)
-raw = resp.choices[0].message.content.strip()
-print(raw)
+    state["edge_events"]= edge_events
+    return state
 

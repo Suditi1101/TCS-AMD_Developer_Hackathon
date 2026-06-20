@@ -1,0 +1,8 @@
+qwen_model: Qwen/Qwen2-VL-7B-Instruct
+vllm_base_url: http://localhost:8000/v1
+vllm_dtype: float16
+vllm_gpu_util: 0.9
+vllm_host: 0.0.0.0
+vllm_max_model_len: 4096
+vllm_port: 8000
+vllm_tensor_parallel: 1

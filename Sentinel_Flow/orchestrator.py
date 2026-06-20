@@ -6,6 +6,7 @@ from edge_filter import edge_filter_node
 from fog_correlator import fog_correlator_node
 from cloud_analyser import cloud_analyser_node
 from alert_learn import alert_learn_node
+from dashboard import create_dashboard
 
 def orchestrator_node(state):
     return state
@@ -39,7 +40,8 @@ def main():
         "frames":[],
         "alerts":[]
     })
-    print(result)
+ #   print(result)
+    create_dashboard(result)
 
 if __name__=="__main__":
     main()
